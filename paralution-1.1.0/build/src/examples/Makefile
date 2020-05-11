@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /paralution/paralution-1.1.0
+CMAKE_SOURCE_DIR = /paralution/para-2.0/paralution-1.1.0
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /paralution/paralution-1.1.0/build
+CMAKE_BINARY_DIR = /paralution/para-2.0/paralution-1.1.0/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -82,8 +82,8 @@ install/fast: preinstall/fast
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -126,14 +126,14 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	cd /paralution/paralution-1.1.0/build && $(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles /paralution/paralution-1.1.0/build/src/examples/CMakeFiles/progress.marks
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles /paralution/para-2.0/paralution-1.1.0/build/src/examples/CMakeFiles/progress.marks
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/clean
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/preinstall
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/preinstall
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /paralution/paralution-1.1.0/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/examples/CMakeFiles/stencil.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/stencil.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/stencil.dir/rule
 .PHONY : src/examples/CMakeFiles/stencil.dir/rule
 
 # Convenience name for target.
@@ -168,12 +168,12 @@ stencil: src/examples/CMakeFiles/stencil.dir/rule
 
 # fast build rule for target.
 stencil/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/stencil.dir/build.make src/examples/CMakeFiles/stencil.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/stencil.dir/build.make src/examples/CMakeFiles/stencil.dir/build
 .PHONY : stencil/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/assembly2.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/assembly2.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/assembly2.dir/rule
 .PHONY : src/examples/CMakeFiles/assembly2.dir/rule
 
 # Convenience name for target.
@@ -183,12 +183,12 @@ assembly2: src/examples/CMakeFiles/assembly2.dir/rule
 
 # fast build rule for target.
 assembly2/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly2.dir/build.make src/examples/CMakeFiles/assembly2.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly2.dir/build.make src/examples/CMakeFiles/assembly2.dir/build
 .PHONY : assembly2/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/assembly.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/assembly.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/assembly.dir/rule
 .PHONY : src/examples/CMakeFiles/assembly.dir/rule
 
 # Convenience name for target.
@@ -198,12 +198,12 @@ assembly: src/examples/CMakeFiles/assembly.dir/rule
 
 # fast build rule for target.
 assembly/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly.dir/build.make src/examples/CMakeFiles/assembly.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly.dir/build.make src/examples/CMakeFiles/assembly.dir/build
 .PHONY : assembly/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/async.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/async.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/async.dir/rule
 .PHONY : src/examples/CMakeFiles/async.dir/rule
 
 # Convenience name for target.
@@ -213,12 +213,12 @@ async: src/examples/CMakeFiles/async.dir/rule
 
 # fast build rule for target.
 async/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/async.dir/build.make src/examples/CMakeFiles/async.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/async.dir/build.make src/examples/CMakeFiles/async.dir/build
 .PHONY : async/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/power-method.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/power-method.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/power-method.dir/rule
 .PHONY : src/examples/CMakeFiles/power-method.dir/rule
 
 # Convenience name for target.
@@ -228,12 +228,12 @@ power-method: src/examples/CMakeFiles/power-method.dir/rule
 
 # fast build rule for target.
 power-method/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/power-method.dir/build.make src/examples/CMakeFiles/power-method.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/power-method.dir/build.make src/examples/CMakeFiles/power-method.dir/build
 .PHONY : power-method/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/cg.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/cg.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/cg.dir/rule
 .PHONY : src/examples/CMakeFiles/cg.dir/rule
 
 # Convenience name for target.
@@ -243,12 +243,12 @@ cg: src/examples/CMakeFiles/cg.dir/rule
 
 # fast build rule for target.
 cg/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg.dir/build.make src/examples/CMakeFiles/cg.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg.dir/build.make src/examples/CMakeFiles/cg.dir/build
 .PHONY : cg/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/complex.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/complex.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/complex.dir/rule
 .PHONY : src/examples/CMakeFiles/complex.dir/rule
 
 # Convenience name for target.
@@ -258,12 +258,12 @@ complex: src/examples/CMakeFiles/complex.dir/rule
 
 # fast build rule for target.
 complex/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/complex.dir/build.make src/examples/CMakeFiles/complex.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/complex.dir/build.make src/examples/CMakeFiles/complex.dir/build
 .PHONY : complex/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/cg-amg.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/cg-amg.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/cg-amg.dir/rule
 .PHONY : src/examples/CMakeFiles/cg-amg.dir/rule
 
 # Convenience name for target.
@@ -273,12 +273,12 @@ cg-amg: src/examples/CMakeFiles/cg-amg.dir/rule
 
 # fast build rule for target.
 cg-amg/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg-amg.dir/build.make src/examples/CMakeFiles/cg-amg.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg-amg.dir/build.make src/examples/CMakeFiles/cg-amg.dir/build
 .PHONY : cg-amg/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/amg.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/amg.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/amg.dir/rule
 .PHONY : src/examples/CMakeFiles/amg.dir/rule
 
 # Convenience name for target.
@@ -288,12 +288,12 @@ amg: src/examples/CMakeFiles/amg.dir/rule
 
 # fast build rule for target.
 amg/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/amg.dir/build.make src/examples/CMakeFiles/amg.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/amg.dir/build.make src/examples/CMakeFiles/amg.dir/build
 .PHONY : amg/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/sira.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/sira.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/sira.dir/rule
 .PHONY : src/examples/CMakeFiles/sira.dir/rule
 
 # Convenience name for target.
@@ -303,12 +303,12 @@ sira: src/examples/CMakeFiles/sira.dir/rule
 
 # fast build rule for target.
 sira/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sira.dir/build.make src/examples/CMakeFiles/sira.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sira.dir/build.make src/examples/CMakeFiles/sira.dir/build
 .PHONY : sira/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/simple-spmv.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/simple-spmv.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/simple-spmv.dir/rule
 .PHONY : src/examples/CMakeFiles/simple-spmv.dir/rule
 
 # Convenience name for target.
@@ -318,12 +318,12 @@ simple-spmv: src/examples/CMakeFiles/simple-spmv.dir/rule
 
 # fast build rule for target.
 simple-spmv/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/simple-spmv.dir/build.make src/examples/CMakeFiles/simple-spmv.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/simple-spmv.dir/build.make src/examples/CMakeFiles/simple-spmv.dir/build
 .PHONY : simple-spmv/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/benchmark.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/benchmark.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/benchmark.dir/rule
 .PHONY : src/examples/CMakeFiles/benchmark.dir/rule
 
 # Convenience name for target.
@@ -333,12 +333,12 @@ benchmark: src/examples/CMakeFiles/benchmark.dir/rule
 
 # fast build rule for target.
 benchmark/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/benchmark.dir/build.make src/examples/CMakeFiles/benchmark.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/benchmark.dir/build.make src/examples/CMakeFiles/benchmark.dir/build
 .PHONY : benchmark/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/cmk.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/cmk.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/cmk.dir/rule
 .PHONY : src/examples/CMakeFiles/cmk.dir/rule
 
 # Convenience name for target.
@@ -348,12 +348,12 @@ cmk: src/examples/CMakeFiles/cmk.dir/rule
 
 # fast build rule for target.
 cmk/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cmk.dir/build.make src/examples/CMakeFiles/cmk.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cmk.dir/build.make src/examples/CMakeFiles/cmk.dir/build
 .PHONY : cmk/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/mixed-precision.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/mixed-precision.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/mixed-precision.dir/rule
 .PHONY : src/examples/CMakeFiles/mixed-precision.dir/rule
 
 # Convenience name for target.
@@ -363,12 +363,12 @@ mixed-precision: src/examples/CMakeFiles/mixed-precision.dir/rule
 
 # fast build rule for target.
 mixed-precision/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/mixed-precision.dir/build.make src/examples/CMakeFiles/mixed-precision.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/mixed-precision.dir/build.make src/examples/CMakeFiles/mixed-precision.dir/build
 .PHONY : mixed-precision/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/dpcg.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/dpcg.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/dpcg.dir/rule
 .PHONY : src/examples/CMakeFiles/dpcg.dir/rule
 
 # Convenience name for target.
@@ -378,12 +378,12 @@ dpcg: src/examples/CMakeFiles/dpcg.dir/rule
 
 # fast build rule for target.
 dpcg/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/dpcg.dir/build.make src/examples/CMakeFiles/dpcg.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/dpcg.dir/build.make src/examples/CMakeFiles/dpcg.dir/build
 .PHONY : dpcg/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/idr.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/idr.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/idr.dir/rule
 .PHONY : src/examples/CMakeFiles/idr.dir/rule
 
 # Convenience name for target.
@@ -393,12 +393,12 @@ idr: src/examples/CMakeFiles/idr.dir/rule
 
 # fast build rule for target.
 idr/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/idr.dir/build.make src/examples/CMakeFiles/idr.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/idr.dir/build.make src/examples/CMakeFiles/idr.dir/build
 .PHONY : idr/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/gmres.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/gmres.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/gmres.dir/rule
 .PHONY : src/examples/CMakeFiles/gmres.dir/rule
 
 # Convenience name for target.
@@ -408,12 +408,12 @@ gmres: src/examples/CMakeFiles/gmres.dir/rule
 
 # fast build rule for target.
 gmres/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/gmres.dir/build.make src/examples/CMakeFiles/gmres.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/gmres.dir/build.make src/examples/CMakeFiles/gmres.dir/build
 .PHONY : gmres/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/sp-precond.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/sp-precond.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/sp-precond.dir/rule
 .PHONY : src/examples/CMakeFiles/sp-precond.dir/rule
 
 # Convenience name for target.
@@ -423,12 +423,12 @@ sp-precond: src/examples/CMakeFiles/sp-precond.dir/rule
 
 # fast build rule for target.
 sp-precond/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sp-precond.dir/build.make src/examples/CMakeFiles/sp-precond.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sp-precond.dir/build.make src/examples/CMakeFiles/sp-precond.dir/build
 .PHONY : sp-precond/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/block-precond.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/block-precond.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/block-precond.dir/rule
 .PHONY : src/examples/CMakeFiles/block-precond.dir/rule
 
 # Convenience name for target.
@@ -438,12 +438,12 @@ block-precond: src/examples/CMakeFiles/block-precond.dir/rule
 
 # fast build rule for target.
 block-precond/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/block-precond.dir/build.make src/examples/CMakeFiles/block-precond.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/block-precond.dir/build.make src/examples/CMakeFiles/block-precond.dir/build
 .PHONY : block-precond/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/bicgstab.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/bicgstab.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/bicgstab.dir/rule
 .PHONY : src/examples/CMakeFiles/bicgstab.dir/rule
 
 # Convenience name for target.
@@ -453,12 +453,12 @@ bicgstab: src/examples/CMakeFiles/bicgstab.dir/rule
 
 # fast build rule for target.
 bicgstab/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/bicgstab.dir/build.make src/examples/CMakeFiles/bicgstab.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/bicgstab.dir/build.make src/examples/CMakeFiles/bicgstab.dir/build
 .PHONY : bicgstab/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/as-precond.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/as-precond.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/as-precond.dir/rule
 .PHONY : src/examples/CMakeFiles/as-precond.dir/rule
 
 # Convenience name for target.
@@ -468,12 +468,12 @@ as-precond: src/examples/CMakeFiles/as-precond.dir/rule
 
 # fast build rule for target.
 as-precond/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/as-precond.dir/build.make src/examples/CMakeFiles/as-precond.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/as-precond.dir/build.make src/examples/CMakeFiles/as-precond.dir/build
 .PHONY : as-precond/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/me-preconditioner.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/me-preconditioner.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/me-preconditioner.dir/rule
 .PHONY : src/examples/CMakeFiles/me-preconditioner.dir/rule
 
 # Convenience name for target.
@@ -483,12 +483,12 @@ me-preconditioner: src/examples/CMakeFiles/me-preconditioner.dir/rule
 
 # fast build rule for target.
 me-preconditioner/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/me-preconditioner.dir/build.make src/examples/CMakeFiles/me-preconditioner.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/me-preconditioner.dir/build.make src/examples/CMakeFiles/me-preconditioner.dir/build
 .PHONY : me-preconditioner/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/tns.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/tns.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/tns.dir/rule
 .PHONY : src/examples/CMakeFiles/tns.dir/rule
 
 # Convenience name for target.
@@ -498,12 +498,12 @@ tns: src/examples/CMakeFiles/tns.dir/rule
 
 # fast build rule for target.
 tns/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/tns.dir/build.make src/examples/CMakeFiles/tns.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/tns.dir/build.make src/examples/CMakeFiles/tns.dir/build
 .PHONY : tns/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/direct.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/direct.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/direct.dir/rule
 .PHONY : src/examples/CMakeFiles/direct.dir/rule
 
 # Convenience name for target.
@@ -513,12 +513,12 @@ direct: src/examples/CMakeFiles/direct.dir/rule
 
 # fast build rule for target.
 direct/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/direct.dir/build.make src/examples/CMakeFiles/direct.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/direct.dir/build.make src/examples/CMakeFiles/direct.dir/build
 .PHONY : direct/fast
 
 # Convenience name for target.
 src/examples/CMakeFiles/fixed-point.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/fixed-point.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/fixed-point.dir/rule
 .PHONY : src/examples/CMakeFiles/fixed-point.dir/rule
 
 # Convenience name for target.
@@ -528,7 +528,7 @@ fixed-point: src/examples/CMakeFiles/fixed-point.dir/rule
 
 # fast build rule for target.
 fixed-point/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/fixed-point.dir/build.make src/examples/CMakeFiles/fixed-point.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/fixed-point.dir/build.make src/examples/CMakeFiles/fixed-point.dir/build
 .PHONY : fixed-point/fast
 
 amg.o: amg.cpp.o
@@ -537,7 +537,7 @@ amg.o: amg.cpp.o
 
 # target to build an object file
 amg.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/amg.dir/build.make src/examples/CMakeFiles/amg.dir/amg.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/amg.dir/build.make src/examples/CMakeFiles/amg.dir/amg.cpp.o
 .PHONY : amg.cpp.o
 
 amg.i: amg.cpp.i
@@ -546,7 +546,7 @@ amg.i: amg.cpp.i
 
 # target to preprocess a source file
 amg.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/amg.dir/build.make src/examples/CMakeFiles/amg.dir/amg.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/amg.dir/build.make src/examples/CMakeFiles/amg.dir/amg.cpp.i
 .PHONY : amg.cpp.i
 
 amg.s: amg.cpp.s
@@ -555,7 +555,7 @@ amg.s: amg.cpp.s
 
 # target to generate assembly for a file
 amg.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/amg.dir/build.make src/examples/CMakeFiles/amg.dir/amg.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/amg.dir/build.make src/examples/CMakeFiles/amg.dir/amg.cpp.s
 .PHONY : amg.cpp.s
 
 as-precond.o: as-precond.cpp.o
@@ -564,7 +564,7 @@ as-precond.o: as-precond.cpp.o
 
 # target to build an object file
 as-precond.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/as-precond.dir/build.make src/examples/CMakeFiles/as-precond.dir/as-precond.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/as-precond.dir/build.make src/examples/CMakeFiles/as-precond.dir/as-precond.cpp.o
 .PHONY : as-precond.cpp.o
 
 as-precond.i: as-precond.cpp.i
@@ -573,7 +573,7 @@ as-precond.i: as-precond.cpp.i
 
 # target to preprocess a source file
 as-precond.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/as-precond.dir/build.make src/examples/CMakeFiles/as-precond.dir/as-precond.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/as-precond.dir/build.make src/examples/CMakeFiles/as-precond.dir/as-precond.cpp.i
 .PHONY : as-precond.cpp.i
 
 as-precond.s: as-precond.cpp.s
@@ -582,7 +582,7 @@ as-precond.s: as-precond.cpp.s
 
 # target to generate assembly for a file
 as-precond.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/as-precond.dir/build.make src/examples/CMakeFiles/as-precond.dir/as-precond.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/as-precond.dir/build.make src/examples/CMakeFiles/as-precond.dir/as-precond.cpp.s
 .PHONY : as-precond.cpp.s
 
 assembly.o: assembly.cpp.o
@@ -591,7 +591,7 @@ assembly.o: assembly.cpp.o
 
 # target to build an object file
 assembly.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly.dir/build.make src/examples/CMakeFiles/assembly.dir/assembly.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly.dir/build.make src/examples/CMakeFiles/assembly.dir/assembly.cpp.o
 .PHONY : assembly.cpp.o
 
 assembly.i: assembly.cpp.i
@@ -600,7 +600,7 @@ assembly.i: assembly.cpp.i
 
 # target to preprocess a source file
 assembly.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly.dir/build.make src/examples/CMakeFiles/assembly.dir/assembly.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly.dir/build.make src/examples/CMakeFiles/assembly.dir/assembly.cpp.i
 .PHONY : assembly.cpp.i
 
 assembly.s: assembly.cpp.s
@@ -609,7 +609,7 @@ assembly.s: assembly.cpp.s
 
 # target to generate assembly for a file
 assembly.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly.dir/build.make src/examples/CMakeFiles/assembly.dir/assembly.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly.dir/build.make src/examples/CMakeFiles/assembly.dir/assembly.cpp.s
 .PHONY : assembly.cpp.s
 
 assembly2.o: assembly2.cpp.o
@@ -618,7 +618,7 @@ assembly2.o: assembly2.cpp.o
 
 # target to build an object file
 assembly2.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly2.dir/build.make src/examples/CMakeFiles/assembly2.dir/assembly2.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly2.dir/build.make src/examples/CMakeFiles/assembly2.dir/assembly2.cpp.o
 .PHONY : assembly2.cpp.o
 
 assembly2.i: assembly2.cpp.i
@@ -627,7 +627,7 @@ assembly2.i: assembly2.cpp.i
 
 # target to preprocess a source file
 assembly2.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly2.dir/build.make src/examples/CMakeFiles/assembly2.dir/assembly2.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly2.dir/build.make src/examples/CMakeFiles/assembly2.dir/assembly2.cpp.i
 .PHONY : assembly2.cpp.i
 
 assembly2.s: assembly2.cpp.s
@@ -636,7 +636,7 @@ assembly2.s: assembly2.cpp.s
 
 # target to generate assembly for a file
 assembly2.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly2.dir/build.make src/examples/CMakeFiles/assembly2.dir/assembly2.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/assembly2.dir/build.make src/examples/CMakeFiles/assembly2.dir/assembly2.cpp.s
 .PHONY : assembly2.cpp.s
 
 async.o: async.cpp.o
@@ -645,7 +645,7 @@ async.o: async.cpp.o
 
 # target to build an object file
 async.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/async.dir/build.make src/examples/CMakeFiles/async.dir/async.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/async.dir/build.make src/examples/CMakeFiles/async.dir/async.cpp.o
 .PHONY : async.cpp.o
 
 async.i: async.cpp.i
@@ -654,7 +654,7 @@ async.i: async.cpp.i
 
 # target to preprocess a source file
 async.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/async.dir/build.make src/examples/CMakeFiles/async.dir/async.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/async.dir/build.make src/examples/CMakeFiles/async.dir/async.cpp.i
 .PHONY : async.cpp.i
 
 async.s: async.cpp.s
@@ -663,7 +663,7 @@ async.s: async.cpp.s
 
 # target to generate assembly for a file
 async.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/async.dir/build.make src/examples/CMakeFiles/async.dir/async.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/async.dir/build.make src/examples/CMakeFiles/async.dir/async.cpp.s
 .PHONY : async.cpp.s
 
 benchmark.o: benchmark.cpp.o
@@ -672,7 +672,7 @@ benchmark.o: benchmark.cpp.o
 
 # target to build an object file
 benchmark.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/benchmark.dir/build.make src/examples/CMakeFiles/benchmark.dir/benchmark.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/benchmark.dir/build.make src/examples/CMakeFiles/benchmark.dir/benchmark.cpp.o
 .PHONY : benchmark.cpp.o
 
 benchmark.i: benchmark.cpp.i
@@ -681,7 +681,7 @@ benchmark.i: benchmark.cpp.i
 
 # target to preprocess a source file
 benchmark.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/benchmark.dir/build.make src/examples/CMakeFiles/benchmark.dir/benchmark.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/benchmark.dir/build.make src/examples/CMakeFiles/benchmark.dir/benchmark.cpp.i
 .PHONY : benchmark.cpp.i
 
 benchmark.s: benchmark.cpp.s
@@ -690,7 +690,7 @@ benchmark.s: benchmark.cpp.s
 
 # target to generate assembly for a file
 benchmark.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/benchmark.dir/build.make src/examples/CMakeFiles/benchmark.dir/benchmark.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/benchmark.dir/build.make src/examples/CMakeFiles/benchmark.dir/benchmark.cpp.s
 .PHONY : benchmark.cpp.s
 
 bicgstab.o: bicgstab.cpp.o
@@ -699,7 +699,7 @@ bicgstab.o: bicgstab.cpp.o
 
 # target to build an object file
 bicgstab.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/bicgstab.dir/build.make src/examples/CMakeFiles/bicgstab.dir/bicgstab.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/bicgstab.dir/build.make src/examples/CMakeFiles/bicgstab.dir/bicgstab.cpp.o
 .PHONY : bicgstab.cpp.o
 
 bicgstab.i: bicgstab.cpp.i
@@ -708,7 +708,7 @@ bicgstab.i: bicgstab.cpp.i
 
 # target to preprocess a source file
 bicgstab.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/bicgstab.dir/build.make src/examples/CMakeFiles/bicgstab.dir/bicgstab.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/bicgstab.dir/build.make src/examples/CMakeFiles/bicgstab.dir/bicgstab.cpp.i
 .PHONY : bicgstab.cpp.i
 
 bicgstab.s: bicgstab.cpp.s
@@ -717,7 +717,7 @@ bicgstab.s: bicgstab.cpp.s
 
 # target to generate assembly for a file
 bicgstab.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/bicgstab.dir/build.make src/examples/CMakeFiles/bicgstab.dir/bicgstab.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/bicgstab.dir/build.make src/examples/CMakeFiles/bicgstab.dir/bicgstab.cpp.s
 .PHONY : bicgstab.cpp.s
 
 block-precond.o: block-precond.cpp.o
@@ -726,7 +726,7 @@ block-precond.o: block-precond.cpp.o
 
 # target to build an object file
 block-precond.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/block-precond.dir/build.make src/examples/CMakeFiles/block-precond.dir/block-precond.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/block-precond.dir/build.make src/examples/CMakeFiles/block-precond.dir/block-precond.cpp.o
 .PHONY : block-precond.cpp.o
 
 block-precond.i: block-precond.cpp.i
@@ -735,7 +735,7 @@ block-precond.i: block-precond.cpp.i
 
 # target to preprocess a source file
 block-precond.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/block-precond.dir/build.make src/examples/CMakeFiles/block-precond.dir/block-precond.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/block-precond.dir/build.make src/examples/CMakeFiles/block-precond.dir/block-precond.cpp.i
 .PHONY : block-precond.cpp.i
 
 block-precond.s: block-precond.cpp.s
@@ -744,7 +744,7 @@ block-precond.s: block-precond.cpp.s
 
 # target to generate assembly for a file
 block-precond.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/block-precond.dir/build.make src/examples/CMakeFiles/block-precond.dir/block-precond.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/block-precond.dir/build.make src/examples/CMakeFiles/block-precond.dir/block-precond.cpp.s
 .PHONY : block-precond.cpp.s
 
 cg-amg.o: cg-amg.cpp.o
@@ -753,7 +753,7 @@ cg-amg.o: cg-amg.cpp.o
 
 # target to build an object file
 cg-amg.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg-amg.dir/build.make src/examples/CMakeFiles/cg-amg.dir/cg-amg.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg-amg.dir/build.make src/examples/CMakeFiles/cg-amg.dir/cg-amg.cpp.o
 .PHONY : cg-amg.cpp.o
 
 cg-amg.i: cg-amg.cpp.i
@@ -762,7 +762,7 @@ cg-amg.i: cg-amg.cpp.i
 
 # target to preprocess a source file
 cg-amg.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg-amg.dir/build.make src/examples/CMakeFiles/cg-amg.dir/cg-amg.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg-amg.dir/build.make src/examples/CMakeFiles/cg-amg.dir/cg-amg.cpp.i
 .PHONY : cg-amg.cpp.i
 
 cg-amg.s: cg-amg.cpp.s
@@ -771,7 +771,7 @@ cg-amg.s: cg-amg.cpp.s
 
 # target to generate assembly for a file
 cg-amg.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg-amg.dir/build.make src/examples/CMakeFiles/cg-amg.dir/cg-amg.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg-amg.dir/build.make src/examples/CMakeFiles/cg-amg.dir/cg-amg.cpp.s
 .PHONY : cg-amg.cpp.s
 
 cg.o: cg.cpp.o
@@ -780,7 +780,7 @@ cg.o: cg.cpp.o
 
 # target to build an object file
 cg.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg.dir/build.make src/examples/CMakeFiles/cg.dir/cg.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg.dir/build.make src/examples/CMakeFiles/cg.dir/cg.cpp.o
 .PHONY : cg.cpp.o
 
 cg.i: cg.cpp.i
@@ -789,7 +789,7 @@ cg.i: cg.cpp.i
 
 # target to preprocess a source file
 cg.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg.dir/build.make src/examples/CMakeFiles/cg.dir/cg.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg.dir/build.make src/examples/CMakeFiles/cg.dir/cg.cpp.i
 .PHONY : cg.cpp.i
 
 cg.s: cg.cpp.s
@@ -798,7 +798,7 @@ cg.s: cg.cpp.s
 
 # target to generate assembly for a file
 cg.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg.dir/build.make src/examples/CMakeFiles/cg.dir/cg.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cg.dir/build.make src/examples/CMakeFiles/cg.dir/cg.cpp.s
 .PHONY : cg.cpp.s
 
 cmk.o: cmk.cpp.o
@@ -807,7 +807,7 @@ cmk.o: cmk.cpp.o
 
 # target to build an object file
 cmk.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cmk.dir/build.make src/examples/CMakeFiles/cmk.dir/cmk.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cmk.dir/build.make src/examples/CMakeFiles/cmk.dir/cmk.cpp.o
 .PHONY : cmk.cpp.o
 
 cmk.i: cmk.cpp.i
@@ -816,7 +816,7 @@ cmk.i: cmk.cpp.i
 
 # target to preprocess a source file
 cmk.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cmk.dir/build.make src/examples/CMakeFiles/cmk.dir/cmk.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cmk.dir/build.make src/examples/CMakeFiles/cmk.dir/cmk.cpp.i
 .PHONY : cmk.cpp.i
 
 cmk.s: cmk.cpp.s
@@ -825,7 +825,7 @@ cmk.s: cmk.cpp.s
 
 # target to generate assembly for a file
 cmk.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cmk.dir/build.make src/examples/CMakeFiles/cmk.dir/cmk.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/cmk.dir/build.make src/examples/CMakeFiles/cmk.dir/cmk.cpp.s
 .PHONY : cmk.cpp.s
 
 complex.o: complex.cpp.o
@@ -834,7 +834,7 @@ complex.o: complex.cpp.o
 
 # target to build an object file
 complex.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/complex.dir/build.make src/examples/CMakeFiles/complex.dir/complex.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/complex.dir/build.make src/examples/CMakeFiles/complex.dir/complex.cpp.o
 .PHONY : complex.cpp.o
 
 complex.i: complex.cpp.i
@@ -843,7 +843,7 @@ complex.i: complex.cpp.i
 
 # target to preprocess a source file
 complex.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/complex.dir/build.make src/examples/CMakeFiles/complex.dir/complex.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/complex.dir/build.make src/examples/CMakeFiles/complex.dir/complex.cpp.i
 .PHONY : complex.cpp.i
 
 complex.s: complex.cpp.s
@@ -852,7 +852,7 @@ complex.s: complex.cpp.s
 
 # target to generate assembly for a file
 complex.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/complex.dir/build.make src/examples/CMakeFiles/complex.dir/complex.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/complex.dir/build.make src/examples/CMakeFiles/complex.dir/complex.cpp.s
 .PHONY : complex.cpp.s
 
 direct.o: direct.cpp.o
@@ -861,7 +861,7 @@ direct.o: direct.cpp.o
 
 # target to build an object file
 direct.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/direct.dir/build.make src/examples/CMakeFiles/direct.dir/direct.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/direct.dir/build.make src/examples/CMakeFiles/direct.dir/direct.cpp.o
 .PHONY : direct.cpp.o
 
 direct.i: direct.cpp.i
@@ -870,7 +870,7 @@ direct.i: direct.cpp.i
 
 # target to preprocess a source file
 direct.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/direct.dir/build.make src/examples/CMakeFiles/direct.dir/direct.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/direct.dir/build.make src/examples/CMakeFiles/direct.dir/direct.cpp.i
 .PHONY : direct.cpp.i
 
 direct.s: direct.cpp.s
@@ -879,7 +879,7 @@ direct.s: direct.cpp.s
 
 # target to generate assembly for a file
 direct.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/direct.dir/build.make src/examples/CMakeFiles/direct.dir/direct.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/direct.dir/build.make src/examples/CMakeFiles/direct.dir/direct.cpp.s
 .PHONY : direct.cpp.s
 
 dpcg.o: dpcg.cpp.o
@@ -888,7 +888,7 @@ dpcg.o: dpcg.cpp.o
 
 # target to build an object file
 dpcg.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/dpcg.dir/build.make src/examples/CMakeFiles/dpcg.dir/dpcg.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/dpcg.dir/build.make src/examples/CMakeFiles/dpcg.dir/dpcg.cpp.o
 .PHONY : dpcg.cpp.o
 
 dpcg.i: dpcg.cpp.i
@@ -897,7 +897,7 @@ dpcg.i: dpcg.cpp.i
 
 # target to preprocess a source file
 dpcg.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/dpcg.dir/build.make src/examples/CMakeFiles/dpcg.dir/dpcg.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/dpcg.dir/build.make src/examples/CMakeFiles/dpcg.dir/dpcg.cpp.i
 .PHONY : dpcg.cpp.i
 
 dpcg.s: dpcg.cpp.s
@@ -906,7 +906,7 @@ dpcg.s: dpcg.cpp.s
 
 # target to generate assembly for a file
 dpcg.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/dpcg.dir/build.make src/examples/CMakeFiles/dpcg.dir/dpcg.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/dpcg.dir/build.make src/examples/CMakeFiles/dpcg.dir/dpcg.cpp.s
 .PHONY : dpcg.cpp.s
 
 fixed-point.o: fixed-point.cpp.o
@@ -915,7 +915,7 @@ fixed-point.o: fixed-point.cpp.o
 
 # target to build an object file
 fixed-point.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/fixed-point.dir/build.make src/examples/CMakeFiles/fixed-point.dir/fixed-point.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/fixed-point.dir/build.make src/examples/CMakeFiles/fixed-point.dir/fixed-point.cpp.o
 .PHONY : fixed-point.cpp.o
 
 fixed-point.i: fixed-point.cpp.i
@@ -924,7 +924,7 @@ fixed-point.i: fixed-point.cpp.i
 
 # target to preprocess a source file
 fixed-point.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/fixed-point.dir/build.make src/examples/CMakeFiles/fixed-point.dir/fixed-point.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/fixed-point.dir/build.make src/examples/CMakeFiles/fixed-point.dir/fixed-point.cpp.i
 .PHONY : fixed-point.cpp.i
 
 fixed-point.s: fixed-point.cpp.s
@@ -933,7 +933,7 @@ fixed-point.s: fixed-point.cpp.s
 
 # target to generate assembly for a file
 fixed-point.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/fixed-point.dir/build.make src/examples/CMakeFiles/fixed-point.dir/fixed-point.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/fixed-point.dir/build.make src/examples/CMakeFiles/fixed-point.dir/fixed-point.cpp.s
 .PHONY : fixed-point.cpp.s
 
 gmres.o: gmres.cpp.o
@@ -942,7 +942,7 @@ gmres.o: gmres.cpp.o
 
 # target to build an object file
 gmres.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/gmres.dir/build.make src/examples/CMakeFiles/gmres.dir/gmres.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/gmres.dir/build.make src/examples/CMakeFiles/gmres.dir/gmres.cpp.o
 .PHONY : gmres.cpp.o
 
 gmres.i: gmres.cpp.i
@@ -951,7 +951,7 @@ gmres.i: gmres.cpp.i
 
 # target to preprocess a source file
 gmres.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/gmres.dir/build.make src/examples/CMakeFiles/gmres.dir/gmres.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/gmres.dir/build.make src/examples/CMakeFiles/gmres.dir/gmres.cpp.i
 .PHONY : gmres.cpp.i
 
 gmres.s: gmres.cpp.s
@@ -960,7 +960,7 @@ gmres.s: gmres.cpp.s
 
 # target to generate assembly for a file
 gmres.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/gmres.dir/build.make src/examples/CMakeFiles/gmres.dir/gmres.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/gmres.dir/build.make src/examples/CMakeFiles/gmres.dir/gmres.cpp.s
 .PHONY : gmres.cpp.s
 
 idr.o: idr.cpp.o
@@ -969,7 +969,7 @@ idr.o: idr.cpp.o
 
 # target to build an object file
 idr.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/idr.dir/build.make src/examples/CMakeFiles/idr.dir/idr.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/idr.dir/build.make src/examples/CMakeFiles/idr.dir/idr.cpp.o
 .PHONY : idr.cpp.o
 
 idr.i: idr.cpp.i
@@ -978,7 +978,7 @@ idr.i: idr.cpp.i
 
 # target to preprocess a source file
 idr.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/idr.dir/build.make src/examples/CMakeFiles/idr.dir/idr.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/idr.dir/build.make src/examples/CMakeFiles/idr.dir/idr.cpp.i
 .PHONY : idr.cpp.i
 
 idr.s: idr.cpp.s
@@ -987,7 +987,7 @@ idr.s: idr.cpp.s
 
 # target to generate assembly for a file
 idr.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/idr.dir/build.make src/examples/CMakeFiles/idr.dir/idr.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/idr.dir/build.make src/examples/CMakeFiles/idr.dir/idr.cpp.s
 .PHONY : idr.cpp.s
 
 me-preconditioner.o: me-preconditioner.cpp.o
@@ -996,7 +996,7 @@ me-preconditioner.o: me-preconditioner.cpp.o
 
 # target to build an object file
 me-preconditioner.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/me-preconditioner.dir/build.make src/examples/CMakeFiles/me-preconditioner.dir/me-preconditioner.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/me-preconditioner.dir/build.make src/examples/CMakeFiles/me-preconditioner.dir/me-preconditioner.cpp.o
 .PHONY : me-preconditioner.cpp.o
 
 me-preconditioner.i: me-preconditioner.cpp.i
@@ -1005,7 +1005,7 @@ me-preconditioner.i: me-preconditioner.cpp.i
 
 # target to preprocess a source file
 me-preconditioner.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/me-preconditioner.dir/build.make src/examples/CMakeFiles/me-preconditioner.dir/me-preconditioner.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/me-preconditioner.dir/build.make src/examples/CMakeFiles/me-preconditioner.dir/me-preconditioner.cpp.i
 .PHONY : me-preconditioner.cpp.i
 
 me-preconditioner.s: me-preconditioner.cpp.s
@@ -1014,7 +1014,7 @@ me-preconditioner.s: me-preconditioner.cpp.s
 
 # target to generate assembly for a file
 me-preconditioner.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/me-preconditioner.dir/build.make src/examples/CMakeFiles/me-preconditioner.dir/me-preconditioner.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/me-preconditioner.dir/build.make src/examples/CMakeFiles/me-preconditioner.dir/me-preconditioner.cpp.s
 .PHONY : me-preconditioner.cpp.s
 
 mixed-precision.o: mixed-precision.cpp.o
@@ -1023,7 +1023,7 @@ mixed-precision.o: mixed-precision.cpp.o
 
 # target to build an object file
 mixed-precision.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/mixed-precision.dir/build.make src/examples/CMakeFiles/mixed-precision.dir/mixed-precision.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/mixed-precision.dir/build.make src/examples/CMakeFiles/mixed-precision.dir/mixed-precision.cpp.o
 .PHONY : mixed-precision.cpp.o
 
 mixed-precision.i: mixed-precision.cpp.i
@@ -1032,7 +1032,7 @@ mixed-precision.i: mixed-precision.cpp.i
 
 # target to preprocess a source file
 mixed-precision.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/mixed-precision.dir/build.make src/examples/CMakeFiles/mixed-precision.dir/mixed-precision.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/mixed-precision.dir/build.make src/examples/CMakeFiles/mixed-precision.dir/mixed-precision.cpp.i
 .PHONY : mixed-precision.cpp.i
 
 mixed-precision.s: mixed-precision.cpp.s
@@ -1041,7 +1041,7 @@ mixed-precision.s: mixed-precision.cpp.s
 
 # target to generate assembly for a file
 mixed-precision.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/mixed-precision.dir/build.make src/examples/CMakeFiles/mixed-precision.dir/mixed-precision.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/mixed-precision.dir/build.make src/examples/CMakeFiles/mixed-precision.dir/mixed-precision.cpp.s
 .PHONY : mixed-precision.cpp.s
 
 power-method.o: power-method.cpp.o
@@ -1050,7 +1050,7 @@ power-method.o: power-method.cpp.o
 
 # target to build an object file
 power-method.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/power-method.dir/build.make src/examples/CMakeFiles/power-method.dir/power-method.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/power-method.dir/build.make src/examples/CMakeFiles/power-method.dir/power-method.cpp.o
 .PHONY : power-method.cpp.o
 
 power-method.i: power-method.cpp.i
@@ -1059,7 +1059,7 @@ power-method.i: power-method.cpp.i
 
 # target to preprocess a source file
 power-method.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/power-method.dir/build.make src/examples/CMakeFiles/power-method.dir/power-method.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/power-method.dir/build.make src/examples/CMakeFiles/power-method.dir/power-method.cpp.i
 .PHONY : power-method.cpp.i
 
 power-method.s: power-method.cpp.s
@@ -1068,7 +1068,7 @@ power-method.s: power-method.cpp.s
 
 # target to generate assembly for a file
 power-method.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/power-method.dir/build.make src/examples/CMakeFiles/power-method.dir/power-method.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/power-method.dir/build.make src/examples/CMakeFiles/power-method.dir/power-method.cpp.s
 .PHONY : power-method.cpp.s
 
 simple-spmv.o: simple-spmv.cpp.o
@@ -1077,7 +1077,7 @@ simple-spmv.o: simple-spmv.cpp.o
 
 # target to build an object file
 simple-spmv.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/simple-spmv.dir/build.make src/examples/CMakeFiles/simple-spmv.dir/simple-spmv.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/simple-spmv.dir/build.make src/examples/CMakeFiles/simple-spmv.dir/simple-spmv.cpp.o
 .PHONY : simple-spmv.cpp.o
 
 simple-spmv.i: simple-spmv.cpp.i
@@ -1086,7 +1086,7 @@ simple-spmv.i: simple-spmv.cpp.i
 
 # target to preprocess a source file
 simple-spmv.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/simple-spmv.dir/build.make src/examples/CMakeFiles/simple-spmv.dir/simple-spmv.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/simple-spmv.dir/build.make src/examples/CMakeFiles/simple-spmv.dir/simple-spmv.cpp.i
 .PHONY : simple-spmv.cpp.i
 
 simple-spmv.s: simple-spmv.cpp.s
@@ -1095,7 +1095,7 @@ simple-spmv.s: simple-spmv.cpp.s
 
 # target to generate assembly for a file
 simple-spmv.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/simple-spmv.dir/build.make src/examples/CMakeFiles/simple-spmv.dir/simple-spmv.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/simple-spmv.dir/build.make src/examples/CMakeFiles/simple-spmv.dir/simple-spmv.cpp.s
 .PHONY : simple-spmv.cpp.s
 
 sira.o: sira.cpp.o
@@ -1104,7 +1104,7 @@ sira.o: sira.cpp.o
 
 # target to build an object file
 sira.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sira.dir/build.make src/examples/CMakeFiles/sira.dir/sira.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sira.dir/build.make src/examples/CMakeFiles/sira.dir/sira.cpp.o
 .PHONY : sira.cpp.o
 
 sira.i: sira.cpp.i
@@ -1113,7 +1113,7 @@ sira.i: sira.cpp.i
 
 # target to preprocess a source file
 sira.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sira.dir/build.make src/examples/CMakeFiles/sira.dir/sira.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sira.dir/build.make src/examples/CMakeFiles/sira.dir/sira.cpp.i
 .PHONY : sira.cpp.i
 
 sira.s: sira.cpp.s
@@ -1122,7 +1122,7 @@ sira.s: sira.cpp.s
 
 # target to generate assembly for a file
 sira.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sira.dir/build.make src/examples/CMakeFiles/sira.dir/sira.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sira.dir/build.make src/examples/CMakeFiles/sira.dir/sira.cpp.s
 .PHONY : sira.cpp.s
 
 sp-precond.o: sp-precond.cpp.o
@@ -1131,7 +1131,7 @@ sp-precond.o: sp-precond.cpp.o
 
 # target to build an object file
 sp-precond.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sp-precond.dir/build.make src/examples/CMakeFiles/sp-precond.dir/sp-precond.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sp-precond.dir/build.make src/examples/CMakeFiles/sp-precond.dir/sp-precond.cpp.o
 .PHONY : sp-precond.cpp.o
 
 sp-precond.i: sp-precond.cpp.i
@@ -1140,7 +1140,7 @@ sp-precond.i: sp-precond.cpp.i
 
 # target to preprocess a source file
 sp-precond.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sp-precond.dir/build.make src/examples/CMakeFiles/sp-precond.dir/sp-precond.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sp-precond.dir/build.make src/examples/CMakeFiles/sp-precond.dir/sp-precond.cpp.i
 .PHONY : sp-precond.cpp.i
 
 sp-precond.s: sp-precond.cpp.s
@@ -1149,7 +1149,7 @@ sp-precond.s: sp-precond.cpp.s
 
 # target to generate assembly for a file
 sp-precond.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sp-precond.dir/build.make src/examples/CMakeFiles/sp-precond.dir/sp-precond.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/sp-precond.dir/build.make src/examples/CMakeFiles/sp-precond.dir/sp-precond.cpp.s
 .PHONY : sp-precond.cpp.s
 
 stencil.o: stencil.cpp.o
@@ -1158,7 +1158,7 @@ stencil.o: stencil.cpp.o
 
 # target to build an object file
 stencil.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/stencil.dir/build.make src/examples/CMakeFiles/stencil.dir/stencil.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/stencil.dir/build.make src/examples/CMakeFiles/stencil.dir/stencil.cpp.o
 .PHONY : stencil.cpp.o
 
 stencil.i: stencil.cpp.i
@@ -1167,7 +1167,7 @@ stencil.i: stencil.cpp.i
 
 # target to preprocess a source file
 stencil.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/stencil.dir/build.make src/examples/CMakeFiles/stencil.dir/stencil.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/stencil.dir/build.make src/examples/CMakeFiles/stencil.dir/stencil.cpp.i
 .PHONY : stencil.cpp.i
 
 stencil.s: stencil.cpp.s
@@ -1176,7 +1176,7 @@ stencil.s: stencil.cpp.s
 
 # target to generate assembly for a file
 stencil.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/stencil.dir/build.make src/examples/CMakeFiles/stencil.dir/stencil.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/stencil.dir/build.make src/examples/CMakeFiles/stencil.dir/stencil.cpp.s
 .PHONY : stencil.cpp.s
 
 tns.o: tns.cpp.o
@@ -1185,7 +1185,7 @@ tns.o: tns.cpp.o
 
 # target to build an object file
 tns.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/tns.dir/build.make src/examples/CMakeFiles/tns.dir/tns.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/tns.dir/build.make src/examples/CMakeFiles/tns.dir/tns.cpp.o
 .PHONY : tns.cpp.o
 
 tns.i: tns.cpp.i
@@ -1194,7 +1194,7 @@ tns.i: tns.cpp.i
 
 # target to preprocess a source file
 tns.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/tns.dir/build.make src/examples/CMakeFiles/tns.dir/tns.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/tns.dir/build.make src/examples/CMakeFiles/tns.dir/tns.cpp.i
 .PHONY : tns.cpp.i
 
 tns.s: tns.cpp.s
@@ -1203,7 +1203,7 @@ tns.s: tns.cpp.s
 
 # target to generate assembly for a file
 tns.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/tns.dir/build.make src/examples/CMakeFiles/tns.dir/tns.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/examples/CMakeFiles/tns.dir/build.make src/examples/CMakeFiles/tns.dir/tns.cpp.s
 .PHONY : tns.cpp.s
 
 # Help Target
@@ -1329,6 +1329,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /paralution/paralution-1.1.0/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

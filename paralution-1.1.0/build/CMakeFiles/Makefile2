@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /paralution/paralution-1.1.0
+CMAKE_SOURCE_DIR = /paralution/para-2.0/paralution-1.1.0
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /paralution/paralution-1.1.0/build
+CMAKE_BINARY_DIR = /paralution/para-2.0/paralution-1.1.0/build
 
 #=============================================================================
 # Directory level rules for directory src
@@ -84,7 +84,7 @@ src/preinstall:
 src/CMakeFiles/paralution.dir/all:
 	$(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/depend
 	$(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88 "Built target paralution"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89 "Built target paralution"
 .PHONY : src/CMakeFiles/paralution.dir/all
 
 # Include target in all.
@@ -94,9 +94,9 @@ all: src/CMakeFiles/paralution.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/paralution.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 53
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 57
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/paralution.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/paralution.dir/rule
 
 # Convenience name for target.
@@ -187,7 +187,7 @@ src/examples/preinstall:
 src/examples/CMakeFiles/stencil.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/stencil.dir/build.make src/examples/CMakeFiles/stencil.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/stencil.dir/build.make src/examples/CMakeFiles/stencil.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=97,98 "Built target stencil"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=97,98 "Built target stencil"
 .PHONY : src/examples/CMakeFiles/stencil.dir/all
 
 # Include target in all.
@@ -197,9 +197,9 @@ all: src/examples/CMakeFiles/stencil.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/stencil.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/stencil.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/stencil.dir/rule
 
 # Convenience name for target.
@@ -224,7 +224,7 @@ clean: src/examples/CMakeFiles/stencil.dir/clean
 src/examples/CMakeFiles/assembly2.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/assembly2.dir/build.make src/examples/CMakeFiles/assembly2.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/assembly2.dir/build.make src/examples/CMakeFiles/assembly2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=6,7 "Built target assembly2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=6 "Built target assembly2"
 .PHONY : src/examples/CMakeFiles/assembly2.dir/all
 
 # Include target in all.
@@ -234,9 +234,9 @@ all: src/examples/CMakeFiles/assembly2.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/assembly2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/assembly2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/assembly2.dir/rule
 
 # Convenience name for target.
@@ -261,7 +261,7 @@ clean: src/examples/CMakeFiles/assembly2.dir/clean
 src/examples/CMakeFiles/assembly.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/assembly.dir/build.make src/examples/CMakeFiles/assembly.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/assembly.dir/build.make src/examples/CMakeFiles/assembly.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=4,5 "Built target assembly"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=4,5 "Built target assembly"
 .PHONY : src/examples/CMakeFiles/assembly.dir/all
 
 # Include target in all.
@@ -271,9 +271,9 @@ all: src/examples/CMakeFiles/assembly.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/assembly.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/assembly.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/assembly.dir/rule
 
 # Convenience name for target.
@@ -298,7 +298,7 @@ clean: src/examples/CMakeFiles/assembly.dir/clean
 src/examples/CMakeFiles/async.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/async.dir/build.make src/examples/CMakeFiles/async.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/async.dir/build.make src/examples/CMakeFiles/async.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=8,9 "Built target async"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=7,8 "Built target async"
 .PHONY : src/examples/CMakeFiles/async.dir/all
 
 # Include target in all.
@@ -308,9 +308,9 @@ all: src/examples/CMakeFiles/async.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/async.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/async.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/async.dir/rule
 
 # Convenience name for target.
@@ -335,7 +335,7 @@ clean: src/examples/CMakeFiles/async.dir/clean
 src/examples/CMakeFiles/power-method.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/power-method.dir/build.make src/examples/CMakeFiles/power-method.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/power-method.dir/build.make src/examples/CMakeFiles/power-method.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=89,90 "Built target power-method"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=90,91 "Built target power-method"
 .PHONY : src/examples/CMakeFiles/power-method.dir/all
 
 # Include target in all.
@@ -345,9 +345,9 @@ all: src/examples/CMakeFiles/power-method.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/power-method.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/power-method.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/power-method.dir/rule
 
 # Convenience name for target.
@@ -372,7 +372,7 @@ clean: src/examples/CMakeFiles/power-method.dir/clean
 src/examples/CMakeFiles/cg.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/cg.dir/build.make src/examples/CMakeFiles/cg.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/cg.dir/build.make src/examples/CMakeFiles/cg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=15,16 "Built target cg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=14,15 "Built target cg"
 .PHONY : src/examples/CMakeFiles/cg.dir/all
 
 # Include target in all.
@@ -382,9 +382,9 @@ all: src/examples/CMakeFiles/cg.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/cg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/cg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/cg.dir/rule
 
 # Convenience name for target.
@@ -409,7 +409,7 @@ clean: src/examples/CMakeFiles/cg.dir/clean
 src/examples/CMakeFiles/complex.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/complex.dir/build.make src/examples/CMakeFiles/complex.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/complex.dir/build.make src/examples/CMakeFiles/complex.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=21,22 "Built target complex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=19,20 "Built target complex"
 .PHONY : src/examples/CMakeFiles/complex.dir/all
 
 # Include target in all.
@@ -419,9 +419,9 @@ all: src/examples/CMakeFiles/complex.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/complex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/complex.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/complex.dir/rule
 
 # Convenience name for target.
@@ -446,7 +446,7 @@ clean: src/examples/CMakeFiles/complex.dir/clean
 src/examples/CMakeFiles/cg-amg.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/cg-amg.dir/build.make src/examples/CMakeFiles/cg-amg.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/cg-amg.dir/build.make src/examples/CMakeFiles/cg-amg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=17,18 "Built target cg-amg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=16 "Built target cg-amg"
 .PHONY : src/examples/CMakeFiles/cg-amg.dir/all
 
 # Include target in all.
@@ -456,9 +456,9 @@ all: src/examples/CMakeFiles/cg-amg.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/cg-amg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/cg-amg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/cg-amg.dir/rule
 
 # Convenience name for target.
@@ -483,7 +483,7 @@ clean: src/examples/CMakeFiles/cg-amg.dir/clean
 src/examples/CMakeFiles/amg.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/amg.dir/build.make src/examples/CMakeFiles/amg.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/amg.dir/build.make src/examples/CMakeFiles/amg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=1 "Built target amg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=1 "Built target amg"
 .PHONY : src/examples/CMakeFiles/amg.dir/all
 
 # Include target in all.
@@ -493,9 +493,9 @@ all: src/examples/CMakeFiles/amg.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/amg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/amg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/amg.dir/rule
 
 # Convenience name for target.
@@ -520,7 +520,7 @@ clean: src/examples/CMakeFiles/amg.dir/clean
 src/examples/CMakeFiles/sira.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/sira.dir/build.make src/examples/CMakeFiles/sira.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/sira.dir/build.make src/examples/CMakeFiles/sira.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=93,94 "Built target sira"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=94 "Built target sira"
 .PHONY : src/examples/CMakeFiles/sira.dir/all
 
 # Include target in all.
@@ -530,9 +530,9 @@ all: src/examples/CMakeFiles/sira.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/sira.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/sira.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/sira.dir/rule
 
 # Convenience name for target.
@@ -557,7 +557,7 @@ clean: src/examples/CMakeFiles/sira.dir/clean
 src/examples/CMakeFiles/simple-spmv.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/simple-spmv.dir/build.make src/examples/CMakeFiles/simple-spmv.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/simple-spmv.dir/build.make src/examples/CMakeFiles/simple-spmv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=91,92 "Built target simple-spmv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=92,93 "Built target simple-spmv"
 .PHONY : src/examples/CMakeFiles/simple-spmv.dir/all
 
 # Include target in all.
@@ -567,9 +567,9 @@ all: src/examples/CMakeFiles/simple-spmv.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/simple-spmv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/simple-spmv.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/simple-spmv.dir/rule
 
 # Convenience name for target.
@@ -594,7 +594,7 @@ clean: src/examples/CMakeFiles/simple-spmv.dir/clean
 src/examples/CMakeFiles/benchmark.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/benchmark.dir/build.make src/examples/CMakeFiles/benchmark.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/benchmark.dir/build.make src/examples/CMakeFiles/benchmark.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=10,11 "Built target benchmark"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=9,10 "Built target benchmark"
 .PHONY : src/examples/CMakeFiles/benchmark.dir/all
 
 # Include target in all.
@@ -604,9 +604,9 @@ all: src/examples/CMakeFiles/benchmark.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/benchmark.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/benchmark.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/benchmark.dir/rule
 
 # Convenience name for target.
@@ -631,7 +631,7 @@ clean: src/examples/CMakeFiles/benchmark.dir/clean
 src/examples/CMakeFiles/cmk.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/cmk.dir/build.make src/examples/CMakeFiles/cmk.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/cmk.dir/build.make src/examples/CMakeFiles/cmk.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=19,20 "Built target cmk"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=17,18 "Built target cmk"
 .PHONY : src/examples/CMakeFiles/cmk.dir/all
 
 # Include target in all.
@@ -641,9 +641,9 @@ all: src/examples/CMakeFiles/cmk.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/cmk.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/cmk.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/cmk.dir/rule
 
 # Convenience name for target.
@@ -668,7 +668,7 @@ clean: src/examples/CMakeFiles/cmk.dir/clean
 src/examples/CMakeFiles/mixed-precision.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/mixed-precision.dir/build.make src/examples/CMakeFiles/mixed-precision.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/mixed-precision.dir/build.make src/examples/CMakeFiles/mixed-precision.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=34,35 "Built target mixed-precision"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=31,32 "Built target mixed-precision"
 .PHONY : src/examples/CMakeFiles/mixed-precision.dir/all
 
 # Include target in all.
@@ -678,9 +678,9 @@ all: src/examples/CMakeFiles/mixed-precision.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/mixed-precision.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/mixed-precision.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/mixed-precision.dir/rule
 
 # Convenience name for target.
@@ -705,7 +705,7 @@ clean: src/examples/CMakeFiles/mixed-precision.dir/clean
 src/examples/CMakeFiles/dpcg.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/dpcg.dir/build.make src/examples/CMakeFiles/dpcg.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/dpcg.dir/build.make src/examples/CMakeFiles/dpcg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=25,26 "Built target dpcg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=23 "Built target dpcg"
 .PHONY : src/examples/CMakeFiles/dpcg.dir/all
 
 # Include target in all.
@@ -715,9 +715,9 @@ all: src/examples/CMakeFiles/dpcg.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/dpcg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/dpcg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/dpcg.dir/rule
 
 # Convenience name for target.
@@ -742,7 +742,7 @@ clean: src/examples/CMakeFiles/dpcg.dir/clean
 src/examples/CMakeFiles/idr.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/idr.dir/build.make src/examples/CMakeFiles/idr.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/idr.dir/build.make src/examples/CMakeFiles/idr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=30,31 "Built target idr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=28 "Built target idr"
 .PHONY : src/examples/CMakeFiles/idr.dir/all
 
 # Include target in all.
@@ -752,9 +752,9 @@ all: src/examples/CMakeFiles/idr.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/idr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/idr.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/idr.dir/rule
 
 # Convenience name for target.
@@ -779,7 +779,7 @@ clean: src/examples/CMakeFiles/idr.dir/clean
 src/examples/CMakeFiles/gmres.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/gmres.dir/build.make src/examples/CMakeFiles/gmres.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/gmres.dir/build.make src/examples/CMakeFiles/gmres.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=29 "Built target gmres"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=26,27 "Built target gmres"
 .PHONY : src/examples/CMakeFiles/gmres.dir/all
 
 # Include target in all.
@@ -789,9 +789,9 @@ all: src/examples/CMakeFiles/gmres.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/gmres.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/gmres.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/gmres.dir/rule
 
 # Convenience name for target.
@@ -816,7 +816,7 @@ clean: src/examples/CMakeFiles/gmres.dir/clean
 src/examples/CMakeFiles/sp-precond.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/sp-precond.dir/build.make src/examples/CMakeFiles/sp-precond.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/sp-precond.dir/build.make src/examples/CMakeFiles/sp-precond.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=95,96 "Built target sp-precond"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=95,96 "Built target sp-precond"
 .PHONY : src/examples/CMakeFiles/sp-precond.dir/all
 
 # Include target in all.
@@ -826,9 +826,9 @@ all: src/examples/CMakeFiles/sp-precond.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/sp-precond.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/sp-precond.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/sp-precond.dir/rule
 
 # Convenience name for target.
@@ -853,7 +853,7 @@ clean: src/examples/CMakeFiles/sp-precond.dir/clean
 src/examples/CMakeFiles/block-precond.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/block-precond.dir/build.make src/examples/CMakeFiles/block-precond.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/block-precond.dir/build.make src/examples/CMakeFiles/block-precond.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=14 "Built target block-precond"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=12,13 "Built target block-precond"
 .PHONY : src/examples/CMakeFiles/block-precond.dir/all
 
 # Include target in all.
@@ -863,9 +863,9 @@ all: src/examples/CMakeFiles/block-precond.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/block-precond.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 54
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/block-precond.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/block-precond.dir/rule
 
 # Convenience name for target.
@@ -890,7 +890,7 @@ clean: src/examples/CMakeFiles/block-precond.dir/clean
 src/examples/CMakeFiles/bicgstab.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/bicgstab.dir/build.make src/examples/CMakeFiles/bicgstab.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/bicgstab.dir/build.make src/examples/CMakeFiles/bicgstab.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=12,13 "Built target bicgstab"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=11 "Built target bicgstab"
 .PHONY : src/examples/CMakeFiles/bicgstab.dir/all
 
 # Include target in all.
@@ -900,9 +900,9 @@ all: src/examples/CMakeFiles/bicgstab.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/bicgstab.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 58
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/bicgstab.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/bicgstab.dir/rule
 
 # Convenience name for target.
@@ -927,7 +927,7 @@ clean: src/examples/CMakeFiles/bicgstab.dir/clean
 src/examples/CMakeFiles/as-precond.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/as-precond.dir/build.make src/examples/CMakeFiles/as-precond.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/as-precond.dir/build.make src/examples/CMakeFiles/as-precond.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=2,3 "Built target as-precond"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=2,3 "Built target as-precond"
 .PHONY : src/examples/CMakeFiles/as-precond.dir/all
 
 # Include target in all.
@@ -937,9 +937,9 @@ all: src/examples/CMakeFiles/as-precond.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/as-precond.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/as-precond.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/as-precond.dir/rule
 
 # Convenience name for target.
@@ -964,7 +964,7 @@ clean: src/examples/CMakeFiles/as-precond.dir/clean
 src/examples/CMakeFiles/me-preconditioner.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/me-preconditioner.dir/build.make src/examples/CMakeFiles/me-preconditioner.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/me-preconditioner.dir/build.make src/examples/CMakeFiles/me-preconditioner.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=32,33 "Built target me-preconditioner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=29,30 "Built target me-preconditioner"
 .PHONY : src/examples/CMakeFiles/me-preconditioner.dir/all
 
 # Include target in all.
@@ -974,9 +974,9 @@ all: src/examples/CMakeFiles/me-preconditioner.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/me-preconditioner.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/me-preconditioner.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/me-preconditioner.dir/rule
 
 # Convenience name for target.
@@ -1001,7 +1001,7 @@ clean: src/examples/CMakeFiles/me-preconditioner.dir/clean
 src/examples/CMakeFiles/tns.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/tns.dir/build.make src/examples/CMakeFiles/tns.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/tns.dir/build.make src/examples/CMakeFiles/tns.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=99,100 "Built target tns"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=99,100 "Built target tns"
 .PHONY : src/examples/CMakeFiles/tns.dir/all
 
 # Include target in all.
@@ -1011,9 +1011,9 @@ all: src/examples/CMakeFiles/tns.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/tns.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/tns.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/tns.dir/rule
 
 # Convenience name for target.
@@ -1038,7 +1038,7 @@ clean: src/examples/CMakeFiles/tns.dir/clean
 src/examples/CMakeFiles/direct.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/direct.dir/build.make src/examples/CMakeFiles/direct.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/direct.dir/build.make src/examples/CMakeFiles/direct.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=23,24 "Built target direct"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=21,22 "Built target direct"
 .PHONY : src/examples/CMakeFiles/direct.dir/all
 
 # Include target in all.
@@ -1048,9 +1048,9 @@ all: src/examples/CMakeFiles/direct.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/direct.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/direct.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/direct.dir/rule
 
 # Convenience name for target.
@@ -1075,7 +1075,7 @@ clean: src/examples/CMakeFiles/direct.dir/clean
 src/examples/CMakeFiles/fixed-point.dir/all: src/CMakeFiles/paralution.dir/all
 	$(MAKE) -f src/examples/CMakeFiles/fixed-point.dir/build.make src/examples/CMakeFiles/fixed-point.dir/depend
 	$(MAKE) -f src/examples/CMakeFiles/fixed-point.dir/build.make src/examples/CMakeFiles/fixed-point.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=27,28 "Built target fixed-point"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=24,25 "Built target fixed-point"
 .PHONY : src/examples/CMakeFiles/fixed-point.dir/all
 
 # Include target in all.
@@ -1085,9 +1085,9 @@ all: src/examples/CMakeFiles/fixed-point.dir/all
 
 # Build rule for subdir invocation for target.
 src/examples/CMakeFiles/fixed-point.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 55
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 59
 	$(MAKE) -f CMakeFiles/Makefile2 src/examples/CMakeFiles/fixed-point.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : src/examples/CMakeFiles/fixed-point.dir/rule
 
 # Convenience name for target.

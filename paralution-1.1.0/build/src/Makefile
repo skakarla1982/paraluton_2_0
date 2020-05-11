@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /paralution/paralution-1.1.0
+CMAKE_SOURCE_DIR = /paralution/para-2.0/paralution-1.1.0
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /paralution/paralution-1.1.0/build
+CMAKE_BINARY_DIR = /paralution/para-2.0/paralution-1.1.0/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -70,8 +70,8 @@ install/strip/fast: preinstall/fast
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /paralution/paralution-1.1.0/build && $(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles /paralution/paralution-1.1.0/build/src/CMakeFiles/progress.marks
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/paralution-1.1.0/build/CMakeFiles 0
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/progress.marks
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /paralution/para-2.0/paralution-1.1.0/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /paralution/paralution-1.1.0/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/paralution.dir/rule:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/paralution.dir/rule
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/paralution.dir/rule
 .PHONY : src/CMakeFiles/paralution.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ paralution: src/CMakeFiles/paralution.dir/rule
 
 # fast build rule for target.
 paralution/fast:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/build
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/build
 .PHONY : paralution/fast
 
 base/backend_manager.o: base/backend_manager.cpp.o
@@ -177,7 +177,7 @@ base/backend_manager.o: base/backend_manager.cpp.o
 
 # target to build an object file
 base/backend_manager.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/backend_manager.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/backend_manager.cpp.o
 .PHONY : base/backend_manager.cpp.o
 
 base/backend_manager.i: base/backend_manager.cpp.i
@@ -186,7 +186,7 @@ base/backend_manager.i: base/backend_manager.cpp.i
 
 # target to preprocess a source file
 base/backend_manager.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/backend_manager.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/backend_manager.cpp.i
 .PHONY : base/backend_manager.cpp.i
 
 base/backend_manager.s: base/backend_manager.cpp.s
@@ -195,7 +195,7 @@ base/backend_manager.s: base/backend_manager.cpp.s
 
 # target to generate assembly for a file
 base/backend_manager.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/backend_manager.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/backend_manager.cpp.s
 .PHONY : base/backend_manager.cpp.s
 
 base/base_matrix.o: base/base_matrix.cpp.o
@@ -204,7 +204,7 @@ base/base_matrix.o: base/base_matrix.cpp.o
 
 # target to build an object file
 base/base_matrix.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_matrix.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_matrix.cpp.o
 .PHONY : base/base_matrix.cpp.o
 
 base/base_matrix.i: base/base_matrix.cpp.i
@@ -213,7 +213,7 @@ base/base_matrix.i: base/base_matrix.cpp.i
 
 # target to preprocess a source file
 base/base_matrix.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_matrix.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_matrix.cpp.i
 .PHONY : base/base_matrix.cpp.i
 
 base/base_matrix.s: base/base_matrix.cpp.s
@@ -222,7 +222,7 @@ base/base_matrix.s: base/base_matrix.cpp.s
 
 # target to generate assembly for a file
 base/base_matrix.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_matrix.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_matrix.cpp.s
 .PHONY : base/base_matrix.cpp.s
 
 base/base_paralution.o: base/base_paralution.cpp.o
@@ -231,7 +231,7 @@ base/base_paralution.o: base/base_paralution.cpp.o
 
 # target to build an object file
 base/base_paralution.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_paralution.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_paralution.cpp.o
 .PHONY : base/base_paralution.cpp.o
 
 base/base_paralution.i: base/base_paralution.cpp.i
@@ -240,7 +240,7 @@ base/base_paralution.i: base/base_paralution.cpp.i
 
 # target to preprocess a source file
 base/base_paralution.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_paralution.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_paralution.cpp.i
 .PHONY : base/base_paralution.cpp.i
 
 base/base_paralution.s: base/base_paralution.cpp.s
@@ -249,7 +249,7 @@ base/base_paralution.s: base/base_paralution.cpp.s
 
 # target to generate assembly for a file
 base/base_paralution.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_paralution.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_paralution.cpp.s
 .PHONY : base/base_paralution.cpp.s
 
 base/base_stencil.o: base/base_stencil.cpp.o
@@ -258,7 +258,7 @@ base/base_stencil.o: base/base_stencil.cpp.o
 
 # target to build an object file
 base/base_stencil.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_stencil.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_stencil.cpp.o
 .PHONY : base/base_stencil.cpp.o
 
 base/base_stencil.i: base/base_stencil.cpp.i
@@ -267,7 +267,7 @@ base/base_stencil.i: base/base_stencil.cpp.i
 
 # target to preprocess a source file
 base/base_stencil.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_stencil.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_stencil.cpp.i
 .PHONY : base/base_stencil.cpp.i
 
 base/base_stencil.s: base/base_stencil.cpp.s
@@ -276,7 +276,7 @@ base/base_stencil.s: base/base_stencil.cpp.s
 
 # target to generate assembly for a file
 base/base_stencil.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_stencil.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_stencil.cpp.s
 .PHONY : base/base_stencil.cpp.s
 
 base/base_vector.o: base/base_vector.cpp.o
@@ -285,7 +285,7 @@ base/base_vector.o: base/base_vector.cpp.o
 
 # target to build an object file
 base/base_vector.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_vector.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_vector.cpp.o
 .PHONY : base/base_vector.cpp.o
 
 base/base_vector.i: base/base_vector.cpp.i
@@ -294,7 +294,7 @@ base/base_vector.i: base/base_vector.cpp.i
 
 # target to preprocess a source file
 base/base_vector.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_vector.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_vector.cpp.i
 .PHONY : base/base_vector.cpp.i
 
 base/base_vector.s: base/base_vector.cpp.s
@@ -303,7 +303,7 @@ base/base_vector.s: base/base_vector.cpp.s
 
 # target to generate assembly for a file
 base/base_vector.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_vector.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/base_vector.cpp.s
 .PHONY : base/base_vector.cpp.s
 
 base/host/host_affinity.o: base/host/host_affinity.cpp.o
@@ -312,7 +312,7 @@ base/host/host_affinity.o: base/host/host_affinity.cpp.o
 
 # target to build an object file
 base/host/host_affinity.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_affinity.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_affinity.cpp.o
 .PHONY : base/host/host_affinity.cpp.o
 
 base/host/host_affinity.i: base/host/host_affinity.cpp.i
@@ -321,7 +321,7 @@ base/host/host_affinity.i: base/host/host_affinity.cpp.i
 
 # target to preprocess a source file
 base/host/host_affinity.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_affinity.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_affinity.cpp.i
 .PHONY : base/host/host_affinity.cpp.i
 
 base/host/host_affinity.s: base/host/host_affinity.cpp.s
@@ -330,7 +330,7 @@ base/host/host_affinity.s: base/host/host_affinity.cpp.s
 
 # target to generate assembly for a file
 base/host/host_affinity.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_affinity.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_affinity.cpp.s
 .PHONY : base/host/host_affinity.cpp.s
 
 base/host/host_conversion.o: base/host/host_conversion.cpp.o
@@ -339,7 +339,7 @@ base/host/host_conversion.o: base/host/host_conversion.cpp.o
 
 # target to build an object file
 base/host/host_conversion.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_conversion.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_conversion.cpp.o
 .PHONY : base/host/host_conversion.cpp.o
 
 base/host/host_conversion.i: base/host/host_conversion.cpp.i
@@ -348,7 +348,7 @@ base/host/host_conversion.i: base/host/host_conversion.cpp.i
 
 # target to preprocess a source file
 base/host/host_conversion.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_conversion.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_conversion.cpp.i
 .PHONY : base/host/host_conversion.cpp.i
 
 base/host/host_conversion.s: base/host/host_conversion.cpp.s
@@ -357,7 +357,7 @@ base/host/host_conversion.s: base/host/host_conversion.cpp.s
 
 # target to generate assembly for a file
 base/host/host_conversion.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_conversion.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_conversion.cpp.s
 .PHONY : base/host/host_conversion.cpp.s
 
 base/host/host_io.o: base/host/host_io.cpp.o
@@ -366,7 +366,7 @@ base/host/host_io.o: base/host/host_io.cpp.o
 
 # target to build an object file
 base/host/host_io.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_io.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_io.cpp.o
 .PHONY : base/host/host_io.cpp.o
 
 base/host/host_io.i: base/host/host_io.cpp.i
@@ -375,7 +375,7 @@ base/host/host_io.i: base/host/host_io.cpp.i
 
 # target to preprocess a source file
 base/host/host_io.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_io.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_io.cpp.i
 .PHONY : base/host/host_io.cpp.i
 
 base/host/host_io.s: base/host/host_io.cpp.s
@@ -384,7 +384,7 @@ base/host/host_io.s: base/host/host_io.cpp.s
 
 # target to generate assembly for a file
 base/host/host_io.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_io.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_io.cpp.s
 .PHONY : base/host/host_io.cpp.s
 
 base/host/host_matrix_bcsr.o: base/host/host_matrix_bcsr.cpp.o
@@ -393,7 +393,7 @@ base/host/host_matrix_bcsr.o: base/host/host_matrix_bcsr.cpp.o
 
 # target to build an object file
 base/host/host_matrix_bcsr.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.o
 .PHONY : base/host/host_matrix_bcsr.cpp.o
 
 base/host/host_matrix_bcsr.i: base/host/host_matrix_bcsr.cpp.i
@@ -402,7 +402,7 @@ base/host/host_matrix_bcsr.i: base/host/host_matrix_bcsr.cpp.i
 
 # target to preprocess a source file
 base/host/host_matrix_bcsr.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.i
 .PHONY : base/host/host_matrix_bcsr.cpp.i
 
 base/host/host_matrix_bcsr.s: base/host/host_matrix_bcsr.cpp.s
@@ -411,7 +411,7 @@ base/host/host_matrix_bcsr.s: base/host/host_matrix_bcsr.cpp.s
 
 # target to generate assembly for a file
 base/host/host_matrix_bcsr.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.s
 .PHONY : base/host/host_matrix_bcsr.cpp.s
 
 base/host/host_matrix_coo.o: base/host/host_matrix_coo.cpp.o
@@ -420,7 +420,7 @@ base/host/host_matrix_coo.o: base/host/host_matrix_coo.cpp.o
 
 # target to build an object file
 base/host/host_matrix_coo.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.o
 .PHONY : base/host/host_matrix_coo.cpp.o
 
 base/host/host_matrix_coo.i: base/host/host_matrix_coo.cpp.i
@@ -429,7 +429,7 @@ base/host/host_matrix_coo.i: base/host/host_matrix_coo.cpp.i
 
 # target to preprocess a source file
 base/host/host_matrix_coo.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.i
 .PHONY : base/host/host_matrix_coo.cpp.i
 
 base/host/host_matrix_coo.s: base/host/host_matrix_coo.cpp.s
@@ -438,7 +438,7 @@ base/host/host_matrix_coo.s: base/host/host_matrix_coo.cpp.s
 
 # target to generate assembly for a file
 base/host/host_matrix_coo.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.s
 .PHONY : base/host/host_matrix_coo.cpp.s
 
 base/host/host_matrix_csr.o: base/host/host_matrix_csr.cpp.o
@@ -447,7 +447,7 @@ base/host/host_matrix_csr.o: base/host/host_matrix_csr.cpp.o
 
 # target to build an object file
 base/host/host_matrix_csr.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.o
 .PHONY : base/host/host_matrix_csr.cpp.o
 
 base/host/host_matrix_csr.i: base/host/host_matrix_csr.cpp.i
@@ -456,7 +456,7 @@ base/host/host_matrix_csr.i: base/host/host_matrix_csr.cpp.i
 
 # target to preprocess a source file
 base/host/host_matrix_csr.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.i
 .PHONY : base/host/host_matrix_csr.cpp.i
 
 base/host/host_matrix_csr.s: base/host/host_matrix_csr.cpp.s
@@ -465,7 +465,7 @@ base/host/host_matrix_csr.s: base/host/host_matrix_csr.cpp.s
 
 # target to generate assembly for a file
 base/host/host_matrix_csr.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.s
 .PHONY : base/host/host_matrix_csr.cpp.s
 
 base/host/host_matrix_dense.o: base/host/host_matrix_dense.cpp.o
@@ -474,7 +474,7 @@ base/host/host_matrix_dense.o: base/host/host_matrix_dense.cpp.o
 
 # target to build an object file
 base/host/host_matrix_dense.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.o
 .PHONY : base/host/host_matrix_dense.cpp.o
 
 base/host/host_matrix_dense.i: base/host/host_matrix_dense.cpp.i
@@ -483,7 +483,7 @@ base/host/host_matrix_dense.i: base/host/host_matrix_dense.cpp.i
 
 # target to preprocess a source file
 base/host/host_matrix_dense.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.i
 .PHONY : base/host/host_matrix_dense.cpp.i
 
 base/host/host_matrix_dense.s: base/host/host_matrix_dense.cpp.s
@@ -492,7 +492,7 @@ base/host/host_matrix_dense.s: base/host/host_matrix_dense.cpp.s
 
 # target to generate assembly for a file
 base/host/host_matrix_dense.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.s
 .PHONY : base/host/host_matrix_dense.cpp.s
 
 base/host/host_matrix_dia.o: base/host/host_matrix_dia.cpp.o
@@ -501,7 +501,7 @@ base/host/host_matrix_dia.o: base/host/host_matrix_dia.cpp.o
 
 # target to build an object file
 base/host/host_matrix_dia.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.o
 .PHONY : base/host/host_matrix_dia.cpp.o
 
 base/host/host_matrix_dia.i: base/host/host_matrix_dia.cpp.i
@@ -510,7 +510,7 @@ base/host/host_matrix_dia.i: base/host/host_matrix_dia.cpp.i
 
 # target to preprocess a source file
 base/host/host_matrix_dia.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.i
 .PHONY : base/host/host_matrix_dia.cpp.i
 
 base/host/host_matrix_dia.s: base/host/host_matrix_dia.cpp.s
@@ -519,7 +519,7 @@ base/host/host_matrix_dia.s: base/host/host_matrix_dia.cpp.s
 
 # target to generate assembly for a file
 base/host/host_matrix_dia.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.s
 .PHONY : base/host/host_matrix_dia.cpp.s
 
 base/host/host_matrix_ell.o: base/host/host_matrix_ell.cpp.o
@@ -528,7 +528,7 @@ base/host/host_matrix_ell.o: base/host/host_matrix_ell.cpp.o
 
 # target to build an object file
 base/host/host_matrix_ell.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.o
 .PHONY : base/host/host_matrix_ell.cpp.o
 
 base/host/host_matrix_ell.i: base/host/host_matrix_ell.cpp.i
@@ -537,7 +537,7 @@ base/host/host_matrix_ell.i: base/host/host_matrix_ell.cpp.i
 
 # target to preprocess a source file
 base/host/host_matrix_ell.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.i
 .PHONY : base/host/host_matrix_ell.cpp.i
 
 base/host/host_matrix_ell.s: base/host/host_matrix_ell.cpp.s
@@ -546,7 +546,7 @@ base/host/host_matrix_ell.s: base/host/host_matrix_ell.cpp.s
 
 # target to generate assembly for a file
 base/host/host_matrix_ell.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.s
 .PHONY : base/host/host_matrix_ell.cpp.s
 
 base/host/host_matrix_hyb.o: base/host/host_matrix_hyb.cpp.o
@@ -555,7 +555,7 @@ base/host/host_matrix_hyb.o: base/host/host_matrix_hyb.cpp.o
 
 # target to build an object file
 base/host/host_matrix_hyb.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.o
 .PHONY : base/host/host_matrix_hyb.cpp.o
 
 base/host/host_matrix_hyb.i: base/host/host_matrix_hyb.cpp.i
@@ -564,7 +564,7 @@ base/host/host_matrix_hyb.i: base/host/host_matrix_hyb.cpp.i
 
 # target to preprocess a source file
 base/host/host_matrix_hyb.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.i
 .PHONY : base/host/host_matrix_hyb.cpp.i
 
 base/host/host_matrix_hyb.s: base/host/host_matrix_hyb.cpp.s
@@ -573,7 +573,7 @@ base/host/host_matrix_hyb.s: base/host/host_matrix_hyb.cpp.s
 
 # target to generate assembly for a file
 base/host/host_matrix_hyb.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.s
 .PHONY : base/host/host_matrix_hyb.cpp.s
 
 base/host/host_matrix_mcsr.o: base/host/host_matrix_mcsr.cpp.o
@@ -582,7 +582,7 @@ base/host/host_matrix_mcsr.o: base/host/host_matrix_mcsr.cpp.o
 
 # target to build an object file
 base/host/host_matrix_mcsr.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.o
 .PHONY : base/host/host_matrix_mcsr.cpp.o
 
 base/host/host_matrix_mcsr.i: base/host/host_matrix_mcsr.cpp.i
@@ -591,7 +591,7 @@ base/host/host_matrix_mcsr.i: base/host/host_matrix_mcsr.cpp.i
 
 # target to preprocess a source file
 base/host/host_matrix_mcsr.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.i
 .PHONY : base/host/host_matrix_mcsr.cpp.i
 
 base/host/host_matrix_mcsr.s: base/host/host_matrix_mcsr.cpp.s
@@ -600,7 +600,7 @@ base/host/host_matrix_mcsr.s: base/host/host_matrix_mcsr.cpp.s
 
 # target to generate assembly for a file
 base/host/host_matrix_mcsr.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.s
 .PHONY : base/host/host_matrix_mcsr.cpp.s
 
 base/host/host_stencil_laplace2d.o: base/host/host_stencil_laplace2d.cpp.o
@@ -609,7 +609,7 @@ base/host/host_stencil_laplace2d.o: base/host/host_stencil_laplace2d.cpp.o
 
 # target to build an object file
 base/host/host_stencil_laplace2d.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.o
 .PHONY : base/host/host_stencil_laplace2d.cpp.o
 
 base/host/host_stencil_laplace2d.i: base/host/host_stencil_laplace2d.cpp.i
@@ -618,7 +618,7 @@ base/host/host_stencil_laplace2d.i: base/host/host_stencil_laplace2d.cpp.i
 
 # target to preprocess a source file
 base/host/host_stencil_laplace2d.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.i
 .PHONY : base/host/host_stencil_laplace2d.cpp.i
 
 base/host/host_stencil_laplace2d.s: base/host/host_stencil_laplace2d.cpp.s
@@ -627,7 +627,7 @@ base/host/host_stencil_laplace2d.s: base/host/host_stencil_laplace2d.cpp.s
 
 # target to generate assembly for a file
 base/host/host_stencil_laplace2d.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.s
 .PHONY : base/host/host_stencil_laplace2d.cpp.s
 
 base/host/host_vector.o: base/host/host_vector.cpp.o
@@ -636,7 +636,7 @@ base/host/host_vector.o: base/host/host_vector.cpp.o
 
 # target to build an object file
 base/host/host_vector.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_vector.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_vector.cpp.o
 .PHONY : base/host/host_vector.cpp.o
 
 base/host/host_vector.i: base/host/host_vector.cpp.i
@@ -645,7 +645,7 @@ base/host/host_vector.i: base/host/host_vector.cpp.i
 
 # target to preprocess a source file
 base/host/host_vector.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_vector.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_vector.cpp.i
 .PHONY : base/host/host_vector.cpp.i
 
 base/host/host_vector.s: base/host/host_vector.cpp.s
@@ -654,7 +654,7 @@ base/host/host_vector.s: base/host/host_vector.cpp.s
 
 # target to generate assembly for a file
 base/host/host_vector.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_vector.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/host/host_vector.cpp.s
 .PHONY : base/host/host_vector.cpp.s
 
 base/local_matrix.o: base/local_matrix.cpp.o
@@ -663,7 +663,7 @@ base/local_matrix.o: base/local_matrix.cpp.o
 
 # target to build an object file
 base/local_matrix.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_matrix.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_matrix.cpp.o
 .PHONY : base/local_matrix.cpp.o
 
 base/local_matrix.i: base/local_matrix.cpp.i
@@ -672,7 +672,7 @@ base/local_matrix.i: base/local_matrix.cpp.i
 
 # target to preprocess a source file
 base/local_matrix.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_matrix.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_matrix.cpp.i
 .PHONY : base/local_matrix.cpp.i
 
 base/local_matrix.s: base/local_matrix.cpp.s
@@ -681,7 +681,7 @@ base/local_matrix.s: base/local_matrix.cpp.s
 
 # target to generate assembly for a file
 base/local_matrix.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_matrix.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_matrix.cpp.s
 .PHONY : base/local_matrix.cpp.s
 
 base/local_stencil.o: base/local_stencil.cpp.o
@@ -690,7 +690,7 @@ base/local_stencil.o: base/local_stencil.cpp.o
 
 # target to build an object file
 base/local_stencil.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_stencil.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_stencil.cpp.o
 .PHONY : base/local_stencil.cpp.o
 
 base/local_stencil.i: base/local_stencil.cpp.i
@@ -699,7 +699,7 @@ base/local_stencil.i: base/local_stencil.cpp.i
 
 # target to preprocess a source file
 base/local_stencil.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_stencil.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_stencil.cpp.i
 .PHONY : base/local_stencil.cpp.i
 
 base/local_stencil.s: base/local_stencil.cpp.s
@@ -708,7 +708,7 @@ base/local_stencil.s: base/local_stencil.cpp.s
 
 # target to generate assembly for a file
 base/local_stencil.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_stencil.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_stencil.cpp.s
 .PHONY : base/local_stencil.cpp.s
 
 base/local_vector.o: base/local_vector.cpp.o
@@ -717,7 +717,7 @@ base/local_vector.o: base/local_vector.cpp.o
 
 # target to build an object file
 base/local_vector.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_vector.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_vector.cpp.o
 .PHONY : base/local_vector.cpp.o
 
 base/local_vector.i: base/local_vector.cpp.i
@@ -726,7 +726,7 @@ base/local_vector.i: base/local_vector.cpp.i
 
 # target to preprocess a source file
 base/local_vector.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_vector.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_vector.cpp.i
 .PHONY : base/local_vector.cpp.i
 
 base/local_vector.s: base/local_vector.cpp.s
@@ -735,7 +735,7 @@ base/local_vector.s: base/local_vector.cpp.s
 
 # target to generate assembly for a file
 base/local_vector.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_vector.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/local_vector.cpp.s
 .PHONY : base/local_vector.cpp.s
 
 base/operator.o: base/operator.cpp.o
@@ -744,7 +744,7 @@ base/operator.o: base/operator.cpp.o
 
 # target to build an object file
 base/operator.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/operator.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/operator.cpp.o
 .PHONY : base/operator.cpp.o
 
 base/operator.i: base/operator.cpp.i
@@ -753,7 +753,7 @@ base/operator.i: base/operator.cpp.i
 
 # target to preprocess a source file
 base/operator.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/operator.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/operator.cpp.i
 .PHONY : base/operator.cpp.i
 
 base/operator.s: base/operator.cpp.s
@@ -762,7 +762,7 @@ base/operator.s: base/operator.cpp.s
 
 # target to generate assembly for a file
 base/operator.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/operator.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/operator.cpp.s
 .PHONY : base/operator.cpp.s
 
 base/vector.o: base/vector.cpp.o
@@ -771,7 +771,7 @@ base/vector.o: base/vector.cpp.o
 
 # target to build an object file
 base/vector.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/vector.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/vector.cpp.o
 .PHONY : base/vector.cpp.o
 
 base/vector.i: base/vector.cpp.i
@@ -780,7 +780,7 @@ base/vector.i: base/vector.cpp.i
 
 # target to preprocess a source file
 base/vector.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/vector.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/vector.cpp.i
 .PHONY : base/vector.cpp.i
 
 base/vector.s: base/vector.cpp.s
@@ -789,7 +789,7 @@ base/vector.s: base/vector.cpp.s
 
 # target to generate assembly for a file
 base/vector.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/vector.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/base/vector.cpp.s
 .PHONY : base/vector.cpp.s
 
 solvers/chebyshev.o: solvers/chebyshev.cpp.o
@@ -798,7 +798,7 @@ solvers/chebyshev.o: solvers/chebyshev.cpp.o
 
 # target to build an object file
 solvers/chebyshev.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/chebyshev.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/chebyshev.cpp.o
 .PHONY : solvers/chebyshev.cpp.o
 
 solvers/chebyshev.i: solvers/chebyshev.cpp.i
@@ -807,7 +807,7 @@ solvers/chebyshev.i: solvers/chebyshev.cpp.i
 
 # target to preprocess a source file
 solvers/chebyshev.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/chebyshev.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/chebyshev.cpp.i
 .PHONY : solvers/chebyshev.cpp.i
 
 solvers/chebyshev.s: solvers/chebyshev.cpp.s
@@ -816,7 +816,7 @@ solvers/chebyshev.s: solvers/chebyshev.cpp.s
 
 # target to generate assembly for a file
 solvers/chebyshev.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/chebyshev.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/chebyshev.cpp.s
 .PHONY : solvers/chebyshev.cpp.s
 
 solvers/deflation/dpcg.o: solvers/deflation/dpcg.cpp.o
@@ -825,7 +825,7 @@ solvers/deflation/dpcg.o: solvers/deflation/dpcg.cpp.o
 
 # target to build an object file
 solvers/deflation/dpcg.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.o
 .PHONY : solvers/deflation/dpcg.cpp.o
 
 solvers/deflation/dpcg.i: solvers/deflation/dpcg.cpp.i
@@ -834,7 +834,7 @@ solvers/deflation/dpcg.i: solvers/deflation/dpcg.cpp.i
 
 # target to preprocess a source file
 solvers/deflation/dpcg.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.i
 .PHONY : solvers/deflation/dpcg.cpp.i
 
 solvers/deflation/dpcg.s: solvers/deflation/dpcg.cpp.s
@@ -843,7 +843,7 @@ solvers/deflation/dpcg.s: solvers/deflation/dpcg.cpp.s
 
 # target to generate assembly for a file
 solvers/deflation/dpcg.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.s
 .PHONY : solvers/deflation/dpcg.cpp.s
 
 solvers/direct/inversion.o: solvers/direct/inversion.cpp.o
@@ -852,7 +852,7 @@ solvers/direct/inversion.o: solvers/direct/inversion.cpp.o
 
 # target to build an object file
 solvers/direct/inversion.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.o
 .PHONY : solvers/direct/inversion.cpp.o
 
 solvers/direct/inversion.i: solvers/direct/inversion.cpp.i
@@ -861,7 +861,7 @@ solvers/direct/inversion.i: solvers/direct/inversion.cpp.i
 
 # target to preprocess a source file
 solvers/direct/inversion.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.i
 .PHONY : solvers/direct/inversion.cpp.i
 
 solvers/direct/inversion.s: solvers/direct/inversion.cpp.s
@@ -870,7 +870,7 @@ solvers/direct/inversion.s: solvers/direct/inversion.cpp.s
 
 # target to generate assembly for a file
 solvers/direct/inversion.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.s
 .PHONY : solvers/direct/inversion.cpp.s
 
 solvers/direct/lu.o: solvers/direct/lu.cpp.o
@@ -879,7 +879,7 @@ solvers/direct/lu.o: solvers/direct/lu.cpp.o
 
 # target to build an object file
 solvers/direct/lu.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/lu.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/lu.cpp.o
 .PHONY : solvers/direct/lu.cpp.o
 
 solvers/direct/lu.i: solvers/direct/lu.cpp.i
@@ -888,7 +888,7 @@ solvers/direct/lu.i: solvers/direct/lu.cpp.i
 
 # target to preprocess a source file
 solvers/direct/lu.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/lu.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/lu.cpp.i
 .PHONY : solvers/direct/lu.cpp.i
 
 solvers/direct/lu.s: solvers/direct/lu.cpp.s
@@ -897,7 +897,7 @@ solvers/direct/lu.s: solvers/direct/lu.cpp.s
 
 # target to generate assembly for a file
 solvers/direct/lu.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/lu.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/lu.cpp.s
 .PHONY : solvers/direct/lu.cpp.s
 
 solvers/direct/qr.o: solvers/direct/qr.cpp.o
@@ -906,7 +906,7 @@ solvers/direct/qr.o: solvers/direct/qr.cpp.o
 
 # target to build an object file
 solvers/direct/qr.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/qr.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/qr.cpp.o
 .PHONY : solvers/direct/qr.cpp.o
 
 solvers/direct/qr.i: solvers/direct/qr.cpp.i
@@ -915,7 +915,7 @@ solvers/direct/qr.i: solvers/direct/qr.cpp.i
 
 # target to preprocess a source file
 solvers/direct/qr.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/qr.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/qr.cpp.i
 .PHONY : solvers/direct/qr.cpp.i
 
 solvers/direct/qr.s: solvers/direct/qr.cpp.s
@@ -924,7 +924,7 @@ solvers/direct/qr.s: solvers/direct/qr.cpp.s
 
 # target to generate assembly for a file
 solvers/direct/qr.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/qr.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/direct/qr.cpp.s
 .PHONY : solvers/direct/qr.cpp.s
 
 solvers/eigenvalue/ampe_sira.o: solvers/eigenvalue/ampe_sira.cpp.o
@@ -933,7 +933,7 @@ solvers/eigenvalue/ampe_sira.o: solvers/eigenvalue/ampe_sira.cpp.o
 
 # target to build an object file
 solvers/eigenvalue/ampe_sira.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.o
 .PHONY : solvers/eigenvalue/ampe_sira.cpp.o
 
 solvers/eigenvalue/ampe_sira.i: solvers/eigenvalue/ampe_sira.cpp.i
@@ -942,7 +942,7 @@ solvers/eigenvalue/ampe_sira.i: solvers/eigenvalue/ampe_sira.cpp.i
 
 # target to preprocess a source file
 solvers/eigenvalue/ampe_sira.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.i
 .PHONY : solvers/eigenvalue/ampe_sira.cpp.i
 
 solvers/eigenvalue/ampe_sira.s: solvers/eigenvalue/ampe_sira.cpp.s
@@ -951,7 +951,7 @@ solvers/eigenvalue/ampe_sira.s: solvers/eigenvalue/ampe_sira.cpp.s
 
 # target to generate assembly for a file
 solvers/eigenvalue/ampe_sira.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.s
 .PHONY : solvers/eigenvalue/ampe_sira.cpp.s
 
 solvers/eigenvalue/cg_hn.o: solvers/eigenvalue/cg_hn.cpp.o
@@ -960,7 +960,7 @@ solvers/eigenvalue/cg_hn.o: solvers/eigenvalue/cg_hn.cpp.o
 
 # target to build an object file
 solvers/eigenvalue/cg_hn.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.o
 .PHONY : solvers/eigenvalue/cg_hn.cpp.o
 
 solvers/eigenvalue/cg_hn.i: solvers/eigenvalue/cg_hn.cpp.i
@@ -969,7 +969,7 @@ solvers/eigenvalue/cg_hn.i: solvers/eigenvalue/cg_hn.cpp.i
 
 # target to preprocess a source file
 solvers/eigenvalue/cg_hn.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.i
 .PHONY : solvers/eigenvalue/cg_hn.cpp.i
 
 solvers/eigenvalue/cg_hn.s: solvers/eigenvalue/cg_hn.cpp.s
@@ -978,7 +978,7 @@ solvers/eigenvalue/cg_hn.s: solvers/eigenvalue/cg_hn.cpp.s
 
 # target to generate assembly for a file
 solvers/eigenvalue/cg_hn.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.s
 .PHONY : solvers/eigenvalue/cg_hn.cpp.s
 
 solvers/iter_ctrl.o: solvers/iter_ctrl.cpp.o
@@ -987,7 +987,7 @@ solvers/iter_ctrl.o: solvers/iter_ctrl.cpp.o
 
 # target to build an object file
 solvers/iter_ctrl.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.o
 .PHONY : solvers/iter_ctrl.cpp.o
 
 solvers/iter_ctrl.i: solvers/iter_ctrl.cpp.i
@@ -996,7 +996,7 @@ solvers/iter_ctrl.i: solvers/iter_ctrl.cpp.i
 
 # target to preprocess a source file
 solvers/iter_ctrl.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.i
 .PHONY : solvers/iter_ctrl.cpp.i
 
 solvers/iter_ctrl.s: solvers/iter_ctrl.cpp.s
@@ -1005,7 +1005,7 @@ solvers/iter_ctrl.s: solvers/iter_ctrl.cpp.s
 
 # target to generate assembly for a file
 solvers/iter_ctrl.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.s
 .PHONY : solvers/iter_ctrl.cpp.s
 
 solvers/krylov/bicgstab.o: solvers/krylov/bicgstab.cpp.o
@@ -1014,7 +1014,7 @@ solvers/krylov/bicgstab.o: solvers/krylov/bicgstab.cpp.o
 
 # target to build an object file
 solvers/krylov/bicgstab.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.o
 .PHONY : solvers/krylov/bicgstab.cpp.o
 
 solvers/krylov/bicgstab.i: solvers/krylov/bicgstab.cpp.i
@@ -1023,7 +1023,7 @@ solvers/krylov/bicgstab.i: solvers/krylov/bicgstab.cpp.i
 
 # target to preprocess a source file
 solvers/krylov/bicgstab.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.i
 .PHONY : solvers/krylov/bicgstab.cpp.i
 
 solvers/krylov/bicgstab.s: solvers/krylov/bicgstab.cpp.s
@@ -1032,7 +1032,7 @@ solvers/krylov/bicgstab.s: solvers/krylov/bicgstab.cpp.s
 
 # target to generate assembly for a file
 solvers/krylov/bicgstab.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.s
 .PHONY : solvers/krylov/bicgstab.cpp.s
 
 solvers/krylov/cg.o: solvers/krylov/cg.cpp.o
@@ -1041,7 +1041,7 @@ solvers/krylov/cg.o: solvers/krylov/cg.cpp.o
 
 # target to build an object file
 solvers/krylov/cg.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.o
 .PHONY : solvers/krylov/cg.cpp.o
 
 solvers/krylov/cg.i: solvers/krylov/cg.cpp.i
@@ -1050,7 +1050,7 @@ solvers/krylov/cg.i: solvers/krylov/cg.cpp.i
 
 # target to preprocess a source file
 solvers/krylov/cg.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.i
 .PHONY : solvers/krylov/cg.cpp.i
 
 solvers/krylov/cg.s: solvers/krylov/cg.cpp.s
@@ -1059,7 +1059,7 @@ solvers/krylov/cg.s: solvers/krylov/cg.cpp.s
 
 # target to generate assembly for a file
 solvers/krylov/cg.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.s
 .PHONY : solvers/krylov/cg.cpp.s
 
 solvers/krylov/cr.o: solvers/krylov/cr.cpp.o
@@ -1068,7 +1068,7 @@ solvers/krylov/cr.o: solvers/krylov/cr.cpp.o
 
 # target to build an object file
 solvers/krylov/cr.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.o
 .PHONY : solvers/krylov/cr.cpp.o
 
 solvers/krylov/cr.i: solvers/krylov/cr.cpp.i
@@ -1077,7 +1077,7 @@ solvers/krylov/cr.i: solvers/krylov/cr.cpp.i
 
 # target to preprocess a source file
 solvers/krylov/cr.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.i
 .PHONY : solvers/krylov/cr.cpp.i
 
 solvers/krylov/cr.s: solvers/krylov/cr.cpp.s
@@ -1086,7 +1086,7 @@ solvers/krylov/cr.s: solvers/krylov/cr.cpp.s
 
 # target to generate assembly for a file
 solvers/krylov/cr.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.s
 .PHONY : solvers/krylov/cr.cpp.s
 
 solvers/krylov/fgmres.o: solvers/krylov/fgmres.cpp.o
@@ -1095,7 +1095,7 @@ solvers/krylov/fgmres.o: solvers/krylov/fgmres.cpp.o
 
 # target to build an object file
 solvers/krylov/fgmres.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.o
 .PHONY : solvers/krylov/fgmres.cpp.o
 
 solvers/krylov/fgmres.i: solvers/krylov/fgmres.cpp.i
@@ -1104,7 +1104,7 @@ solvers/krylov/fgmres.i: solvers/krylov/fgmres.cpp.i
 
 # target to preprocess a source file
 solvers/krylov/fgmres.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.i
 .PHONY : solvers/krylov/fgmres.cpp.i
 
 solvers/krylov/fgmres.s: solvers/krylov/fgmres.cpp.s
@@ -1113,7 +1113,7 @@ solvers/krylov/fgmres.s: solvers/krylov/fgmres.cpp.s
 
 # target to generate assembly for a file
 solvers/krylov/fgmres.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.s
 .PHONY : solvers/krylov/fgmres.cpp.s
 
 solvers/krylov/gmres.o: solvers/krylov/gmres.cpp.o
@@ -1122,7 +1122,7 @@ solvers/krylov/gmres.o: solvers/krylov/gmres.cpp.o
 
 # target to build an object file
 solvers/krylov/gmres.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.o
 .PHONY : solvers/krylov/gmres.cpp.o
 
 solvers/krylov/gmres.i: solvers/krylov/gmres.cpp.i
@@ -1131,7 +1131,7 @@ solvers/krylov/gmres.i: solvers/krylov/gmres.cpp.i
 
 # target to preprocess a source file
 solvers/krylov/gmres.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.i
 .PHONY : solvers/krylov/gmres.cpp.i
 
 solvers/krylov/gmres.s: solvers/krylov/gmres.cpp.s
@@ -1140,7 +1140,7 @@ solvers/krylov/gmres.s: solvers/krylov/gmres.cpp.s
 
 # target to generate assembly for a file
 solvers/krylov/gmres.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.s
 .PHONY : solvers/krylov/gmres.cpp.s
 
 solvers/krylov/idr.o: solvers/krylov/idr.cpp.o
@@ -1149,7 +1149,7 @@ solvers/krylov/idr.o: solvers/krylov/idr.cpp.o
 
 # target to build an object file
 solvers/krylov/idr.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.o
 .PHONY : solvers/krylov/idr.cpp.o
 
 solvers/krylov/idr.i: solvers/krylov/idr.cpp.i
@@ -1158,7 +1158,7 @@ solvers/krylov/idr.i: solvers/krylov/idr.cpp.i
 
 # target to preprocess a source file
 solvers/krylov/idr.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.i
 .PHONY : solvers/krylov/idr.cpp.i
 
 solvers/krylov/idr.s: solvers/krylov/idr.cpp.s
@@ -1167,7 +1167,7 @@ solvers/krylov/idr.s: solvers/krylov/idr.cpp.s
 
 # target to generate assembly for a file
 solvers/krylov/idr.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.s
 .PHONY : solvers/krylov/idr.cpp.s
 
 solvers/mixed_precision.o: solvers/mixed_precision.cpp.o
@@ -1176,7 +1176,7 @@ solvers/mixed_precision.o: solvers/mixed_precision.cpp.o
 
 # target to build an object file
 solvers/mixed_precision.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.o
 .PHONY : solvers/mixed_precision.cpp.o
 
 solvers/mixed_precision.i: solvers/mixed_precision.cpp.i
@@ -1185,7 +1185,7 @@ solvers/mixed_precision.i: solvers/mixed_precision.cpp.i
 
 # target to preprocess a source file
 solvers/mixed_precision.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.i
 .PHONY : solvers/mixed_precision.cpp.i
 
 solvers/mixed_precision.s: solvers/mixed_precision.cpp.s
@@ -1194,7 +1194,7 @@ solvers/mixed_precision.s: solvers/mixed_precision.cpp.s
 
 # target to generate assembly for a file
 solvers/mixed_precision.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.s
 .PHONY : solvers/mixed_precision.cpp.s
 
 solvers/multigrid/amg.o: solvers/multigrid/amg.cpp.o
@@ -1203,7 +1203,7 @@ solvers/multigrid/amg.o: solvers/multigrid/amg.cpp.o
 
 # target to build an object file
 solvers/multigrid/amg.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.o
 .PHONY : solvers/multigrid/amg.cpp.o
 
 solvers/multigrid/amg.i: solvers/multigrid/amg.cpp.i
@@ -1212,7 +1212,7 @@ solvers/multigrid/amg.i: solvers/multigrid/amg.cpp.i
 
 # target to preprocess a source file
 solvers/multigrid/amg.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.i
 .PHONY : solvers/multigrid/amg.cpp.i
 
 solvers/multigrid/amg.s: solvers/multigrid/amg.cpp.s
@@ -1221,7 +1221,7 @@ solvers/multigrid/amg.s: solvers/multigrid/amg.cpp.s
 
 # target to generate assembly for a file
 solvers/multigrid/amg.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.s
 .PHONY : solvers/multigrid/amg.cpp.s
 
 solvers/multigrid/base_amg.o: solvers/multigrid/base_amg.cpp.o
@@ -1230,7 +1230,7 @@ solvers/multigrid/base_amg.o: solvers/multigrid/base_amg.cpp.o
 
 # target to build an object file
 solvers/multigrid/base_amg.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.o
 .PHONY : solvers/multigrid/base_amg.cpp.o
 
 solvers/multigrid/base_amg.i: solvers/multigrid/base_amg.cpp.i
@@ -1239,7 +1239,7 @@ solvers/multigrid/base_amg.i: solvers/multigrid/base_amg.cpp.i
 
 # target to preprocess a source file
 solvers/multigrid/base_amg.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.i
 .PHONY : solvers/multigrid/base_amg.cpp.i
 
 solvers/multigrid/base_amg.s: solvers/multigrid/base_amg.cpp.s
@@ -1248,7 +1248,7 @@ solvers/multigrid/base_amg.s: solvers/multigrid/base_amg.cpp.s
 
 # target to generate assembly for a file
 solvers/multigrid/base_amg.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.s
 .PHONY : solvers/multigrid/base_amg.cpp.s
 
 solvers/multigrid/base_multigrid.o: solvers/multigrid/base_multigrid.cpp.o
@@ -1257,7 +1257,7 @@ solvers/multigrid/base_multigrid.o: solvers/multigrid/base_multigrid.cpp.o
 
 # target to build an object file
 solvers/multigrid/base_multigrid.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.o
 .PHONY : solvers/multigrid/base_multigrid.cpp.o
 
 solvers/multigrid/base_multigrid.i: solvers/multigrid/base_multigrid.cpp.i
@@ -1266,7 +1266,7 @@ solvers/multigrid/base_multigrid.i: solvers/multigrid/base_multigrid.cpp.i
 
 # target to preprocess a source file
 solvers/multigrid/base_multigrid.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.i
 .PHONY : solvers/multigrid/base_multigrid.cpp.i
 
 solvers/multigrid/base_multigrid.s: solvers/multigrid/base_multigrid.cpp.s
@@ -1275,7 +1275,7 @@ solvers/multigrid/base_multigrid.s: solvers/multigrid/base_multigrid.cpp.s
 
 # target to generate assembly for a file
 solvers/multigrid/base_multigrid.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.s
 .PHONY : solvers/multigrid/base_multigrid.cpp.s
 
 solvers/multigrid/multigrid.o: solvers/multigrid/multigrid.cpp.o
@@ -1284,7 +1284,7 @@ solvers/multigrid/multigrid.o: solvers/multigrid/multigrid.cpp.o
 
 # target to build an object file
 solvers/multigrid/multigrid.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.o
 .PHONY : solvers/multigrid/multigrid.cpp.o
 
 solvers/multigrid/multigrid.i: solvers/multigrid/multigrid.cpp.i
@@ -1293,7 +1293,7 @@ solvers/multigrid/multigrid.i: solvers/multigrid/multigrid.cpp.i
 
 # target to preprocess a source file
 solvers/multigrid/multigrid.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.i
 .PHONY : solvers/multigrid/multigrid.cpp.i
 
 solvers/multigrid/multigrid.s: solvers/multigrid/multigrid.cpp.s
@@ -1302,7 +1302,7 @@ solvers/multigrid/multigrid.s: solvers/multigrid/multigrid.cpp.s
 
 # target to generate assembly for a file
 solvers/multigrid/multigrid.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.s
 .PHONY : solvers/multigrid/multigrid.cpp.s
 
 solvers/preconditioners/preconditioner.o: solvers/preconditioners/preconditioner.cpp.o
@@ -1311,7 +1311,7 @@ solvers/preconditioners/preconditioner.o: solvers/preconditioners/preconditioner
 
 # target to build an object file
 solvers/preconditioners/preconditioner.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.o
 .PHONY : solvers/preconditioners/preconditioner.cpp.o
 
 solvers/preconditioners/preconditioner.i: solvers/preconditioners/preconditioner.cpp.i
@@ -1320,7 +1320,7 @@ solvers/preconditioners/preconditioner.i: solvers/preconditioners/preconditioner
 
 # target to preprocess a source file
 solvers/preconditioners/preconditioner.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.i
 .PHONY : solvers/preconditioners/preconditioner.cpp.i
 
 solvers/preconditioners/preconditioner.s: solvers/preconditioners/preconditioner.cpp.s
@@ -1329,7 +1329,7 @@ solvers/preconditioners/preconditioner.s: solvers/preconditioners/preconditioner
 
 # target to generate assembly for a file
 solvers/preconditioners/preconditioner.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.s
 .PHONY : solvers/preconditioners/preconditioner.cpp.s
 
 solvers/preconditioners/preconditioner_ai.o: solvers/preconditioners/preconditioner_ai.cpp.o
@@ -1338,7 +1338,7 @@ solvers/preconditioners/preconditioner_ai.o: solvers/preconditioners/preconditio
 
 # target to build an object file
 solvers/preconditioners/preconditioner_ai.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.o
 .PHONY : solvers/preconditioners/preconditioner_ai.cpp.o
 
 solvers/preconditioners/preconditioner_ai.i: solvers/preconditioners/preconditioner_ai.cpp.i
@@ -1347,7 +1347,7 @@ solvers/preconditioners/preconditioner_ai.i: solvers/preconditioners/preconditio
 
 # target to preprocess a source file
 solvers/preconditioners/preconditioner_ai.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.i
 .PHONY : solvers/preconditioners/preconditioner_ai.cpp.i
 
 solvers/preconditioners/preconditioner_ai.s: solvers/preconditioners/preconditioner_ai.cpp.s
@@ -1356,7 +1356,7 @@ solvers/preconditioners/preconditioner_ai.s: solvers/preconditioners/preconditio
 
 # target to generate assembly for a file
 solvers/preconditioners/preconditioner_ai.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.s
 .PHONY : solvers/preconditioners/preconditioner_ai.cpp.s
 
 solvers/preconditioners/preconditioner_as.o: solvers/preconditioners/preconditioner_as.cpp.o
@@ -1365,7 +1365,7 @@ solvers/preconditioners/preconditioner_as.o: solvers/preconditioners/preconditio
 
 # target to build an object file
 solvers/preconditioners/preconditioner_as.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.o
 .PHONY : solvers/preconditioners/preconditioner_as.cpp.o
 
 solvers/preconditioners/preconditioner_as.i: solvers/preconditioners/preconditioner_as.cpp.i
@@ -1374,7 +1374,7 @@ solvers/preconditioners/preconditioner_as.i: solvers/preconditioners/preconditio
 
 # target to preprocess a source file
 solvers/preconditioners/preconditioner_as.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.i
 .PHONY : solvers/preconditioners/preconditioner_as.cpp.i
 
 solvers/preconditioners/preconditioner_as.s: solvers/preconditioners/preconditioner_as.cpp.s
@@ -1383,7 +1383,7 @@ solvers/preconditioners/preconditioner_as.s: solvers/preconditioners/preconditio
 
 # target to generate assembly for a file
 solvers/preconditioners/preconditioner_as.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.s
 .PHONY : solvers/preconditioners/preconditioner_as.cpp.s
 
 solvers/preconditioners/preconditioner_blockprecond.o: solvers/preconditioners/preconditioner_blockprecond.cpp.o
@@ -1392,7 +1392,7 @@ solvers/preconditioners/preconditioner_blockprecond.o: solvers/preconditioners/p
 
 # target to build an object file
 solvers/preconditioners/preconditioner_blockprecond.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.o
 .PHONY : solvers/preconditioners/preconditioner_blockprecond.cpp.o
 
 solvers/preconditioners/preconditioner_blockprecond.i: solvers/preconditioners/preconditioner_blockprecond.cpp.i
@@ -1401,7 +1401,7 @@ solvers/preconditioners/preconditioner_blockprecond.i: solvers/preconditioners/p
 
 # target to preprocess a source file
 solvers/preconditioners/preconditioner_blockprecond.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.i
 .PHONY : solvers/preconditioners/preconditioner_blockprecond.cpp.i
 
 solvers/preconditioners/preconditioner_blockprecond.s: solvers/preconditioners/preconditioner_blockprecond.cpp.s
@@ -1410,7 +1410,7 @@ solvers/preconditioners/preconditioner_blockprecond.s: solvers/preconditioners/p
 
 # target to generate assembly for a file
 solvers/preconditioners/preconditioner_blockprecond.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.s
 .PHONY : solvers/preconditioners/preconditioner_blockprecond.cpp.s
 
 solvers/preconditioners/preconditioner_multicolored.o: solvers/preconditioners/preconditioner_multicolored.cpp.o
@@ -1419,7 +1419,7 @@ solvers/preconditioners/preconditioner_multicolored.o: solvers/preconditioners/p
 
 # target to build an object file
 solvers/preconditioners/preconditioner_multicolored.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.o
 .PHONY : solvers/preconditioners/preconditioner_multicolored.cpp.o
 
 solvers/preconditioners/preconditioner_multicolored.i: solvers/preconditioners/preconditioner_multicolored.cpp.i
@@ -1428,7 +1428,7 @@ solvers/preconditioners/preconditioner_multicolored.i: solvers/preconditioners/p
 
 # target to preprocess a source file
 solvers/preconditioners/preconditioner_multicolored.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.i
 .PHONY : solvers/preconditioners/preconditioner_multicolored.cpp.i
 
 solvers/preconditioners/preconditioner_multicolored.s: solvers/preconditioners/preconditioner_multicolored.cpp.s
@@ -1437,7 +1437,7 @@ solvers/preconditioners/preconditioner_multicolored.s: solvers/preconditioners/p
 
 # target to generate assembly for a file
 solvers/preconditioners/preconditioner_multicolored.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.s
 .PHONY : solvers/preconditioners/preconditioner_multicolored.cpp.s
 
 solvers/preconditioners/preconditioner_multicolored_gs.o: solvers/preconditioners/preconditioner_multicolored_gs.cpp.o
@@ -1446,7 +1446,7 @@ solvers/preconditioners/preconditioner_multicolored_gs.o: solvers/preconditioner
 
 # target to build an object file
 solvers/preconditioners/preconditioner_multicolored_gs.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.o
 .PHONY : solvers/preconditioners/preconditioner_multicolored_gs.cpp.o
 
 solvers/preconditioners/preconditioner_multicolored_gs.i: solvers/preconditioners/preconditioner_multicolored_gs.cpp.i
@@ -1455,7 +1455,7 @@ solvers/preconditioners/preconditioner_multicolored_gs.i: solvers/preconditioner
 
 # target to preprocess a source file
 solvers/preconditioners/preconditioner_multicolored_gs.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.i
 .PHONY : solvers/preconditioners/preconditioner_multicolored_gs.cpp.i
 
 solvers/preconditioners/preconditioner_multicolored_gs.s: solvers/preconditioners/preconditioner_multicolored_gs.cpp.s
@@ -1464,7 +1464,7 @@ solvers/preconditioners/preconditioner_multicolored_gs.s: solvers/preconditioner
 
 # target to generate assembly for a file
 solvers/preconditioners/preconditioner_multicolored_gs.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.s
 .PHONY : solvers/preconditioners/preconditioner_multicolored_gs.cpp.s
 
 solvers/preconditioners/preconditioner_multicolored_ilu.o: solvers/preconditioners/preconditioner_multicolored_ilu.cpp.o
@@ -1473,7 +1473,7 @@ solvers/preconditioners/preconditioner_multicolored_ilu.o: solvers/preconditione
 
 # target to build an object file
 solvers/preconditioners/preconditioner_multicolored_ilu.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.o
 .PHONY : solvers/preconditioners/preconditioner_multicolored_ilu.cpp.o
 
 solvers/preconditioners/preconditioner_multicolored_ilu.i: solvers/preconditioners/preconditioner_multicolored_ilu.cpp.i
@@ -1482,7 +1482,7 @@ solvers/preconditioners/preconditioner_multicolored_ilu.i: solvers/preconditione
 
 # target to preprocess a source file
 solvers/preconditioners/preconditioner_multicolored_ilu.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.i
 .PHONY : solvers/preconditioners/preconditioner_multicolored_ilu.cpp.i
 
 solvers/preconditioners/preconditioner_multicolored_ilu.s: solvers/preconditioners/preconditioner_multicolored_ilu.cpp.s
@@ -1491,7 +1491,7 @@ solvers/preconditioners/preconditioner_multicolored_ilu.s: solvers/preconditione
 
 # target to generate assembly for a file
 solvers/preconditioners/preconditioner_multicolored_ilu.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.s
 .PHONY : solvers/preconditioners/preconditioner_multicolored_ilu.cpp.s
 
 solvers/preconditioners/preconditioner_multielimination.o: solvers/preconditioners/preconditioner_multielimination.cpp.o
@@ -1500,7 +1500,7 @@ solvers/preconditioners/preconditioner_multielimination.o: solvers/preconditione
 
 # target to build an object file
 solvers/preconditioners/preconditioner_multielimination.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.o
 .PHONY : solvers/preconditioners/preconditioner_multielimination.cpp.o
 
 solvers/preconditioners/preconditioner_multielimination.i: solvers/preconditioners/preconditioner_multielimination.cpp.i
@@ -1509,7 +1509,7 @@ solvers/preconditioners/preconditioner_multielimination.i: solvers/preconditione
 
 # target to preprocess a source file
 solvers/preconditioners/preconditioner_multielimination.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.i
 .PHONY : solvers/preconditioners/preconditioner_multielimination.cpp.i
 
 solvers/preconditioners/preconditioner_multielimination.s: solvers/preconditioners/preconditioner_multielimination.cpp.s
@@ -1518,7 +1518,7 @@ solvers/preconditioners/preconditioner_multielimination.s: solvers/preconditione
 
 # target to generate assembly for a file
 solvers/preconditioners/preconditioner_multielimination.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.s
 .PHONY : solvers/preconditioners/preconditioner_multielimination.cpp.s
 
 solvers/preconditioners/preconditioner_saddlepoint.o: solvers/preconditioners/preconditioner_saddlepoint.cpp.o
@@ -1527,7 +1527,7 @@ solvers/preconditioners/preconditioner_saddlepoint.o: solvers/preconditioners/pr
 
 # target to build an object file
 solvers/preconditioners/preconditioner_saddlepoint.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.o
 .PHONY : solvers/preconditioners/preconditioner_saddlepoint.cpp.o
 
 solvers/preconditioners/preconditioner_saddlepoint.i: solvers/preconditioners/preconditioner_saddlepoint.cpp.i
@@ -1536,7 +1536,7 @@ solvers/preconditioners/preconditioner_saddlepoint.i: solvers/preconditioners/pr
 
 # target to preprocess a source file
 solvers/preconditioners/preconditioner_saddlepoint.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.i
 .PHONY : solvers/preconditioners/preconditioner_saddlepoint.cpp.i
 
 solvers/preconditioners/preconditioner_saddlepoint.s: solvers/preconditioners/preconditioner_saddlepoint.cpp.s
@@ -1545,7 +1545,7 @@ solvers/preconditioners/preconditioner_saddlepoint.s: solvers/preconditioners/pr
 
 # target to generate assembly for a file
 solvers/preconditioners/preconditioner_saddlepoint.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.s
 .PHONY : solvers/preconditioners/preconditioner_saddlepoint.cpp.s
 
 solvers/solver.o: solvers/solver.cpp.o
@@ -1554,7 +1554,7 @@ solvers/solver.o: solvers/solver.cpp.o
 
 # target to build an object file
 solvers/solver.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/solver.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/solver.cpp.o
 .PHONY : solvers/solver.cpp.o
 
 solvers/solver.i: solvers/solver.cpp.i
@@ -1563,7 +1563,7 @@ solvers/solver.i: solvers/solver.cpp.i
 
 # target to preprocess a source file
 solvers/solver.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/solver.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/solver.cpp.i
 .PHONY : solvers/solver.cpp.i
 
 solvers/solver.s: solvers/solver.cpp.s
@@ -1572,7 +1572,7 @@ solvers/solver.s: solvers/solver.cpp.s
 
 # target to generate assembly for a file
 solvers/solver.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/solver.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/solvers/solver.cpp.s
 .PHONY : solvers/solver.cpp.s
 
 utils/allocate_free.o: utils/allocate_free.cpp.o
@@ -1581,7 +1581,7 @@ utils/allocate_free.o: utils/allocate_free.cpp.o
 
 # target to build an object file
 utils/allocate_free.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.o
 .PHONY : utils/allocate_free.cpp.o
 
 utils/allocate_free.i: utils/allocate_free.cpp.i
@@ -1590,7 +1590,7 @@ utils/allocate_free.i: utils/allocate_free.cpp.i
 
 # target to preprocess a source file
 utils/allocate_free.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.i
 .PHONY : utils/allocate_free.cpp.i
 
 utils/allocate_free.s: utils/allocate_free.cpp.s
@@ -1599,7 +1599,7 @@ utils/allocate_free.s: utils/allocate_free.cpp.s
 
 # target to generate assembly for a file
 utils/allocate_free.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.s
 .PHONY : utils/allocate_free.cpp.s
 
 utils/log.o: utils/log.cpp.o
@@ -1608,7 +1608,7 @@ utils/log.o: utils/log.cpp.o
 
 # target to build an object file
 utils/log.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/log.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/log.cpp.o
 .PHONY : utils/log.cpp.o
 
 utils/log.i: utils/log.cpp.i
@@ -1617,7 +1617,7 @@ utils/log.i: utils/log.cpp.i
 
 # target to preprocess a source file
 utils/log.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/log.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/log.cpp.i
 .PHONY : utils/log.cpp.i
 
 utils/log.s: utils/log.cpp.s
@@ -1626,7 +1626,7 @@ utils/log.s: utils/log.cpp.s
 
 # target to generate assembly for a file
 utils/log.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/log.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/log.cpp.s
 .PHONY : utils/log.cpp.s
 
 utils/math_functions.o: utils/math_functions.cpp.o
@@ -1635,7 +1635,7 @@ utils/math_functions.o: utils/math_functions.cpp.o
 
 # target to build an object file
 utils/math_functions.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/math_functions.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/math_functions.cpp.o
 .PHONY : utils/math_functions.cpp.o
 
 utils/math_functions.i: utils/math_functions.cpp.i
@@ -1644,7 +1644,7 @@ utils/math_functions.i: utils/math_functions.cpp.i
 
 # target to preprocess a source file
 utils/math_functions.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/math_functions.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/math_functions.cpp.i
 .PHONY : utils/math_functions.cpp.i
 
 utils/math_functions.s: utils/math_functions.cpp.s
@@ -1653,7 +1653,7 @@ utils/math_functions.s: utils/math_functions.cpp.s
 
 # target to generate assembly for a file
 utils/math_functions.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/math_functions.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/math_functions.cpp.s
 .PHONY : utils/math_functions.cpp.s
 
 utils/time_functions.o: utils/time_functions.cpp.o
@@ -1662,7 +1662,7 @@ utils/time_functions.o: utils/time_functions.cpp.o
 
 # target to build an object file
 utils/time_functions.cpp.o:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/time_functions.cpp.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/time_functions.cpp.o
 .PHONY : utils/time_functions.cpp.o
 
 utils/time_functions.i: utils/time_functions.cpp.i
@@ -1671,7 +1671,7 @@ utils/time_functions.i: utils/time_functions.cpp.i
 
 # target to preprocess a source file
 utils/time_functions.cpp.i:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/time_functions.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/time_functions.cpp.i
 .PHONY : utils/time_functions.cpp.i
 
 utils/time_functions.s: utils/time_functions.cpp.s
@@ -1680,7 +1680,7 @@ utils/time_functions.s: utils/time_functions.cpp.s
 
 # target to generate assembly for a file
 utils/time_functions.cpp.s:
-	cd /paralution/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/time_functions.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(MAKE) -f src/CMakeFiles/paralution.dir/build.make src/CMakeFiles/paralution.dir/utils/time_functions.cpp.s
 .PHONY : utils/time_functions.cpp.s
 
 # Help Target
@@ -1875,6 +1875,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /paralution/paralution-1.1.0/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

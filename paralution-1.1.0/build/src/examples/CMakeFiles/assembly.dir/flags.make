@@ -6,5 +6,5 @@ CXX_FLAGS = -O3 -Wall -fPIC -fopenmp
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/paralution/paralution-1.1.0/build/inc 
+CXX_INCLUDES = -I/paralution/para-2.0/paralution-1.1.0/build/inc 
 

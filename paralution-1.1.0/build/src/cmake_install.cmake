@@ -1,4 +1,4 @@
-# Install script for directory: /paralution/paralution-1.1.0/src
+# Install script for directory: /paralution/para-2.0/paralution-1.1.0/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

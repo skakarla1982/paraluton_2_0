@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /paralution/paralution-1.1.0
+CMAKE_SOURCE_DIR = /paralution/para-2.0/paralution-1.1.0
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /paralution/paralution-1.1.0/build
+CMAKE_BINARY_DIR = /paralution/para-2.0/paralution-1.1.0/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/paralution.dir/depend.make
@@ -57,18 +57,84 @@ include src/CMakeFiles/paralution.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/paralution.dir/flags.make
 
+src/CMakeFiles/hip_compile_1.dir/base/gpu/hip_compile_1_generated_gpu_allocate_free.cu.o: ../src/base/gpu/gpu_allocate_free.cu
+src/CMakeFiles/hip_compile_1.dir/base/gpu/hip_compile_1_generated_gpu_allocate_free.cu.o: src/CMakeFiles/hip_compile_1.dir/base/gpu/hip_compile_1_generated_gpu_allocate_free.cu.o.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building HCC (Device) object src/CMakeFiles/hip_compile_1.dir/base/gpu/hip_compile_1_generated_gpu_allocate_free.cu.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_1.dir/base/gpu && /usr/bin/cmake -E make_directory /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_1.dir/base/gpu/.
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_1.dir/base/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_1.dir/base/gpu/./hip_compile_1_generated_gpu_allocate_free.cu.o -D generated_cubin_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_1.dir/base/gpu/./hip_compile_1_generated_gpu_allocate_free.cu.o.cubin.txt -P /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_1.dir/base/gpu/hip_compile_1_generated_gpu_allocate_free.cu.o.cmake
+
+src/CMakeFiles/hip_compile_2.dir/base/gpu/hip_compile_2_generated_backend_gpu.cu.o: ../src/base/gpu/backend_gpu.cu
+src/CMakeFiles/hip_compile_2.dir/base/gpu/hip_compile_2_generated_backend_gpu.cu.o: src/CMakeFiles/hip_compile_2.dir/base/gpu/hip_compile_2_generated_backend_gpu.cu.o.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building HCC (Device) object src/CMakeFiles/hip_compile_2.dir/base/gpu/hip_compile_2_generated_backend_gpu.cu.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_2.dir/base/gpu && /usr/bin/cmake -E make_directory /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_2.dir/base/gpu/.
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_2.dir/base/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_2.dir/base/gpu/./hip_compile_2_generated_backend_gpu.cu.o -D generated_cubin_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_2.dir/base/gpu/./hip_compile_2_generated_backend_gpu.cu.o.cubin.txt -P /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_2.dir/base/gpu/hip_compile_2_generated_backend_gpu.cu.o.cmake
+
+src/CMakeFiles/hip_compile_3.dir/base/gpu/hip_compile_3_generated_gpu_vector.cu.o: ../src/base/gpu/gpu_vector.cu
+src/CMakeFiles/hip_compile_3.dir/base/gpu/hip_compile_3_generated_gpu_vector.cu.o: src/CMakeFiles/hip_compile_3.dir/base/gpu/hip_compile_3_generated_gpu_vector.cu.o.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building HCC (Device) object src/CMakeFiles/hip_compile_3.dir/base/gpu/hip_compile_3_generated_gpu_vector.cu.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_3.dir/base/gpu && /usr/bin/cmake -E make_directory /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_3.dir/base/gpu/.
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_3.dir/base/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_3.dir/base/gpu/./hip_compile_3_generated_gpu_vector.cu.o -D generated_cubin_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_3.dir/base/gpu/./hip_compile_3_generated_gpu_vector.cu.o.cubin.txt -P /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_3.dir/base/gpu/hip_compile_3_generated_gpu_vector.cu.o.cmake
+
+src/CMakeFiles/hip_compile_4.dir/base/gpu/hip_compile_4_generated_gpu_matrix_csr.cu.o: ../src/base/gpu/gpu_matrix_csr.cu
+src/CMakeFiles/hip_compile_4.dir/base/gpu/hip_compile_4_generated_gpu_matrix_csr.cu.o: src/CMakeFiles/hip_compile_4.dir/base/gpu/hip_compile_4_generated_gpu_matrix_csr.cu.o.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building HCC (Device) object src/CMakeFiles/hip_compile_4.dir/base/gpu/hip_compile_4_generated_gpu_matrix_csr.cu.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_4.dir/base/gpu && /usr/bin/cmake -E make_directory /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_4.dir/base/gpu/.
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_4.dir/base/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_4.dir/base/gpu/./hip_compile_4_generated_gpu_matrix_csr.cu.o -D generated_cubin_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_4.dir/base/gpu/./hip_compile_4_generated_gpu_matrix_csr.cu.o.cubin.txt -P /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_4.dir/base/gpu/hip_compile_4_generated_gpu_matrix_csr.cu.o.cmake
+
+src/CMakeFiles/hip_compile_5.dir/base/gpu/hip_compile_5_generated_gpu_matrix_coo.cu.o: ../src/base/gpu/gpu_matrix_coo.cu
+src/CMakeFiles/hip_compile_5.dir/base/gpu/hip_compile_5_generated_gpu_matrix_coo.cu.o: src/CMakeFiles/hip_compile_5.dir/base/gpu/hip_compile_5_generated_gpu_matrix_coo.cu.o.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building HCC (Device) object src/CMakeFiles/hip_compile_5.dir/base/gpu/hip_compile_5_generated_gpu_matrix_coo.cu.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_5.dir/base/gpu && /usr/bin/cmake -E make_directory /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_5.dir/base/gpu/.
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_5.dir/base/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_5.dir/base/gpu/./hip_compile_5_generated_gpu_matrix_coo.cu.o -D generated_cubin_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_5.dir/base/gpu/./hip_compile_5_generated_gpu_matrix_coo.cu.o.cubin.txt -P /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_5.dir/base/gpu/hip_compile_5_generated_gpu_matrix_coo.cu.o.cmake
+
+src/CMakeFiles/hip_compile_6.dir/base/gpu/hip_compile_6_generated_gpu_matrix_dense.cu.o: ../src/base/gpu/gpu_matrix_dense.cu
+src/CMakeFiles/hip_compile_6.dir/base/gpu/hip_compile_6_generated_gpu_matrix_dense.cu.o: src/CMakeFiles/hip_compile_6.dir/base/gpu/hip_compile_6_generated_gpu_matrix_dense.cu.o.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building HCC (Device) object src/CMakeFiles/hip_compile_6.dir/base/gpu/hip_compile_6_generated_gpu_matrix_dense.cu.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_6.dir/base/gpu && /usr/bin/cmake -E make_directory /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_6.dir/base/gpu/.
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_6.dir/base/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_6.dir/base/gpu/./hip_compile_6_generated_gpu_matrix_dense.cu.o -D generated_cubin_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_6.dir/base/gpu/./hip_compile_6_generated_gpu_matrix_dense.cu.o.cubin.txt -P /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_6.dir/base/gpu/hip_compile_6_generated_gpu_matrix_dense.cu.o.cmake
+
+src/CMakeFiles/hip_compile_7.dir/base/gpu/hip_compile_7_generated_gpu_matrix_mcsr.cu.o: ../src/base/gpu/gpu_matrix_mcsr.cu
+src/CMakeFiles/hip_compile_7.dir/base/gpu/hip_compile_7_generated_gpu_matrix_mcsr.cu.o: src/CMakeFiles/hip_compile_7.dir/base/gpu/hip_compile_7_generated_gpu_matrix_mcsr.cu.o.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building HCC (Device) object src/CMakeFiles/hip_compile_7.dir/base/gpu/hip_compile_7_generated_gpu_matrix_mcsr.cu.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_7.dir/base/gpu && /usr/bin/cmake -E make_directory /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_7.dir/base/gpu/.
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_7.dir/base/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_7.dir/base/gpu/./hip_compile_7_generated_gpu_matrix_mcsr.cu.o -D generated_cubin_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_7.dir/base/gpu/./hip_compile_7_generated_gpu_matrix_mcsr.cu.o.cubin.txt -P /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_7.dir/base/gpu/hip_compile_7_generated_gpu_matrix_mcsr.cu.o.cmake
+
+src/CMakeFiles/hip_compile_8.dir/base/gpu/hip_compile_8_generated_gpu_matrix_bcsr.cu.o: ../src/base/gpu/gpu_matrix_bcsr.cu
+src/CMakeFiles/hip_compile_8.dir/base/gpu/hip_compile_8_generated_gpu_matrix_bcsr.cu.o: src/CMakeFiles/hip_compile_8.dir/base/gpu/hip_compile_8_generated_gpu_matrix_bcsr.cu.o.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building HCC (Device) object src/CMakeFiles/hip_compile_8.dir/base/gpu/hip_compile_8_generated_gpu_matrix_bcsr.cu.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_8.dir/base/gpu && /usr/bin/cmake -E make_directory /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_8.dir/base/gpu/.
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_8.dir/base/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_8.dir/base/gpu/./hip_compile_8_generated_gpu_matrix_bcsr.cu.o -D generated_cubin_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_8.dir/base/gpu/./hip_compile_8_generated_gpu_matrix_bcsr.cu.o.cubin.txt -P /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_8.dir/base/gpu/hip_compile_8_generated_gpu_matrix_bcsr.cu.o.cmake
+
+src/CMakeFiles/hip_compile_9.dir/base/gpu/hip_compile_9_generated_gpu_matrix_ell.cu.o: ../src/base/gpu/gpu_matrix_ell.cu
+src/CMakeFiles/hip_compile_9.dir/base/gpu/hip_compile_9_generated_gpu_matrix_ell.cu.o: src/CMakeFiles/hip_compile_9.dir/base/gpu/hip_compile_9_generated_gpu_matrix_ell.cu.o.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building HCC (Device) object src/CMakeFiles/hip_compile_9.dir/base/gpu/hip_compile_9_generated_gpu_matrix_ell.cu.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_9.dir/base/gpu && /usr/bin/cmake -E make_directory /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_9.dir/base/gpu/.
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_9.dir/base/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_9.dir/base/gpu/./hip_compile_9_generated_gpu_matrix_ell.cu.o -D generated_cubin_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_9.dir/base/gpu/./hip_compile_9_generated_gpu_matrix_ell.cu.o.cubin.txt -P /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_9.dir/base/gpu/hip_compile_9_generated_gpu_matrix_ell.cu.o.cmake
+
+src/CMakeFiles/hip_compile_10.dir/base/gpu/hip_compile_10_generated_gpu_matrix_dia.cu.o: ../src/base/gpu/gpu_matrix_dia.cu
+src/CMakeFiles/hip_compile_10.dir/base/gpu/hip_compile_10_generated_gpu_matrix_dia.cu.o: src/CMakeFiles/hip_compile_10.dir/base/gpu/hip_compile_10_generated_gpu_matrix_dia.cu.o.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building HCC (Device) object src/CMakeFiles/hip_compile_10.dir/base/gpu/hip_compile_10_generated_gpu_matrix_dia.cu.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_10.dir/base/gpu && /usr/bin/cmake -E make_directory /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_10.dir/base/gpu/.
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_10.dir/base/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_10.dir/base/gpu/./hip_compile_10_generated_gpu_matrix_dia.cu.o -D generated_cubin_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_10.dir/base/gpu/./hip_compile_10_generated_gpu_matrix_dia.cu.o.cubin.txt -P /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_10.dir/base/gpu/hip_compile_10_generated_gpu_matrix_dia.cu.o.cmake
+
+src/CMakeFiles/hip_compile_11.dir/base/gpu/hip_compile_11_generated_gpu_matrix_hyb.cu.o: ../src/base/gpu/gpu_matrix_hyb.cu
+src/CMakeFiles/hip_compile_11.dir/base/gpu/hip_compile_11_generated_gpu_matrix_hyb.cu.o: src/CMakeFiles/hip_compile_11.dir/base/gpu/hip_compile_11_generated_gpu_matrix_hyb.cu.o.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building HCC (Device) object src/CMakeFiles/hip_compile_11.dir/base/gpu/hip_compile_11_generated_gpu_matrix_hyb.cu.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_11.dir/base/gpu && /usr/bin/cmake -E make_directory /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_11.dir/base/gpu/.
+	cd /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_11.dir/base/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_11.dir/base/gpu/./hip_compile_11_generated_gpu_matrix_hyb.cu.o -D generated_cubin_file:STRING=/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_11.dir/base/gpu/./hip_compile_11_generated_gpu_matrix_hyb.cu.o.cubin.txt -P /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_11.dir/base/gpu/hip_compile_11_generated_gpu_matrix_hyb.cu.o.cmake
+
 src/CMakeFiles/paralution.dir/base/base_paralution.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/base_paralution.cpp.o: ../src/base/base_paralution.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/paralution.dir/base/base_paralution.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/base_paralution.cpp.o -c /paralution/paralution-1.1.0/src/base/base_paralution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/paralution.dir/base/base_paralution.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/base_paralution.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/base_paralution.cpp
 
 src/CMakeFiles/paralution.dir/base/base_paralution.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/base_paralution.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/base_paralution.cpp > CMakeFiles/paralution.dir/base/base_paralution.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/base_paralution.cpp > CMakeFiles/paralution.dir/base/base_paralution.cpp.i
 
 src/CMakeFiles/paralution.dir/base/base_paralution.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/base_paralution.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/base_paralution.cpp -o CMakeFiles/paralution.dir/base/base_paralution.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/base_paralution.cpp -o CMakeFiles/paralution.dir/base/base_paralution.cpp.s
 
 src/CMakeFiles/paralution.dir/base/base_paralution.cpp.o.requires:
 
@@ -83,16 +149,16 @@ src/CMakeFiles/paralution.dir/base/base_paralution.cpp.o.provides.build: src/CMa
 
 src/CMakeFiles/paralution.dir/base/operator.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/operator.cpp.o: ../src/base/operator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/paralution.dir/base/operator.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/operator.cpp.o -c /paralution/paralution-1.1.0/src/base/operator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/paralution.dir/base/operator.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/operator.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/operator.cpp
 
 src/CMakeFiles/paralution.dir/base/operator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/operator.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/operator.cpp > CMakeFiles/paralution.dir/base/operator.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/operator.cpp > CMakeFiles/paralution.dir/base/operator.cpp.i
 
 src/CMakeFiles/paralution.dir/base/operator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/operator.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/operator.cpp -o CMakeFiles/paralution.dir/base/operator.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/operator.cpp -o CMakeFiles/paralution.dir/base/operator.cpp.s
 
 src/CMakeFiles/paralution.dir/base/operator.cpp.o.requires:
 
@@ -107,16 +173,16 @@ src/CMakeFiles/paralution.dir/base/operator.cpp.o.provides.build: src/CMakeFiles
 
 src/CMakeFiles/paralution.dir/base/vector.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/vector.cpp.o: ../src/base/vector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/paralution.dir/base/vector.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/vector.cpp.o -c /paralution/paralution-1.1.0/src/base/vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/paralution.dir/base/vector.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/vector.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/vector.cpp
 
 src/CMakeFiles/paralution.dir/base/vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/vector.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/vector.cpp > CMakeFiles/paralution.dir/base/vector.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/vector.cpp > CMakeFiles/paralution.dir/base/vector.cpp.i
 
 src/CMakeFiles/paralution.dir/base/vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/vector.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/vector.cpp -o CMakeFiles/paralution.dir/base/vector.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/vector.cpp -o CMakeFiles/paralution.dir/base/vector.cpp.s
 
 src/CMakeFiles/paralution.dir/base/vector.cpp.o.requires:
 
@@ -131,16 +197,16 @@ src/CMakeFiles/paralution.dir/base/vector.cpp.o.provides.build: src/CMakeFiles/p
 
 src/CMakeFiles/paralution.dir/base/local_matrix.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/local_matrix.cpp.o: ../src/base/local_matrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/paralution.dir/base/local_matrix.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/local_matrix.cpp.o -c /paralution/paralution-1.1.0/src/base/local_matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/paralution.dir/base/local_matrix.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/local_matrix.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/local_matrix.cpp
 
 src/CMakeFiles/paralution.dir/base/local_matrix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/local_matrix.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/local_matrix.cpp > CMakeFiles/paralution.dir/base/local_matrix.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/local_matrix.cpp > CMakeFiles/paralution.dir/base/local_matrix.cpp.i
 
 src/CMakeFiles/paralution.dir/base/local_matrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/local_matrix.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/local_matrix.cpp -o CMakeFiles/paralution.dir/base/local_matrix.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/local_matrix.cpp -o CMakeFiles/paralution.dir/base/local_matrix.cpp.s
 
 src/CMakeFiles/paralution.dir/base/local_matrix.cpp.o.requires:
 
@@ -155,16 +221,16 @@ src/CMakeFiles/paralution.dir/base/local_matrix.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/paralution.dir/base/local_vector.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/local_vector.cpp.o: ../src/base/local_vector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/paralution.dir/base/local_vector.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/local_vector.cpp.o -c /paralution/paralution-1.1.0/src/base/local_vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/paralution.dir/base/local_vector.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/local_vector.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/local_vector.cpp
 
 src/CMakeFiles/paralution.dir/base/local_vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/local_vector.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/local_vector.cpp > CMakeFiles/paralution.dir/base/local_vector.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/local_vector.cpp > CMakeFiles/paralution.dir/base/local_vector.cpp.i
 
 src/CMakeFiles/paralution.dir/base/local_vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/local_vector.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/local_vector.cpp -o CMakeFiles/paralution.dir/base/local_vector.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/local_vector.cpp -o CMakeFiles/paralution.dir/base/local_vector.cpp.s
 
 src/CMakeFiles/paralution.dir/base/local_vector.cpp.o.requires:
 
@@ -179,16 +245,16 @@ src/CMakeFiles/paralution.dir/base/local_vector.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/paralution.dir/base/base_matrix.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/base_matrix.cpp.o: ../src/base/base_matrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/paralution.dir/base/base_matrix.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/base_matrix.cpp.o -c /paralution/paralution-1.1.0/src/base/base_matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/paralution.dir/base/base_matrix.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/base_matrix.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/base_matrix.cpp
 
 src/CMakeFiles/paralution.dir/base/base_matrix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/base_matrix.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/base_matrix.cpp > CMakeFiles/paralution.dir/base/base_matrix.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/base_matrix.cpp > CMakeFiles/paralution.dir/base/base_matrix.cpp.i
 
 src/CMakeFiles/paralution.dir/base/base_matrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/base_matrix.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/base_matrix.cpp -o CMakeFiles/paralution.dir/base/base_matrix.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/base_matrix.cpp -o CMakeFiles/paralution.dir/base/base_matrix.cpp.s
 
 src/CMakeFiles/paralution.dir/base/base_matrix.cpp.o.requires:
 
@@ -203,16 +269,16 @@ src/CMakeFiles/paralution.dir/base/base_matrix.cpp.o.provides.build: src/CMakeFi
 
 src/CMakeFiles/paralution.dir/base/base_vector.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/base_vector.cpp.o: ../src/base/base_vector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/paralution.dir/base/base_vector.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/base_vector.cpp.o -c /paralution/paralution-1.1.0/src/base/base_vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/paralution.dir/base/base_vector.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/base_vector.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/base_vector.cpp
 
 src/CMakeFiles/paralution.dir/base/base_vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/base_vector.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/base_vector.cpp > CMakeFiles/paralution.dir/base/base_vector.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/base_vector.cpp > CMakeFiles/paralution.dir/base/base_vector.cpp.i
 
 src/CMakeFiles/paralution.dir/base/base_vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/base_vector.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/base_vector.cpp -o CMakeFiles/paralution.dir/base/base_vector.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/base_vector.cpp -o CMakeFiles/paralution.dir/base/base_vector.cpp.s
 
 src/CMakeFiles/paralution.dir/base/base_vector.cpp.o.requires:
 
@@ -227,16 +293,16 @@ src/CMakeFiles/paralution.dir/base/base_vector.cpp.o.provides.build: src/CMakeFi
 
 src/CMakeFiles/paralution.dir/base/backend_manager.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/backend_manager.cpp.o: ../src/base/backend_manager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/paralution.dir/base/backend_manager.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/backend_manager.cpp.o -c /paralution/paralution-1.1.0/src/base/backend_manager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/paralution.dir/base/backend_manager.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/backend_manager.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/backend_manager.cpp
 
 src/CMakeFiles/paralution.dir/base/backend_manager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/backend_manager.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/backend_manager.cpp > CMakeFiles/paralution.dir/base/backend_manager.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/backend_manager.cpp > CMakeFiles/paralution.dir/base/backend_manager.cpp.i
 
 src/CMakeFiles/paralution.dir/base/backend_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/backend_manager.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/backend_manager.cpp -o CMakeFiles/paralution.dir/base/backend_manager.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/backend_manager.cpp -o CMakeFiles/paralution.dir/base/backend_manager.cpp.s
 
 src/CMakeFiles/paralution.dir/base/backend_manager.cpp.o.requires:
 
@@ -251,16 +317,16 @@ src/CMakeFiles/paralution.dir/base/backend_manager.cpp.o.provides.build: src/CMa
 
 src/CMakeFiles/paralution.dir/base/local_stencil.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/local_stencil.cpp.o: ../src/base/local_stencil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/paralution.dir/base/local_stencil.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/local_stencil.cpp.o -c /paralution/paralution-1.1.0/src/base/local_stencil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/paralution.dir/base/local_stencil.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/local_stencil.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/local_stencil.cpp
 
 src/CMakeFiles/paralution.dir/base/local_stencil.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/local_stencil.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/local_stencil.cpp > CMakeFiles/paralution.dir/base/local_stencil.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/local_stencil.cpp > CMakeFiles/paralution.dir/base/local_stencil.cpp.i
 
 src/CMakeFiles/paralution.dir/base/local_stencil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/local_stencil.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/local_stencil.cpp -o CMakeFiles/paralution.dir/base/local_stencil.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/local_stencil.cpp -o CMakeFiles/paralution.dir/base/local_stencil.cpp.s
 
 src/CMakeFiles/paralution.dir/base/local_stencil.cpp.o.requires:
 
@@ -275,16 +341,16 @@ src/CMakeFiles/paralution.dir/base/local_stencil.cpp.o.provides.build: src/CMake
 
 src/CMakeFiles/paralution.dir/base/base_stencil.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/base_stencil.cpp.o: ../src/base/base_stencil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/paralution.dir/base/base_stencil.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/base_stencil.cpp.o -c /paralution/paralution-1.1.0/src/base/base_stencil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/paralution.dir/base/base_stencil.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/base_stencil.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/base_stencil.cpp
 
 src/CMakeFiles/paralution.dir/base/base_stencil.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/base_stencil.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/base_stencil.cpp > CMakeFiles/paralution.dir/base/base_stencil.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/base_stencil.cpp > CMakeFiles/paralution.dir/base/base_stencil.cpp.i
 
 src/CMakeFiles/paralution.dir/base/base_stencil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/base_stencil.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/base_stencil.cpp -o CMakeFiles/paralution.dir/base/base_stencil.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/base_stencil.cpp -o CMakeFiles/paralution.dir/base/base_stencil.cpp.s
 
 src/CMakeFiles/paralution.dir/base/base_stencil.cpp.o.requires:
 
@@ -299,16 +365,16 @@ src/CMakeFiles/paralution.dir/base/base_stencil.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.o: ../src/base/host/host_matrix_csr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.o -c /paralution/paralution-1.1.0/src/base/host/host_matrix_csr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_csr.cpp
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/host/host_matrix_csr.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_csr.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.i
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/host/host_matrix_csr.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_csr.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.s
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.o.requires:
 
@@ -323,16 +389,16 @@ src/CMakeFiles/paralution.dir/base/host/host_matrix_csr.cpp.o.provides.build: sr
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.o: ../src/base/host/host_matrix_mcsr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.o -c /paralution/paralution-1.1.0/src/base/host/host_matrix_mcsr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_mcsr.cpp
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/host/host_matrix_mcsr.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_mcsr.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.i
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/host/host_matrix_mcsr.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_mcsr.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.s
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.o.requires:
 
@@ -347,16 +413,16 @@ src/CMakeFiles/paralution.dir/base/host/host_matrix_mcsr.cpp.o.provides.build: s
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.o: ../src/base/host/host_matrix_bcsr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.o -c /paralution/paralution-1.1.0/src/base/host/host_matrix_bcsr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_bcsr.cpp
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/host/host_matrix_bcsr.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_bcsr.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.i
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/host/host_matrix_bcsr.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_bcsr.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.s
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.o.requires:
 
@@ -371,16 +437,16 @@ src/CMakeFiles/paralution.dir/base/host/host_matrix_bcsr.cpp.o.provides.build: s
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.o: ../src/base/host/host_matrix_coo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.o -c /paralution/paralution-1.1.0/src/base/host/host_matrix_coo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_coo.cpp
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/host/host_matrix_coo.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_coo.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.i
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/host/host_matrix_coo.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_coo.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.s
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.o.requires:
 
@@ -395,16 +461,16 @@ src/CMakeFiles/paralution.dir/base/host/host_matrix_coo.cpp.o.provides.build: sr
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.o: ../src/base/host/host_matrix_dia.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.o -c /paralution/paralution-1.1.0/src/base/host/host_matrix_dia.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_dia.cpp
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/host/host_matrix_dia.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_dia.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.i
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/host/host_matrix_dia.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_dia.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.s
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.o.requires:
 
@@ -419,16 +485,16 @@ src/CMakeFiles/paralution.dir/base/host/host_matrix_dia.cpp.o.provides.build: sr
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.o: ../src/base/host/host_matrix_ell.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.o -c /paralution/paralution-1.1.0/src/base/host/host_matrix_ell.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_ell.cpp
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/host/host_matrix_ell.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_ell.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.i
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/host/host_matrix_ell.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_ell.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.s
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.o.requires:
 
@@ -443,16 +509,16 @@ src/CMakeFiles/paralution.dir/base/host/host_matrix_ell.cpp.o.provides.build: sr
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.o: ../src/base/host/host_matrix_hyb.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.o -c /paralution/paralution-1.1.0/src/base/host/host_matrix_hyb.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_hyb.cpp
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/host/host_matrix_hyb.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_hyb.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.i
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/host/host_matrix_hyb.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_hyb.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.s
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.o.requires:
 
@@ -467,16 +533,16 @@ src/CMakeFiles/paralution.dir/base/host/host_matrix_hyb.cpp.o.provides.build: sr
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.o: ../src/base/host/host_matrix_dense.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.o -c /paralution/paralution-1.1.0/src/base/host/host_matrix_dense.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_dense.cpp
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/host/host_matrix_dense.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_dense.cpp > CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.i
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/host/host_matrix_dense.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/host/host_matrix_dense.cpp -o CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.s
 
 src/CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.o.requires:
 
@@ -491,16 +557,16 @@ src/CMakeFiles/paralution.dir/base/host/host_matrix_dense.cpp.o.provides.build: 
 
 src/CMakeFiles/paralution.dir/base/host/host_vector.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/host/host_vector.cpp.o: ../src/base/host/host_vector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_vector.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_vector.cpp.o -c /paralution/paralution-1.1.0/src/base/host/host_vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_vector.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_vector.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/host/host_vector.cpp
 
 src/CMakeFiles/paralution.dir/base/host/host_vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/host/host_vector.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/host/host_vector.cpp > CMakeFiles/paralution.dir/base/host/host_vector.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/host/host_vector.cpp > CMakeFiles/paralution.dir/base/host/host_vector.cpp.i
 
 src/CMakeFiles/paralution.dir/base/host/host_vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/host/host_vector.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/host/host_vector.cpp -o CMakeFiles/paralution.dir/base/host/host_vector.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/host/host_vector.cpp -o CMakeFiles/paralution.dir/base/host/host_vector.cpp.s
 
 src/CMakeFiles/paralution.dir/base/host/host_vector.cpp.o.requires:
 
@@ -515,16 +581,16 @@ src/CMakeFiles/paralution.dir/base/host/host_vector.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/paralution.dir/base/host/host_conversion.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/host/host_conversion.cpp.o: ../src/base/host/host_conversion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_conversion.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_conversion.cpp.o -c /paralution/paralution-1.1.0/src/base/host/host_conversion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_conversion.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_conversion.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/host/host_conversion.cpp
 
 src/CMakeFiles/paralution.dir/base/host/host_conversion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/host/host_conversion.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/host/host_conversion.cpp > CMakeFiles/paralution.dir/base/host/host_conversion.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/host/host_conversion.cpp > CMakeFiles/paralution.dir/base/host/host_conversion.cpp.i
 
 src/CMakeFiles/paralution.dir/base/host/host_conversion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/host/host_conversion.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/host/host_conversion.cpp -o CMakeFiles/paralution.dir/base/host/host_conversion.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/host/host_conversion.cpp -o CMakeFiles/paralution.dir/base/host/host_conversion.cpp.s
 
 src/CMakeFiles/paralution.dir/base/host/host_conversion.cpp.o.requires:
 
@@ -539,16 +605,16 @@ src/CMakeFiles/paralution.dir/base/host/host_conversion.cpp.o.provides.build: sr
 
 src/CMakeFiles/paralution.dir/base/host/host_affinity.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/host/host_affinity.cpp.o: ../src/base/host/host_affinity.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_affinity.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_affinity.cpp.o -c /paralution/paralution-1.1.0/src/base/host/host_affinity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_affinity.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_affinity.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/host/host_affinity.cpp
 
 src/CMakeFiles/paralution.dir/base/host/host_affinity.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/host/host_affinity.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/host/host_affinity.cpp > CMakeFiles/paralution.dir/base/host/host_affinity.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/host/host_affinity.cpp > CMakeFiles/paralution.dir/base/host/host_affinity.cpp.i
 
 src/CMakeFiles/paralution.dir/base/host/host_affinity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/host/host_affinity.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/host/host_affinity.cpp -o CMakeFiles/paralution.dir/base/host/host_affinity.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/host/host_affinity.cpp -o CMakeFiles/paralution.dir/base/host/host_affinity.cpp.s
 
 src/CMakeFiles/paralution.dir/base/host/host_affinity.cpp.o.requires:
 
@@ -563,16 +629,16 @@ src/CMakeFiles/paralution.dir/base/host/host_affinity.cpp.o.provides.build: src/
 
 src/CMakeFiles/paralution.dir/base/host/host_io.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/host/host_io.cpp.o: ../src/base/host/host_io.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_io.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_io.cpp.o -c /paralution/paralution-1.1.0/src/base/host/host_io.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_io.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_io.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/host/host_io.cpp
 
 src/CMakeFiles/paralution.dir/base/host/host_io.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/host/host_io.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/host/host_io.cpp > CMakeFiles/paralution.dir/base/host/host_io.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/host/host_io.cpp > CMakeFiles/paralution.dir/base/host/host_io.cpp.i
 
 src/CMakeFiles/paralution.dir/base/host/host_io.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/host/host_io.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/host/host_io.cpp -o CMakeFiles/paralution.dir/base/host/host_io.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/host/host_io.cpp -o CMakeFiles/paralution.dir/base/host/host_io.cpp.s
 
 src/CMakeFiles/paralution.dir/base/host/host_io.cpp.o.requires:
 
@@ -587,16 +653,16 @@ src/CMakeFiles/paralution.dir/base/host/host_io.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.o: ../src/base/host/host_stencil_laplace2d.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.o -c /paralution/paralution-1.1.0/src/base/host/host_stencil_laplace2d.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object src/CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/base/host/host_stencil_laplace2d.cpp
 
 src/CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/base/host/host_stencil_laplace2d.cpp > CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/base/host/host_stencil_laplace2d.cpp > CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.i
 
 src/CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/base/host/host_stencil_laplace2d.cpp -o CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/base/host/host_stencil_laplace2d.cpp -o CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.s
 
 src/CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.o.requires:
 
@@ -611,16 +677,16 @@ src/CMakeFiles/paralution.dir/base/host/host_stencil_laplace2d.cpp.o.provides.bu
 
 src/CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.o: ../src/solvers/krylov/cg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.o -c /paralution/paralution-1.1.0/src/solvers/krylov/cg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object src/CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/cg.cpp
 
 src/CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/krylov/cg.cpp > CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/cg.cpp > CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/krylov/cg.cpp -o CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/cg.cpp -o CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.o.requires:
 
@@ -635,16 +701,16 @@ src/CMakeFiles/paralution.dir/solvers/krylov/cg.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.o: ../src/solvers/krylov/cr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object src/CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.o -c /paralution/paralution-1.1.0/src/solvers/krylov/cr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object src/CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/cr.cpp
 
 src/CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/krylov/cr.cpp > CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/cr.cpp > CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/krylov/cr.cpp -o CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/cr.cpp -o CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.o.requires:
 
@@ -659,16 +725,16 @@ src/CMakeFiles/paralution.dir/solvers/krylov/cr.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.o: ../src/solvers/krylov/bicgstab.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object src/CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.o -c /paralution/paralution-1.1.0/src/solvers/krylov/bicgstab.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object src/CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/bicgstab.cpp
 
 src/CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/krylov/bicgstab.cpp > CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/bicgstab.cpp > CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/krylov/bicgstab.cpp -o CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/bicgstab.cpp -o CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.o.requires:
 
@@ -683,16 +749,16 @@ src/CMakeFiles/paralution.dir/solvers/krylov/bicgstab.cpp.o.provides.build: src/
 
 src/CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.o: ../src/solvers/krylov/gmres.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object src/CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.o -c /paralution/paralution-1.1.0/src/solvers/krylov/gmres.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object src/CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/gmres.cpp
 
 src/CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/krylov/gmres.cpp > CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/gmres.cpp > CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/krylov/gmres.cpp -o CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/gmres.cpp -o CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.o.requires:
 
@@ -707,16 +773,16 @@ src/CMakeFiles/paralution.dir/solvers/krylov/gmres.cpp.o.provides.build: src/CMa
 
 src/CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.o: ../src/solvers/krylov/fgmres.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object src/CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.o -c /paralution/paralution-1.1.0/src/solvers/krylov/fgmres.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object src/CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/fgmres.cpp
 
 src/CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/krylov/fgmres.cpp > CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/fgmres.cpp > CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/krylov/fgmres.cpp -o CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/fgmres.cpp -o CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.o.requires:
 
@@ -731,16 +797,16 @@ src/CMakeFiles/paralution.dir/solvers/krylov/fgmres.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.o: ../src/solvers/krylov/idr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object src/CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.o -c /paralution/paralution-1.1.0/src/solvers/krylov/idr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object src/CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/idr.cpp
 
 src/CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/krylov/idr.cpp > CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/idr.cpp > CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/krylov/idr.cpp -o CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/krylov/idr.cpp -o CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.o.requires:
 
@@ -755,16 +821,16 @@ src/CMakeFiles/paralution.dir/solvers/krylov/idr.cpp.o.provides.build: src/CMake
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.o: ../src/solvers/multigrid/base_multigrid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object src/CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.o -c /paralution/paralution-1.1.0/src/solvers/multigrid/base_multigrid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object src/CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/multigrid/base_multigrid.cpp
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/multigrid/base_multigrid.cpp > CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/multigrid/base_multigrid.cpp > CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/multigrid/base_multigrid.cpp -o CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/multigrid/base_multigrid.cpp -o CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.o.requires:
 
@@ -779,16 +845,16 @@ src/CMakeFiles/paralution.dir/solvers/multigrid/base_multigrid.cpp.o.provides.bu
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.o: ../src/solvers/multigrid/base_amg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object src/CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.o -c /paralution/paralution-1.1.0/src/solvers/multigrid/base_amg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object src/CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/multigrid/base_amg.cpp
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/multigrid/base_amg.cpp > CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/multigrid/base_amg.cpp > CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/multigrid/base_amg.cpp -o CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/multigrid/base_amg.cpp -o CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.o.requires:
 
@@ -803,16 +869,16 @@ src/CMakeFiles/paralution.dir/solvers/multigrid/base_amg.cpp.o.provides.build: s
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.o: ../src/solvers/multigrid/multigrid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object src/CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.o -c /paralution/paralution-1.1.0/src/solvers/multigrid/multigrid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object src/CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/multigrid/multigrid.cpp
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/multigrid/multigrid.cpp > CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/multigrid/multigrid.cpp > CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/multigrid/multigrid.cpp -o CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/multigrid/multigrid.cpp -o CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.o.requires:
 
@@ -827,16 +893,16 @@ src/CMakeFiles/paralution.dir/solvers/multigrid/multigrid.cpp.o.provides.build: 
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.o: ../src/solvers/multigrid/amg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object src/CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.o -c /paralution/paralution-1.1.0/src/solvers/multigrid/amg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object src/CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/multigrid/amg.cpp
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/multigrid/amg.cpp > CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/multigrid/amg.cpp > CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/multigrid/amg.cpp -o CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/multigrid/amg.cpp -o CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.o.requires:
 
@@ -851,16 +917,16 @@ src/CMakeFiles/paralution.dir/solvers/multigrid/amg.cpp.o.provides.build: src/CM
 
 src/CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.o: ../src/solvers/deflation/dpcg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object src/CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.o -c /paralution/paralution-1.1.0/src/solvers/deflation/dpcg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object src/CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/deflation/dpcg.cpp
 
 src/CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/deflation/dpcg.cpp > CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/deflation/dpcg.cpp > CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/deflation/dpcg.cpp -o CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/deflation/dpcg.cpp -o CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.o.requires:
 
@@ -875,16 +941,16 @@ src/CMakeFiles/paralution.dir/solvers/deflation/dpcg.cpp.o.provides.build: src/C
 
 src/CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.o: ../src/solvers/direct/inversion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object src/CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.o -c /paralution/paralution-1.1.0/src/solvers/direct/inversion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object src/CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/direct/inversion.cpp
 
 src/CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/direct/inversion.cpp > CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/direct/inversion.cpp > CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/direct/inversion.cpp -o CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/direct/inversion.cpp -o CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.o.requires:
 
@@ -899,16 +965,16 @@ src/CMakeFiles/paralution.dir/solvers/direct/inversion.cpp.o.provides.build: src
 
 src/CMakeFiles/paralution.dir/solvers/direct/lu.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/direct/lu.cpp.o: ../src/solvers/direct/lu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object src/CMakeFiles/paralution.dir/solvers/direct/lu.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/direct/lu.cpp.o -c /paralution/paralution-1.1.0/src/solvers/direct/lu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object src/CMakeFiles/paralution.dir/solvers/direct/lu.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/direct/lu.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/direct/lu.cpp
 
 src/CMakeFiles/paralution.dir/solvers/direct/lu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/direct/lu.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/direct/lu.cpp > CMakeFiles/paralution.dir/solvers/direct/lu.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/direct/lu.cpp > CMakeFiles/paralution.dir/solvers/direct/lu.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/direct/lu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/direct/lu.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/direct/lu.cpp -o CMakeFiles/paralution.dir/solvers/direct/lu.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/direct/lu.cpp -o CMakeFiles/paralution.dir/solvers/direct/lu.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/direct/lu.cpp.o.requires:
 
@@ -923,16 +989,16 @@ src/CMakeFiles/paralution.dir/solvers/direct/lu.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/paralution.dir/solvers/direct/qr.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/direct/qr.cpp.o: ../src/solvers/direct/qr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object src/CMakeFiles/paralution.dir/solvers/direct/qr.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/direct/qr.cpp.o -c /paralution/paralution-1.1.0/src/solvers/direct/qr.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object src/CMakeFiles/paralution.dir/solvers/direct/qr.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/direct/qr.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/direct/qr.cpp
 
 src/CMakeFiles/paralution.dir/solvers/direct/qr.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/direct/qr.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/direct/qr.cpp > CMakeFiles/paralution.dir/solvers/direct/qr.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/direct/qr.cpp > CMakeFiles/paralution.dir/solvers/direct/qr.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/direct/qr.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/direct/qr.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/direct/qr.cpp -o CMakeFiles/paralution.dir/solvers/direct/qr.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/direct/qr.cpp -o CMakeFiles/paralution.dir/solvers/direct/qr.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/direct/qr.cpp.o.requires:
 
@@ -947,16 +1013,16 @@ src/CMakeFiles/paralution.dir/solvers/direct/qr.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/paralution.dir/solvers/solver.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/solver.cpp.o: ../src/solvers/solver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object src/CMakeFiles/paralution.dir/solvers/solver.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/solver.cpp.o -c /paralution/paralution-1.1.0/src/solvers/solver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object src/CMakeFiles/paralution.dir/solvers/solver.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/solver.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/solver.cpp
 
 src/CMakeFiles/paralution.dir/solvers/solver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/solver.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/solver.cpp > CMakeFiles/paralution.dir/solvers/solver.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/solver.cpp > CMakeFiles/paralution.dir/solvers/solver.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/solver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/solver.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/solver.cpp -o CMakeFiles/paralution.dir/solvers/solver.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/solver.cpp -o CMakeFiles/paralution.dir/solvers/solver.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/solver.cpp.o.requires:
 
@@ -971,16 +1037,16 @@ src/CMakeFiles/paralution.dir/solvers/solver.cpp.o.provides.build: src/CMakeFile
 
 src/CMakeFiles/paralution.dir/solvers/chebyshev.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/chebyshev.cpp.o: ../src/solvers/chebyshev.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object src/CMakeFiles/paralution.dir/solvers/chebyshev.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/chebyshev.cpp.o -c /paralution/paralution-1.1.0/src/solvers/chebyshev.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object src/CMakeFiles/paralution.dir/solvers/chebyshev.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/chebyshev.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/chebyshev.cpp
 
 src/CMakeFiles/paralution.dir/solvers/chebyshev.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/chebyshev.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/chebyshev.cpp > CMakeFiles/paralution.dir/solvers/chebyshev.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/chebyshev.cpp > CMakeFiles/paralution.dir/solvers/chebyshev.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/chebyshev.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/chebyshev.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/chebyshev.cpp -o CMakeFiles/paralution.dir/solvers/chebyshev.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/chebyshev.cpp -o CMakeFiles/paralution.dir/solvers/chebyshev.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/chebyshev.cpp.o.requires:
 
@@ -995,16 +1061,16 @@ src/CMakeFiles/paralution.dir/solvers/chebyshev.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.o: ../src/solvers/mixed_precision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object src/CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.o -c /paralution/paralution-1.1.0/src/solvers/mixed_precision.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object src/CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/mixed_precision.cpp
 
 src/CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/mixed_precision.cpp > CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/mixed_precision.cpp > CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/mixed_precision.cpp -o CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/mixed_precision.cpp -o CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.o.requires:
 
@@ -1019,16 +1085,16 @@ src/CMakeFiles/paralution.dir/solvers/mixed_precision.cpp.o.provides.build: src/
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.o: ../src/solvers/preconditioners/preconditioner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.o -c /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner.cpp
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.o.requires:
 
@@ -1043,16 +1109,16 @@ src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner.cpp.o.provi
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.o: ../src/solvers/preconditioners/preconditioner_ai.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.o -c /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_ai.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_ai.cpp
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_ai.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_ai.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_ai.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_ai.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.o.requires:
 
@@ -1067,16 +1133,16 @@ src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_ai.cpp.o.pr
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.o: ../src/solvers/preconditioners/preconditioner_as.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.o -c /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_as.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_as.cpp
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_as.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_as.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_as.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_as.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.o.requires:
 
@@ -1091,16 +1157,16 @@ src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_as.cpp.o.pr
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.o: ../src/solvers/preconditioners/preconditioner_multielimination.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.o -c /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multielimination.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multielimination.cpp
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multielimination.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multielimination.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multielimination.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multielimination.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimination.cpp.o.requires:
 
@@ -1115,16 +1181,16 @@ src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multielimin
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.o: ../src/solvers/preconditioners/preconditioner_saddlepoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.o -c /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_saddlepoint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_saddlepoint.cpp
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_saddlepoint.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_saddlepoint.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_saddlepoint.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_saddlepoint.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint.cpp.o.requires:
 
@@ -1139,16 +1205,16 @@ src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_saddlepoint
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.o: ../src/solvers/preconditioners/preconditioner_blockprecond.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.o -c /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_blockprecond.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_blockprecond.cpp
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_blockprecond.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_blockprecond.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_blockprecond.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_blockprecond.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecond.cpp.o.requires:
 
@@ -1163,16 +1229,16 @@ src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_blockprecon
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.o: ../src/solvers/preconditioners/preconditioner_multicolored.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.o -c /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored.cpp
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored.cpp.o.requires:
 
@@ -1187,16 +1253,16 @@ src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolore
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.o: ../src/solvers/preconditioners/preconditioner_multicolored_gs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.o -c /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored_gs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored_gs.cpp
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored_gs.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored_gs.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored_gs.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored_gs.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_gs.cpp.o.requires:
 
@@ -1211,16 +1277,16 @@ src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolore
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.o: ../src/solvers/preconditioners/preconditioner_multicolored_ilu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.o -c /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored_ilu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored_ilu.cpp
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored_ilu.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored_ilu.cpp > CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored_ilu.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/preconditioners/preconditioner_multicolored_ilu.cpp -o CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolored_ilu.cpp.o.requires:
 
@@ -1235,16 +1301,16 @@ src/CMakeFiles/paralution.dir/solvers/preconditioners/preconditioner_multicolore
 
 src/CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.o: ../src/solvers/iter_ctrl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object src/CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.o -c /paralution/paralution-1.1.0/src/solvers/iter_ctrl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object src/CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/iter_ctrl.cpp
 
 src/CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/iter_ctrl.cpp > CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/iter_ctrl.cpp > CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/iter_ctrl.cpp -o CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/iter_ctrl.cpp -o CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.o.requires:
 
@@ -1259,16 +1325,16 @@ src/CMakeFiles/paralution.dir/solvers/iter_ctrl.cpp.o.provides.build: src/CMakeF
 
 src/CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.o: ../src/solvers/eigenvalue/cg_hn.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object src/CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.o -c /paralution/paralution-1.1.0/src/solvers/eigenvalue/cg_hn.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object src/CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/eigenvalue/cg_hn.cpp
 
 src/CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/eigenvalue/cg_hn.cpp > CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/eigenvalue/cg_hn.cpp > CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/eigenvalue/cg_hn.cpp -o CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/eigenvalue/cg_hn.cpp -o CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.o.requires:
 
@@ -1283,16 +1349,16 @@ src/CMakeFiles/paralution.dir/solvers/eigenvalue/cg_hn.cpp.o.provides.build: src
 
 src/CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.o: ../src/solvers/eigenvalue/ampe_sira.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object src/CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.o -c /paralution/paralution-1.1.0/src/solvers/eigenvalue/ampe_sira.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object src/CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/solvers/eigenvalue/ampe_sira.cpp
 
 src/CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/solvers/eigenvalue/ampe_sira.cpp > CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/solvers/eigenvalue/ampe_sira.cpp > CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.i
 
 src/CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/solvers/eigenvalue/ampe_sira.cpp -o CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/solvers/eigenvalue/ampe_sira.cpp -o CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.s
 
 src/CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.o.requires:
 
@@ -1307,16 +1373,16 @@ src/CMakeFiles/paralution.dir/solvers/eigenvalue/ampe_sira.cpp.o.provides.build:
 
 src/CMakeFiles/paralution.dir/utils/log.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/utils/log.cpp.o: ../src/utils/log.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object src/CMakeFiles/paralution.dir/utils/log.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/utils/log.cpp.o -c /paralution/paralution-1.1.0/src/utils/log.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object src/CMakeFiles/paralution.dir/utils/log.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/utils/log.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/utils/log.cpp
 
 src/CMakeFiles/paralution.dir/utils/log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/utils/log.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/utils/log.cpp > CMakeFiles/paralution.dir/utils/log.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/utils/log.cpp > CMakeFiles/paralution.dir/utils/log.cpp.i
 
 src/CMakeFiles/paralution.dir/utils/log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/utils/log.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/utils/log.cpp -o CMakeFiles/paralution.dir/utils/log.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/utils/log.cpp -o CMakeFiles/paralution.dir/utils/log.cpp.s
 
 src/CMakeFiles/paralution.dir/utils/log.cpp.o.requires:
 
@@ -1331,16 +1397,16 @@ src/CMakeFiles/paralution.dir/utils/log.cpp.o.provides.build: src/CMakeFiles/par
 
 src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.o: ../src/utils/allocate_free.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/utils/allocate_free.cpp.o -c /paralution/paralution-1.1.0/src/utils/allocate_free.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/utils/allocate_free.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/utils/allocate_free.cpp
 
 src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/utils/allocate_free.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/utils/allocate_free.cpp > CMakeFiles/paralution.dir/utils/allocate_free.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/utils/allocate_free.cpp > CMakeFiles/paralution.dir/utils/allocate_free.cpp.i
 
 src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/utils/allocate_free.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/utils/allocate_free.cpp -o CMakeFiles/paralution.dir/utils/allocate_free.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/utils/allocate_free.cpp -o CMakeFiles/paralution.dir/utils/allocate_free.cpp.s
 
 src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.o.requires:
 
@@ -1355,16 +1421,16 @@ src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.o.provides.build: src/CMak
 
 src/CMakeFiles/paralution.dir/utils/math_functions.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/utils/math_functions.cpp.o: ../src/utils/math_functions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object src/CMakeFiles/paralution.dir/utils/math_functions.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/utils/math_functions.cpp.o -c /paralution/paralution-1.1.0/src/utils/math_functions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object src/CMakeFiles/paralution.dir/utils/math_functions.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/utils/math_functions.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/utils/math_functions.cpp
 
 src/CMakeFiles/paralution.dir/utils/math_functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/utils/math_functions.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/utils/math_functions.cpp > CMakeFiles/paralution.dir/utils/math_functions.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/utils/math_functions.cpp > CMakeFiles/paralution.dir/utils/math_functions.cpp.i
 
 src/CMakeFiles/paralution.dir/utils/math_functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/utils/math_functions.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/utils/math_functions.cpp -o CMakeFiles/paralution.dir/utils/math_functions.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/utils/math_functions.cpp -o CMakeFiles/paralution.dir/utils/math_functions.cpp.s
 
 src/CMakeFiles/paralution.dir/utils/math_functions.cpp.o.requires:
 
@@ -1379,16 +1445,16 @@ src/CMakeFiles/paralution.dir/utils/math_functions.cpp.o.provides.build: src/CMa
 
 src/CMakeFiles/paralution.dir/utils/time_functions.cpp.o: src/CMakeFiles/paralution.dir/flags.make
 src/CMakeFiles/paralution.dir/utils/time_functions.cpp.o: ../src/utils/time_functions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object src/CMakeFiles/paralution.dir/utils/time_functions.cpp.o"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/utils/time_functions.cpp.o -c /paralution/paralution-1.1.0/src/utils/time_functions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object src/CMakeFiles/paralution.dir/utils/time_functions.cpp.o"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/paralution.dir/utils/time_functions.cpp.o -c /paralution/para-2.0/paralution-1.1.0/src/utils/time_functions.cpp
 
 src/CMakeFiles/paralution.dir/utils/time_functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/paralution.dir/utils/time_functions.cpp.i"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/paralution-1.1.0/src/utils/time_functions.cpp > CMakeFiles/paralution.dir/utils/time_functions.cpp.i
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /paralution/para-2.0/paralution-1.1.0/src/utils/time_functions.cpp > CMakeFiles/paralution.dir/utils/time_functions.cpp.i
 
 src/CMakeFiles/paralution.dir/utils/time_functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/paralution.dir/utils/time_functions.cpp.s"
-	cd /paralution/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/paralution-1.1.0/src/utils/time_functions.cpp -o CMakeFiles/paralution.dir/utils/time_functions.cpp.s
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /paralution/para-2.0/paralution-1.1.0/src/utils/time_functions.cpp -o CMakeFiles/paralution.dir/utils/time_functions.cpp.s
 
 src/CMakeFiles/paralution.dir/utils/time_functions.cpp.o.requires:
 
@@ -1461,7 +1527,18 @@ paralution_OBJECTS = \
 "CMakeFiles/paralution.dir/utils/time_functions.cpp.o"
 
 # External object files for target paralution
-paralution_EXTERNAL_OBJECTS =
+paralution_EXTERNAL_OBJECTS = \
+"/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_1.dir/base/gpu/hip_compile_1_generated_gpu_allocate_free.cu.o" \
+"/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_2.dir/base/gpu/hip_compile_2_generated_backend_gpu.cu.o" \
+"/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_3.dir/base/gpu/hip_compile_3_generated_gpu_vector.cu.o" \
+"/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_4.dir/base/gpu/hip_compile_4_generated_gpu_matrix_csr.cu.o" \
+"/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_5.dir/base/gpu/hip_compile_5_generated_gpu_matrix_coo.cu.o" \
+"/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_6.dir/base/gpu/hip_compile_6_generated_gpu_matrix_dense.cu.o" \
+"/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_7.dir/base/gpu/hip_compile_7_generated_gpu_matrix_mcsr.cu.o" \
+"/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_8.dir/base/gpu/hip_compile_8_generated_gpu_matrix_bcsr.cu.o" \
+"/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_9.dir/base/gpu/hip_compile_9_generated_gpu_matrix_ell.cu.o" \
+"/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_10.dir/base/gpu/hip_compile_10_generated_gpu_matrix_dia.cu.o" \
+"/paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/hip_compile_11.dir/base/gpu/hip_compile_11_generated_gpu_matrix_hyb.cu.o"
 
 lib/libparalution.so: src/CMakeFiles/paralution.dir/base/base_paralution.cpp.o
 lib/libparalution.so: src/CMakeFiles/paralution.dir/base/operator.cpp.o
@@ -1519,10 +1596,21 @@ lib/libparalution.so: src/CMakeFiles/paralution.dir/utils/log.cpp.o
 lib/libparalution.so: src/CMakeFiles/paralution.dir/utils/allocate_free.cpp.o
 lib/libparalution.so: src/CMakeFiles/paralution.dir/utils/math_functions.cpp.o
 lib/libparalution.so: src/CMakeFiles/paralution.dir/utils/time_functions.cpp.o
+lib/libparalution.so: src/CMakeFiles/hip_compile_1.dir/base/gpu/hip_compile_1_generated_gpu_allocate_free.cu.o
+lib/libparalution.so: src/CMakeFiles/hip_compile_2.dir/base/gpu/hip_compile_2_generated_backend_gpu.cu.o
+lib/libparalution.so: src/CMakeFiles/hip_compile_3.dir/base/gpu/hip_compile_3_generated_gpu_vector.cu.o
+lib/libparalution.so: src/CMakeFiles/hip_compile_4.dir/base/gpu/hip_compile_4_generated_gpu_matrix_csr.cu.o
+lib/libparalution.so: src/CMakeFiles/hip_compile_5.dir/base/gpu/hip_compile_5_generated_gpu_matrix_coo.cu.o
+lib/libparalution.so: src/CMakeFiles/hip_compile_6.dir/base/gpu/hip_compile_6_generated_gpu_matrix_dense.cu.o
+lib/libparalution.so: src/CMakeFiles/hip_compile_7.dir/base/gpu/hip_compile_7_generated_gpu_matrix_mcsr.cu.o
+lib/libparalution.so: src/CMakeFiles/hip_compile_8.dir/base/gpu/hip_compile_8_generated_gpu_matrix_bcsr.cu.o
+lib/libparalution.so: src/CMakeFiles/hip_compile_9.dir/base/gpu/hip_compile_9_generated_gpu_matrix_ell.cu.o
+lib/libparalution.so: src/CMakeFiles/hip_compile_10.dir/base/gpu/hip_compile_10_generated_gpu_matrix_dia.cu.o
+lib/libparalution.so: src/CMakeFiles/hip_compile_11.dir/base/gpu/hip_compile_11_generated_gpu_matrix_hyb.cu.o
 lib/libparalution.so: src/CMakeFiles/paralution.dir/build.make
 lib/libparalution.so: src/CMakeFiles/paralution.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/paralution/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Linking CXX shared library ../lib/libparalution.so"
-	cd /paralution/paralution-1.1.0/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/paralution.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/paralution/para-2.0/paralution-1.1.0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Linking CXX shared library ../lib/libparalution.so"
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/paralution.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/paralution.dir/build: lib/libparalution.so
@@ -1589,10 +1677,20 @@ src/CMakeFiles/paralution.dir/requires: src/CMakeFiles/paralution.dir/utils/time
 .PHONY : src/CMakeFiles/paralution.dir/requires
 
 src/CMakeFiles/paralution.dir/clean:
-	cd /paralution/paralution-1.1.0/build/src && $(CMAKE_COMMAND) -P CMakeFiles/paralution.dir/cmake_clean.cmake
+	cd /paralution/para-2.0/paralution-1.1.0/build/src && $(CMAKE_COMMAND) -P CMakeFiles/paralution.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/paralution.dir/clean
 
-src/CMakeFiles/paralution.dir/depend:
-	cd /paralution/paralution-1.1.0/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /paralution/paralution-1.1.0 /paralution/paralution-1.1.0/src /paralution/paralution-1.1.0/build /paralution/paralution-1.1.0/build/src /paralution/paralution-1.1.0/build/src/CMakeFiles/paralution.dir/DependInfo.cmake --color=$(COLOR)
+src/CMakeFiles/paralution.dir/depend: src/CMakeFiles/hip_compile_1.dir/base/gpu/hip_compile_1_generated_gpu_allocate_free.cu.o
+src/CMakeFiles/paralution.dir/depend: src/CMakeFiles/hip_compile_2.dir/base/gpu/hip_compile_2_generated_backend_gpu.cu.o
+src/CMakeFiles/paralution.dir/depend: src/CMakeFiles/hip_compile_3.dir/base/gpu/hip_compile_3_generated_gpu_vector.cu.o
+src/CMakeFiles/paralution.dir/depend: src/CMakeFiles/hip_compile_4.dir/base/gpu/hip_compile_4_generated_gpu_matrix_csr.cu.o
+src/CMakeFiles/paralution.dir/depend: src/CMakeFiles/hip_compile_5.dir/base/gpu/hip_compile_5_generated_gpu_matrix_coo.cu.o
+src/CMakeFiles/paralution.dir/depend: src/CMakeFiles/hip_compile_6.dir/base/gpu/hip_compile_6_generated_gpu_matrix_dense.cu.o
+src/CMakeFiles/paralution.dir/depend: src/CMakeFiles/hip_compile_7.dir/base/gpu/hip_compile_7_generated_gpu_matrix_mcsr.cu.o
+src/CMakeFiles/paralution.dir/depend: src/CMakeFiles/hip_compile_8.dir/base/gpu/hip_compile_8_generated_gpu_matrix_bcsr.cu.o
+src/CMakeFiles/paralution.dir/depend: src/CMakeFiles/hip_compile_9.dir/base/gpu/hip_compile_9_generated_gpu_matrix_ell.cu.o
+src/CMakeFiles/paralution.dir/depend: src/CMakeFiles/hip_compile_10.dir/base/gpu/hip_compile_10_generated_gpu_matrix_dia.cu.o
+src/CMakeFiles/paralution.dir/depend: src/CMakeFiles/hip_compile_11.dir/base/gpu/hip_compile_11_generated_gpu_matrix_hyb.cu.o
+	cd /paralution/para-2.0/paralution-1.1.0/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /paralution/para-2.0/paralution-1.1.0 /paralution/para-2.0/paralution-1.1.0/src /paralution/para-2.0/paralution-1.1.0/build /paralution/para-2.0/paralution-1.1.0/build/src /paralution/para-2.0/paralution-1.1.0/build/src/CMakeFiles/paralution.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/paralution.dir/depend
 

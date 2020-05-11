@@ -77,13 +77,15 @@ if(HIP_HOST_COMPILATION_CPP)
 
   set(generated_extension ${CMAKE_${HIP_C_OR_CXX}_OUTPUT_EXTENSION})
 
-  if(CUDA_64_BIT_DEVICE_CODE)   # Srinivas K
+  if(HIP_64_BIT_DEVICE_CODE)   # Srinivas K
     set(hcc_flags ${hcc_flags} -m64)
   else()
     set(hcc_flags ${hcc_flags} -m32)
   endif()
-if(CUDA_TARGET_CPU_ARCH) # Srinivas K
-    set(hcc_flags ${hcc_flags} "--target-cpu-architecture=${CUDA_TARGET_CPU_ARCH}")
+
+  if(HIP_TARGET_CPU_ARCH) # Srinivas K 
+      #set(hcc_flags ${hcc_flags} "--target-cpu-architecture=${CUDA_TARGET_CPU_ARCH}")
+      set(hcc_flags ${hcc_flags} "-O3 -arch amd-gpu-target=gfx906  --compiler-options -Wall =${HIP_TARGET_CPU_ARCH}")
   endif()
 
   # This needs to be passed in at this stage, because VS needs to fill out the
@@ -222,7 +224,7 @@ if(CUDA_TARGET_CPU_ARCH) # Srinivas K
   endif()
 
   # Reset the output variable
-  set(_cuda_wrap_generated_files "")
+  set(_hip_wrap_generated_files "")
 
   # Iterate over the macro arguments and create custom
   # commands for all the .cu files.
@@ -408,7 +410,7 @@ if(CUDA_TARGET_CPU_ARCH) # Srinivas K
   # Make sure the build system knows the file is generated.
       set_source_files_properties(${generated_file} PROPERTIES GENERATED TRUE)
 
-      list(APPEND _cuda_wrap_generated_files ${generated_file})
+      list(APPEND _hip_wrap_generated_files ${generated_file})
 
       # Add the other files that we want cmake to clean on a cleanup ##########
       list(APPEND HIP_ADDITIONAL_CLEAN_FILES "${cmake_dependency_file}")
@@ -419,7 +421,7 @@ if(CUDA_TARGET_CPU_ARCH) # Srinivas K
   endforeach()
 
   # Set the return parameter
-  set(${generated_files} ${_cuda_wrap_generated_files})
+  set(${generated_files} ${_hip_wrap_generated_files})
 endmacro()
 
 function(_cuda_get_important_host_flags important_flags flag_string)
