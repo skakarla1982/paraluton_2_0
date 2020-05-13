@@ -44,8 +44,11 @@
 #include <stdlib.h>
 
 #include <hip/hip_runtime.h>
-#include <hipblas.h>
-#include <hipsparse.h>
+//#include <hipblas.h>
+#include "hipblas.h"
+//#include <hipsparse.h>
+#include "hipsparse.h"
+
 
 #define CUBLAS_HANDLE(handle) *static_cast<hipblasHandle_t*>(handle)
 #define CUSPARSE_HANDLE(handle) *static_cast<hipsparseHandle_t*>(handle)

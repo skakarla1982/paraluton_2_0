@@ -46,7 +46,8 @@
 #include "gpu_allocate_free.hpp"
 
 #include <hip/hip_runtime.h>
-#include <hipblas.h>
+//#include <hipblas.h>
+#include "hipblas.h"
 
 namespace paralution {
 

@@ -50,7 +50,9 @@
 #include "gpu_matrix_dense.hpp"
 
 #include <hip/hip_runtime.h>
-#include <hipblas.h>
+//#include <hipblas.h>
+#include "hipblas.h"
+
 
 namespace paralution {
 

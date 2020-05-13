@@ -63,6 +63,6 @@ set(EXAMPLES
 
 foreach(example ${EXAMPLES})
   add_executable(${example} ${example}.cpp)
-  target_link_libraries(${example} ${PARALUTION_LIBRARY})
+  target_link_libraries(${example} ${PARALUTION_LIBRARY} )
   install(PROGRAMS ${example} DESTINATION bin)
 endforeach()

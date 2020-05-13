@@ -35,7 +35,8 @@
 #define PARALUTION_GPU_CUSPARSE_CSR_HPP_
 
 namespace paralution {
-
+// Srinivas K	
+/*
 hipsparseStatus_t __cusparseXcsrgeam__(hipsparseHandle_t handle, int m, int n,
                                       const double *alpha,
                                       const hipsparseMatDescr_t descrA, int nnzA,
@@ -79,6 +80,7 @@ hipsparseStatus_t __cusparseXcsrgeam__(hipsparseHandle_t handle, int m, int n,
                           csrValC, csrRowPtrC, csrColIndC);
 
 }
+*/ //Srinivas K
 
 hipsparseStatus_t  __cusparseXcsrgemm__(hipsparseHandle_t handle,
                                        hipsparseOperation_t transA, hipsparseOperation_t transB,

@@ -54,8 +54,8 @@
 #include <algorithm>
 
 #include <hip/hip_runtime.h>
-#include <hipsparse.h>
-
+//#include <hipsparse.h>
+#include "hipsparse.h"
 namespace paralution {
 
 template <typename ValueType>

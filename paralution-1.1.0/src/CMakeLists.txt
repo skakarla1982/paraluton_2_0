@@ -30,7 +30,39 @@
 
 # PARALUTION version 1.1.0 
 
-#set(HIP_SUPPORT ON) # Srinivas K
+###############################################################################
+# SET: Variable defaults
+###############################################################################
+# User defined flags
+set(HIP_HIPCC_FLAGS "" CACHE STRING "Semicolon delimited flags for HIPCC")
+set(HIP_HCC_FLAGS "" CACHE STRING "Semicolon delimited flags for HCC")
+set(HIP_NVCC_FLAGS "" CACHE STRING "Semicolon delimted flags for NVCC")
+mark_as_advanced(HIP_HIPCC_FLAGS HIP_HCC_FLAGS HIP_NVCC_FLAGS)
+set(_hip_configuration_types ${CMAKE_CONFIGURATION_TYPES} ${CMAKE_BUILD_TYPE} Debug MinSizeRel Release RelWithDebInfo)
+list(REMOVE_DUPLICATES _hip_configuration_types)
+foreach(config ${_hip_configuration_types})
+    string(TOUPPER ${config} config_upper)
+    set(HIP_HIPCC_FLAGS_${config_upper} "" CACHE STRING "Semicolon delimited flags for HIPCC")
+    set(HIP_HCC_FLAGS_${config_upper} "" CACHE STRING "Semicolon delimited flags for HCC")
+    set(HIP_NVCC_FLAGS_${config_upper} "" CACHE STRING "Semicolon delimited flags for NVCC")
+    mark_as_advanced(HIP_HIPCC_FLAGS_${config_upper} HIP_HCC_FLAGS_${config_upper} HIP_NVCC_FLAGS_${config_upper})
+endforeach()
+option(HIP_HOST_COMPILATION_CPP "Host code compilation mode" ON)
+option(HIP_VERBOSE_BUILD "Print out the commands run while compiling the HIP source file.  With the Makefile generator this defaults to VERBOSE variable specified on the command line, but can be forced on with this option." OFF)
+mark_as_advanced(HIP_HOST_COMPILATION_CPP)
+
+
+###############################################################################
+# MACRO: Add include directories to pass to the hipcc command
+###############################################################################
+set(HIP_HIPCC_INCLUDE_ARGS_USER "")
+macro(HIP_INCLUDE_DIRECTORIES)
+    foreach(dir ${ARGN})
+        list(APPEND HIP_HIPCC_INCLUDE_ARGS_USER $<$<BOOL:${dir}>:-I${dir}>)
+    endforeach()
+endmacro()
+
+
 
 ###################################################
 
@@ -64,28 +96,35 @@ macro(HIP_WRAP_SRCS hip_target format generated_files)
   else()
     # Device mode.  No flags necessary.
   endif()
-if(HIP_HOST_COMPILATION_CPP)
-    set(HIP_C_OR_CXX CXX)
-  else()
-  if(HIP_VERSION VERSION_LESS "3.0")
-      set(hcc_flags ${hcc_flags} --host-compilation C)
-    else()
-      message(WARNING "--host-compilation flag is deprecated in CUDA version >= 3.0.  Removing --host-compilation C flag" )
-    endif()
-    set(HIP_C_OR_CXX C)
-  endif()
 
-  set(generated_extension ${CMAKE_${HIP_C_OR_CXX}_OUTPUT_EXTENSION})
+    if(HIP_HOST_COMPILATION_CPP)
+        set(HIP_C_OR_CXX CXX)
+    else()
+        set(HIP_C_OR_CXX C)
+    endif()
+    set(generated_extension ${CMAKE_${HIP_C_OR_CXX}_OUTPUT_EXTENSION})
+
+    #    if(HIP_HOST_COMPILATION_CPP) # Srinivas K
+    #set(HIP_C_OR_CXX CXX)
+    #else()
+    #if(HIP_VERSION VERSION_LESS "3.0")
+    #  set(hcc_flags ${hcc_flags} --host-compilation C)
+    #else()
+    #  message(WARNING "--host-compilation flag is deprecated in CUDA version >= 3.0.  Removing --host-compilation C flag" )
+    #endif()
+    #set(HIP_C_OR_CXX C)
+    #endif()
+    #set(generated_extension ${CMAKE_${HIP_C_OR_CXX}_OUTPUT_EXTENSION})
 
   if(HIP_64_BIT_DEVICE_CODE)   # Srinivas K
-    set(hcc_flags ${hcc_flags} -m64)
+    set(hcc_flags ${hcc_flags} I/opt/rocm/hipblas/include -I/opt/rocm/hipsparse/include -m64)
   else()
     set(hcc_flags ${hcc_flags} -m32)
   endif()
 
   if(HIP_TARGET_CPU_ARCH) # Srinivas K 
       #set(hcc_flags ${hcc_flags} "--target-cpu-architecture=${CUDA_TARGET_CPU_ARCH}")
-      set(hcc_flags ${hcc_flags} "-O3 -arch amd-gpu-target=gfx906  --compiler-options -Wall =${HIP_TARGET_CPU_ARCH}")
+      set(hcc_flags ${hcc_flags} "-I/opt/rocm/hipsparse/include  -I/opt/rocm/hipblas/include -O3 -arch amd-gpu-target=gfx906  --compiler-options -Wall =${HIP_TARGET_CPU_ARCH}")
   endif()
 
   # This needs to be passed in at this stage, because VS needs to fill out the
@@ -107,35 +146,51 @@ if(HIP_HOST_COMPILATION_CPP)
   else()
     set( HIP_build_configuration "${CMAKE_BUILD_TYPE}")
   endif()
-# Initialize our list of includes with the user ones followed by the CUDA system ones.
-  set(CUDA_NVCC_INCLUDE_DIRS ${CUDA_NVCC_INCLUDE_DIRS_USER} "${CUDA_INCLUDE_DIRS}")
+  # Initialize our list of includes with the user ones followed by the CUDA system ones.
+  #set(CUDA_NVCC_INCLUDE_DIRS ${CUDA_NVCC_INCLUDE_DIRS_USER} "${CUDA_INCLUDE_DIRS}") # ** Srinivas K **
+  set(HIP_HIPCC_INCLUDE_ARGS ${HIP_HIPCC_INCLUDE_ARGS_USER})
+
   if(_target_is_phony)
     # If the passed in target name isn't a real target (i.e., this is from a call to one of the
     # cuda_compile_* functions), need to query directory properties to get include directories
     # and compile definitions.
-    get_directory_property(_dir_include_dirs INCLUDE_DIRECTORIES)
-    get_directory_property(_dir_compile_defs COMPILE_DEFINITIONS)
+    
+    #get_directory_property(_dir_include_dirs INCLUDE_DIRECTORIES) # Srinivas K CUDA
+    get_directory_property(_hip_include_directories INCLUDE_DIRECTORIES)
+    list(REMOVE_DUPLICATES _hip_include_directories)
+    if(_hip_include_directories)
+        foreach(dir ${_hip_include_directories})
+            list(APPEND HIP_HIPCC_INCLUDE_ARGS $<$<BOOL:${dir}>:-I${dir}>)
+        endforeach()
+    endif()
 
-    list(APPEND HIP_NVCC_INCLUDE_DIRS "${_dir_include_dirs}")
-    set(CUDA_NVCC_COMPILE_DEFINITIONS "${_dir_compile_defs}")
-  else()
+    #get_directory_property(_dir_compile_defs COMPILE_DEFINITIONS) # Srinivas K CUDA
+     
+
+    #list(APPEND HIP_NVCC_INCLUDE_DIRS "${_dir_include_dirs}") # Srinivas K CUDA
+    #set(CUDA_NVCC_COMPILE_DEFINITIONS "${_dir_compile_defs}") 
+    set(compile_definition_generator "$<TARGET_PROPERTY:${_target},COMPILE_DEFINITIONS>")
+    list(APPEND HIP_HIPCC_FLAGS "$<$<BOOL:${compile_definition_generator}>:-D$<JOIN:${compile_definition_generator}, -D>>")
+
+    else()
     # Append the include directories for this target via generator expression, which is
     # expanded by the FILE(GENERATE) call below.  This generator expression captures all
     # include dirs set by the user, whether via directory properties or target properties
-    list(APPEND HIP_NVCC_INCLUDE_DIRS "$<TARGET_PROPERTY:${hip_target},INCLUDE_DIRECTORIES>")
+    
+    list(APPEND HIP_NVCC_INCLUDE_DIRS "$<TARGET_PROPERTY:${hip_target},INCLUDE_DIRECTORIES>") # Srinivas K Need to replace
+     # Do the same thing with compile definitions
+     set(HIP_NVCC_COMPILE_DEFINITIONS "$<TARGET_PROPERTY:${hip_target},COMPILE_DEFINITIONS>") # Srinivas K Need to repalce
 
-    # Do the same thing with compile definitions
-    set(HIP_NVCC_COMPILE_DEFINITIONS "$<TARGET_PROPERTY:${hip_target},COMPILE_DEFINITIONS>")
-  endif()
- # Reset these variables
-  set(HIP_WRAP_OPTION_NVCC_FLAGS)
-  foreach(config ${CUDA_configuration_types})
+   endif()
+   # Reset these variables
+   set(HIP_WRAP_OPTION_NVCC_FLAGS)
+   foreach(config ${CUDA_configuration_types}) # Srinivas K need  to check
     string(TOUPPER ${config} config_upper)
-    set(HIP_WRAP_OPTION_NVCC_FLAGS_${config_upper})
-  endforeach()
+    set(HIP_WRAP_OPTION_NVCC_FLAGS_${config_upper}) # Srinivas K need to check
+   endforeach()
 
   HIP_GET_SOURCES_AND_OPTIONS(_hip_wrap_sources _hip_wrap_cmake_options _hip_wrap_options ${_argn_list})
-  HIP_PARSE_HCC_OPTIONS(HIP_WRAP_OPTION_NVCC_FLAGS ${_hip_wrap_options})
+  HIP_PARSE_HCC_OPTIONS(HIP_WRAP_OPTION_NVCC_FLAGS ${_hip_wrap_options}) # Srinivas K
 
   # Figure out if we are building a shared library.  BUILD_SHARED_LIBS is
   # respected in CUDA_ADD_LIBRARY.
@@ -243,7 +298,7 @@ if(HIP_HOST_COMPILATION_CPP)
         set(cuda_language_flag -x=cu)
       else()
         set(cuda_language_flag)
-      endif()
+     endif()
 
       if( ${_hip_source_format} MATCHES "OBJ")
         set( hip_compile_to_external_module OFF )
@@ -305,7 +360,7 @@ if(HIP_HOST_COMPILATION_CPP)
       # generated_file_path in them get passed in through as a command line
       # argument, so that the ${CMAKE_CFG_INTDIR} gets expanded at run time
       # instead of configure time.
- set(generated_file "${generated_file_path}/${generated_file_basename}")
+      set(generated_file "${generated_file_path}/${generated_file_basename}")
       set(cmake_dependency_file "${hip_compile_intermediate_directory}/${generated_file_basename}.depend")
       set(NVCC_generated_dependency_file "${hip_compile_intermediate_directory}/${generated_file_basename}.NVCC-depend")
       set(generated_cubin_file "${generated_file_path}/${generated_file_basename}.cubin.txt")
@@ -333,8 +388,9 @@ if(HIP_HOST_COMPILATION_CPP)
       endif()
 
       # Bring in the dependencies.  Creates a variable CUDA_NVCC_DEPEND #######
-      #cuda_include_nvcc_dependencies(${cmake_dependency_file}) // Srinivas K
- 
+      #cuda_include_nvcc_dependencies(${cmake_dependency_file}) # Srinivas K
+      HIP_INCLUDE_HIPCC_DEPENDENCIES(${cmake_dependency_file})
+
       # Convenience string for output #########################################
       if(HIP_BUILD_EMULATION)
         set(hip_build_type "Emulation")
@@ -351,7 +407,8 @@ if(HIP_HOST_COMPILATION_CPP)
       endif()
 
       # Configure the build script
-      configure_file("${HIP_run_hipcc}" "${custom_target_script_pregen}" @ONLY)
+      #configure_file("${CUDA_run_nvcc}" "${custom_target_script_pregen}" @ONLY )  # Srinivas K
+      configure_file("${HIP_run_hipcc}" "${custom_target_script_pregen}" @ONLY )  # Srinivas K
       file(GENERATE
         OUTPUT "${custom_target_script}"
         INPUT "${custom_target_script_pregen}"
@@ -377,9 +434,9 @@ if(HIP_HOST_COMPILATION_CPP)
    # Create up the comment string
       file(RELATIVE_PATH generated_file_relative_path "${CMAKE_BINARY_DIR}" "${generated_file}")
       if(hip_compile_to_external_module)
-         set(hip_build_comment_string "Building HCC ${hip_compile_to_external_module_type} file ${generated_file_relative_path}")
+         set(hip_build_comment_string "Building HCC .. ${hip_compile_to_external_module_type} file ${generated_file_relative_path}")
       else()
-         set(hip_build_comment_string "Building HCC (${hip_build_type}) object ${generated_file_relative_path}")
+         set(hip_build_comment_string "Building HCC .. (${hip_build_type}) object ${generated_file_relative_path}")
       endif()
 
       set(_verbatim VERBATIM)
@@ -392,14 +449,14 @@ if(HIP_HOST_COMPILATION_CPP)
         OUTPUT ${generated_file}
         # These output files depend on the source_file and the contents of cmake_dependency_file
         ${main_dep}
-        DEPENDS ${HIP_NVCC_DEPEND}
+        DEPENDS ${HIP_HIPCC_DEPEND}
         DEPENDS ${custom_target_script}
         # Make sure the output directory exists before trying to write to it.
         COMMAND ${CMAKE_COMMAND} -E make_directory "${generated_file_path}"
         COMMAND ${CMAKE_COMMAND} ARGS
           -D verbose:BOOL=${verbose_output}
           ${ccbin_flags}
-          -D build_configuration:STRING=${HIP_build_configuration}
+          -D build_configuration:STRING=${hip_build_configuration}
           -D "generated_file:STRING=${generated_file}"
           -D "generated_cubin_file:STRING=${generated_cubin_file}"
           -P "${custom_target_script}"
@@ -407,7 +464,8 @@ if(HIP_HOST_COMPILATION_CPP)
         COMMENT "${hip_build_comment_string}"
         ${_verbatim}
         )
-  # Make sure the build system knows the file is generated.
+
+     # Make sure the build system knows the file is generated.
       set_source_files_properties(${generated_file} PROPERTIES GENERATED TRUE)
 
       list(APPEND _hip_wrap_generated_files ${generated_file})
@@ -422,6 +480,8 @@ if(HIP_HOST_COMPILATION_CPP)
 
   # Set the return parameter
   set(${generated_files} ${_hip_wrap_generated_files})
+
+
 endmacro()
 
 function(_cuda_get_important_host_flags important_flags flag_string)
@@ -436,6 +496,18 @@ function(_cuda_get_important_host_flags important_flags flag_string)
 endfunction()
 
 #########################################################
+
+macro(HIP_ADD_LIBRARY hip_target)
+    # Separate the sources from the options
+    HIP_GET_SOURCES_AND_OPTIONS(_sources _cmake_options _hipcc_options _hcc_options _nvcc_options ${ARGN})
+    HIP_PREPARE_TARGET_COMMANDS(${hip_target} OBJ _generated_files _source_files ${_sources} ${_cmake_options} HIPCC_OPTIONS ${_hipcc_options} HCC_OPTIONS ${_hcc_options} NVCC_OPTIONS ${_nvcc_options})
+    if(_source_files)
+        list(REMOVE_ITEM _sources ${_source_files})
+    endif()
+    add_library(${hip_target} ${_cmake_options} ${_generated_files} ${_sources})
+    set_target_properties(${hip_target} PROPERTIES LINKER_LANGUAGE ${HIP_C_OR_CXX})
+endmacro()
+
 ##############################################################################
 # Separate the OPTIONS out from the sources
 #
@@ -517,7 +589,9 @@ macro(hip_compile_base hip_target format generated_files)
   set_property(DIRECTORY PROPERTY _hip_internal_phony_counter ${_counter})
 
   # Separate the sources from the options
-  HIP_GET_SOURCES_AND_OPTIONS(_sources _cmake_options _options ${ARGN})
+  #HIP_GET_SOURCES_AND_OPTIONS(_sources _cmake_options _options ${ARGN})
+  # Srinivas K
+  HIP_GET_SOURCES_AND_OPTIONS(_sources _cmake_options _hipcc_options _hcc_options _nvcc_options ${ARGN})
 
   # Create custom commands and targets for each file.
   HIP_WRAP_SRCS( ${_hip_target} ${format} _generated_files ${_sources}
@@ -526,6 +600,54 @@ macro(hip_compile_base hip_target format generated_files)
   set( ${generated_files} ${_generated_files})
 
 endmacro()
+
+###############################################################################
+# MACRO: Separate the options from the sources
+###############################################################################
+macro(HIP_GET_SOURCES_AND_OPTIONS _sources _cmake_options _hipcc_options _hcc_options _nvcc_options)
+    set(${_sources})
+    set(${_cmake_options})
+    set(${_hipcc_options})
+    set(${_hcc_options})
+    set(${_nvcc_options})
+    set(_hipcc_found_options FALSE)
+    set(_hcc_found_options FALSE)
+    set(_nvcc_found_options FALSE)
+    foreach(arg ${ARGN})
+        if("x${arg}" STREQUAL "xHIPCC_OPTIONS")
+            set(_hipcc_found_options TRUE)
+            set(_hcc_found_options FALSE)
+            set(_nvcc_found_options FALSE)
+        elseif("x${arg}" STREQUAL "xHCC_OPTIONS")
+            set(_hipcc_found_options FALSE)
+            set(_hcc_found_options TRUE)
+            set(_nvcc_found_options FALSE)
+        elseif("x${arg}" STREQUAL "xNVCC_OPTIONS")
+            set(_hipcc_found_options FALSE)
+            set(_hcc_found_options FALSE)
+            set(_nvcc_found_options TRUE)
+        elseif(
+                "x${arg}" STREQUAL "xEXCLUDE_FROM_ALL" OR
+                "x${arg}" STREQUAL "xSTATIC" OR
+                "x${arg}" STREQUAL "xSHARED" OR
+                "x${arg}" STREQUAL "xMODULE"
+                )
+            list(APPEND ${_cmake_options} ${arg})
+        else()
+            if(_hipcc_found_options)
+                list(APPEND ${_hipcc_options} ${arg})
+            elseif(_hcc_found_options)
+                list(APPEND ${_hcc_options} ${arg})
+            elseif(_nvcc_found_options)
+                list(APPEND ${_nvcc_options} ${arg})
+            else()
+                # Assume this is a file
+                list(APPEND ${_sources} ${arg})
+            endif()
+        endif()
+    endforeach()
+endmacro()
+#############################################################################################
 
 # Copy headers to binary include dir
 foreach(i ${PARALUTION_PUBLIC_HEADERS})
@@ -573,20 +695,29 @@ foreach(i ${PLUG-INS_PUBLIC_HEADERS})
   configure_file("${CMAKE_CURRENT_SOURCE_DIR}/plug-ins/${i}" "${PLUGINS_BUILD_DIR}/${i}" COPYONLY)
 endforeach()
 
-#######################################################################################################################
+###################################################################################
 
 # Replace HIP files in PARALUTION list since it is compiled by NVCC
 if (SUPPORT_HIP)
   foreach(i ${PARALUTION_SOURCES})
 
-    if (${i} MATCHES ".cu")
-	    HIP_COMPILE(cu ${i})
-      list(REMOVE_ITEM PARALUTION_SOURCES ${i})
-      list(APPEND PARALUTION_SOURCES ${cu})
+    if (${i} MATCHES ".cu")  
+	    #message(\n  STATUS "@  Srinivas K  @1 Compiling with cuda Srinivas K @ i  cu  ${i}  ${PARALUTION_SOURCES} )" )
+	    #message(\n  STATUS| "@  Srinivas K  @2   cu  ${cu}" )
+
+    #HIP_COMPILE(cu ${i}) # Srinivas K
+    #HIP_ADD_LIBRARY(cu ${i} )
+
+    execute_process(COMMAND /opt/rocm/bin/hipcc -c -fPIC -fno-gpu-rdc ${PROJECT_SOURCE_DIR}/src/${i} -o gpu.o  WORKING_DIRECTORY "${PROJECT_SOURCE_DIR}/src/base/gpu/")
+     set(cu ${PROJECT_SOURCE_DIR}/src/base/gpu/gpu.o)
+
+    list(REMOVE_ITEM PARALUTION_SOURCES ${i})
+    list(APPEND PARALUTION_SOURCES ${cu})
     endif()
 
   endforeach()
 endif()
+
 
 # Create paralution library
 if (SUPPORT_MIC)
@@ -596,7 +727,11 @@ if (SUPPORT_MIC)
   SET(CMAKE_CXX_ARCHIVE_CREATE "<CMAKE_AR> -qoffload-build rcs <TARGET> <LINK_FLAGS> <OBJECTS>")
 endif()
 
-add_library(${PARALUTION_LIBRARY} ${LIBRARY_TYPE} ${PARALUTION_SOURCES})
+
+add_library(${PARALUTION_LIBRARY} ${LIBRARY_TYPE} ${PARALUTION_SOURCES} )
+
+#SET(HIP_LIBRARIES "-I/opt/rocm/include -L/opt/rocm/lib -lhip_hcc -lhipblas -lhipsparse")
+SET(HIP_LIBRARIES "-L/opt/rocm/lib -lhip_hcc -lhipblas -lhipsparse") # Srinivas K
 
 #######################################################################################################################
 
@@ -606,8 +741,7 @@ add_library(${PARALUTION_LIBRARY} ${LIBRARY_TYPE} ${PARALUTION_SOURCES})
 #endif()
 
 if (SUPPORT_HIP)
-	SET(HIP_LIBRARIES "-L/opt/rocm/lib -lhip_hcc -lhipblas -lhipsparse")
-	target_link_libraries(${PARALUTION_LIBRARY} ${HIP_LIBRARIES} ${HIP_hipsparse_LIBRARY} ${HIP_hipsparse_LIBRARIES} )
+	target_link_libraries(${PARALUTION_LIBRARY} ${HIP_LIBRARIES}  )
 endif()
 
 if (SUPPORT_OCL)

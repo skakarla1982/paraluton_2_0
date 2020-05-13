@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -Wall -fPIC -fopenmp      -rdynamic CMakeFiles/assembly2.dir/assembly2.cpp.o  -o ../../bin/assembly2 -Wl,-rpath,/paralution/para-2.0/paralution-1.1.0/build/lib ../../lib/libparalution.so -L/opt/rocm/lib -lhip_hcc -lhipblas -lhipsparse 

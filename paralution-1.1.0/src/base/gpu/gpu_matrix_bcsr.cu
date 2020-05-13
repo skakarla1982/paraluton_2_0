@@ -47,7 +47,8 @@
 #include "../matrix_formats_ind.hpp"
 
 #include <hip/hip_runtime.h>
-#include <hipsparse.h>
+//#include <hipsparse.h>
+#include "hipsparse.h"
 
 namespace paralution {
 

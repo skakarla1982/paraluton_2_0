@@ -57,7 +57,8 @@
 #include "../matrix_formats_ind.hpp"
 
 #include <hip/hip_runtime.h>
-#include <hipsparse.h>
+//#include <hipsparse.h>
+#include "hipsparse.h"
 
 namespace paralution {
 
@@ -84,8 +85,8 @@ GPUAcceleratorMatrixCSR<ValueType>::GPUAcceleratorMatrixCSR(const Paralution_Bac
   this->L_mat_descr_ = 0;
   this->U_mat_descr_ = 0;
 
-  this->L_mat_info_ = 0;
-  this->U_mat_info_ = 0;
+  //this->L_mat_info_ = 0;
+  //this->U_mat_info_ = 0;
 
   this->mat_descr_ = 0;
 
@@ -643,7 +644,7 @@ void GPUAcceleratorMatrixCSR<ValueType>::CopyTo(BaseMatrix<ValueType> *dst) cons
 template <typename ValueType>
 void GPUAcceleratorMatrixCSR<ValueType>::CopyToAsync(BaseMatrix<ValueType> *dst) const {
 
-  GPUAcceleratorMatrixCSR<ValueType> *gpu_cast_mat;
+GPUAcceleratorMatrixCSR<ValueType> *gpu_cast_mat;
   HostMatrix<ValueType> *host_cast_mat;
 
   // copy only in the same format
@@ -1261,14 +1262,15 @@ void GPUAcceleratorMatrixCSR<double>::ApplyAdd(const BaseVector<double> &in, con
   }
 
 }
-
+// Srinivas K
+/*
 template <>
 bool GPUAcceleratorMatrixCSR<float>::ILU0Factorize(void) {
   
   if (this->get_nnz() > 0) {
 
     hipsparseStatus_t stat_t;
-
+    
     cusparseSolveAnalysisInfo_t infoA = 0;
 
     stat_t = cusparseCreateSolveAnalysisInfo(&infoA);
@@ -1294,7 +1296,7 @@ bool GPUAcceleratorMatrixCSR<float>::ILU0Factorize(void) {
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
 
   }
-
+ 
   return true;
 
 }
@@ -1305,7 +1307,8 @@ bool GPUAcceleratorMatrixCSR<double>::ILU0Factorize(void) {
   if (this->get_nnz() > 0) {
 
     hipsparseStatus_t stat_t;
-
+    // Srinivas K
+    
     cusparseSolveAnalysisInfo_t infoA = 0;
 
     stat_t = cusparseCreateSolveAnalysisInfo(&infoA);
@@ -1328,7 +1331,7 @@ bool GPUAcceleratorMatrixCSR<double>::ILU0Factorize(void) {
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
 
     stat_t = cusparseDestroySolveAnalysisInfo(infoA);
-    CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
+    CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__); 
 
   }
 
@@ -1342,7 +1345,8 @@ bool GPUAcceleratorMatrixCSR<float>::ICFactorize(BaseVector<float> *inv_diag) {
   if (this->get_nnz() > 0) {
 
     hipsparseStatus_t stat_t;
-
+    
+    
     cusparseSolveAnalysisInfo_t infoA = 0;
 
     stat_t = cusparseCreateSolveAnalysisInfo(&infoA);
@@ -1372,7 +1376,7 @@ bool GPUAcceleratorMatrixCSR<float>::ICFactorize(BaseVector<float> *inv_diag) {
                              this->mat_.val, this->mat_.row_offset, this->mat_.col,
                              infoA);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
-
+ 
   }
 
   return true;
@@ -1385,7 +1389,8 @@ bool GPUAcceleratorMatrixCSR<double>::ICFactorize(BaseVector<double> *inv_diag) 
   if (this->get_nnz() > 0) {
 
     hipsparseStatus_t stat_t;
-
+    // Srinivas K
+    
     cusparseSolveAnalysisInfo_t infoA = 0;
 
     stat_t = cusparseCreateSolveAnalysisInfo(&infoA);
@@ -1422,13 +1427,17 @@ bool GPUAcceleratorMatrixCSR<double>::ICFactorize(BaseVector<double> *inv_diag) 
 
 }
 
+*/
+
+// Srinivas K
+
 template <>
 void GPUAcceleratorMatrixCSR<double>::LUAnalyse(void) {
 
     this->LUAnalyseClear();
 
     hipsparseStatus_t stat_t;
-
+/*
     // L part
     stat_t = hipsparseCreateMatDescr(&this->L_mat_descr_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
@@ -1491,6 +1500,7 @@ void GPUAcceleratorMatrixCSR<double>::LUAnalyse(void) {
     assert(this->tmp_vec_ != NULL);
 
     tmp_vec_->Allocate(this->get_nrow());
+    */
 
 }
 
@@ -1500,7 +1510,7 @@ void GPUAcceleratorMatrixCSR<float>::LUAnalyse(void) {
     this->LUAnalyseClear();
 
     hipsparseStatus_t stat_t;
-
+/*
     // L part
     stat_t = hipsparseCreateMatDescr(&this->L_mat_descr_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
@@ -1563,14 +1573,14 @@ void GPUAcceleratorMatrixCSR<float>::LUAnalyse(void) {
     assert(this->tmp_vec_ != NULL);
 
     tmp_vec_->Allocate(this->get_nrow());
-
+*/
 }
 
 template <typename ValueType>
 void GPUAcceleratorMatrixCSR<ValueType>::LUAnalyseClear(void) {
 
   hipsparseStatus_t stat_t;
-
+/*
   if (this->L_mat_info_ != 0) {
     stat_t = cusparseDestroySolveAnalysisInfo(this->L_mat_info_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__); 
@@ -1600,14 +1610,14 @@ void GPUAcceleratorMatrixCSR<ValueType>::LUAnalyseClear(void) {
     delete this->tmp_vec_ ;
     this->tmp_vec_ = NULL;
   }
-
+*/
 }
 
 template <>
 bool GPUAcceleratorMatrixCSR<float>::LUSolve(const BaseVector<float> &in, BaseVector<float> *out) const {
 
   if (this->get_nnz() > 0) {
-
+/*
     assert(this->L_mat_descr_ != 0);
     assert(this->U_mat_descr_ != 0);
     assert(this->L_mat_info_  != 0);
@@ -1654,6 +1664,7 @@ bool GPUAcceleratorMatrixCSR<float>::LUSolve(const BaseVector<float> &in, BaseVe
                                   tmp_vec_->vec_,
                                   cast_out->vec_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
+    */
 
   }
 
@@ -1665,7 +1676,7 @@ template <>
 bool GPUAcceleratorMatrixCSR<double>::LUSolve(const BaseVector<double> &in, BaseVector<double> *out) const {
 
   if (this->get_nnz() > 0) {
-
+/*
     assert(this->L_mat_descr_ != 0);
     assert(this->U_mat_descr_ != 0);
     assert(this->L_mat_info_  != 0);
@@ -1710,7 +1721,7 @@ bool GPUAcceleratorMatrixCSR<double>::LUSolve(const BaseVector<double> &in, Base
                                   this->tmp_vec_->vec_,
                                   cast_out->vec_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
-
+*/
   }
 
   return true;
@@ -1723,7 +1734,7 @@ void GPUAcceleratorMatrixCSR<double>::LLAnalyse(void) {
     this->LLAnalyseClear();
 
     hipsparseStatus_t stat_t;
-
+/*
     // L part
     stat_t = hipsparseCreateMatDescr(&this->L_mat_descr_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
@@ -1785,7 +1796,7 @@ void GPUAcceleratorMatrixCSR<double>::LLAnalyse(void) {
     assert(this->tmp_vec_ != NULL);
 
     tmp_vec_->Allocate(this->get_nrow());
-
+*/
 }
 
 template <>
@@ -1794,7 +1805,7 @@ void GPUAcceleratorMatrixCSR<float>::LLAnalyse(void) {
     this->LLAnalyseClear();
 
     hipsparseStatus_t stat_t;
-
+/*
     // L part
     stat_t = hipsparseCreateMatDescr(&this->L_mat_descr_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
@@ -1856,14 +1867,14 @@ void GPUAcceleratorMatrixCSR<float>::LLAnalyse(void) {
     assert(this->tmp_vec_ != NULL);
 
     tmp_vec_->Allocate(this->get_nrow());
-
+*/
 }
 
 template <typename ValueType>
 void GPUAcceleratorMatrixCSR<ValueType>::LLAnalyseClear(void) {
 
   hipsparseStatus_t stat_t;
-
+/*
   if (this->L_mat_info_ != 0) {
     stat_t = cusparseDestroySolveAnalysisInfo(this->L_mat_info_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__); 
@@ -1888,7 +1899,7 @@ void GPUAcceleratorMatrixCSR<ValueType>::LLAnalyseClear(void) {
   this->U_mat_descr_ = 0;
   this->L_mat_info_ = 0;
   this->U_mat_info_ = 0;
-
+*/
   if (this ->tmp_vec_ != NULL) {
     delete this->tmp_vec_ ;
     this->tmp_vec_ = NULL;
@@ -1901,7 +1912,7 @@ template <>
 bool GPUAcceleratorMatrixCSR<double>::LLSolve(const BaseVector<double> &in, BaseVector<double> *out) const {
 
   if (this->get_nnz() > 0) {
-
+/*
     assert(this->L_mat_descr_ != 0);
     assert(this->U_mat_descr_ != 0);
     assert(this->L_mat_info_  != 0);
@@ -1946,7 +1957,7 @@ bool GPUAcceleratorMatrixCSR<double>::LLSolve(const BaseVector<double> &in, Base
                                   this->tmp_vec_->vec_,
                                   cast_out->vec_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
-
+*/
   }
 
   return true;
@@ -1957,7 +1968,7 @@ template <>
 bool GPUAcceleratorMatrixCSR<float>::LLSolve(const BaseVector<float> &in, BaseVector<float> *out) const {
 
   if (this->get_nnz() > 0) {
-
+/*
     assert(this->L_mat_descr_ != 0);
     assert(this->U_mat_descr_ != 0);
     assert(this->L_mat_info_  != 0);
@@ -2002,9 +2013,8 @@ bool GPUAcceleratorMatrixCSR<float>::LLSolve(const BaseVector<float> &in, BaseVe
                                   this->tmp_vec_->vec_,
                                   cast_out->vec_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
-
+*/
   }
-
   return true;
 
 }
@@ -2021,7 +2031,7 @@ template <>
 void GPUAcceleratorMatrixCSR<double>::LAnalyse(const bool diag_unit) {
 
   hipsparseStatus_t stat_t;
-
+  /*
   // L part
   stat_t = hipsparseCreateMatDescr(&this->L_mat_descr_);
   CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
@@ -2058,6 +2068,7 @@ void GPUAcceleratorMatrixCSR<double>::LAnalyse(const bool diag_unit) {
                                    this->mat_.val, this->mat_.row_offset, this->mat_.col,
                                    this->L_mat_info_);
   CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
+  */
 
 }
 
@@ -2065,7 +2076,7 @@ template <>
 void GPUAcceleratorMatrixCSR<float>::LAnalyse(const bool diag_unit) {
 
   hipsparseStatus_t stat_t;
-
+/*
   // L part
   stat_t = hipsparseCreateMatDescr(&this->L_mat_descr_);
   CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
@@ -2102,14 +2113,14 @@ void GPUAcceleratorMatrixCSR<float>::LAnalyse(const bool diag_unit) {
                                    this->mat_.val, this->mat_.row_offset, this->mat_.col,
                                    this->L_mat_info_);
   CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
-
+*/
 }
 
 template <>
 void GPUAcceleratorMatrixCSR<double>::UAnalyse(const bool diag_unit) {
 
   hipsparseStatus_t stat_t;
-
+  /*
   // U upart
   stat_t = hipsparseCreateMatDescr(&this->U_mat_descr_);
   CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
@@ -2146,14 +2157,14 @@ void GPUAcceleratorMatrixCSR<double>::UAnalyse(const bool diag_unit) {
                                    this->mat_.val, this->mat_.row_offset, this->mat_.col,
                                    this->U_mat_info_);
   CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
-
+ */
 }
 
 template <>
 void GPUAcceleratorMatrixCSR<float>::UAnalyse(const bool diag_unit) {
 
   hipsparseStatus_t stat_t;
-
+  /*
   // U part
   stat_t = hipsparseCreateMatDescr(&this->U_mat_descr_);
   CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
@@ -2190,19 +2201,19 @@ void GPUAcceleratorMatrixCSR<float>::UAnalyse(const bool diag_unit) {
                                    this->mat_.val, this->mat_.row_offset, this->mat_.col,
                                    this->U_mat_info_);
   CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
-
+*/
 }
 
 template <typename ValueType>
 void GPUAcceleratorMatrixCSR<ValueType>::LAnalyseClear(void) {
 
   hipsparseStatus_t stat_t;
-
+/*
   if (this->L_mat_info_ != 0) {
     stat_t = cusparseDestroySolveAnalysisInfo(this->L_mat_info_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__); 
   }
-
+ 
   if (this->L_mat_descr_ != 0) {
     stat_t = hipsparseDestroyMatDescr(this->L_mat_descr_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__); 
@@ -2210,14 +2221,14 @@ void GPUAcceleratorMatrixCSR<ValueType>::LAnalyseClear(void) {
 
   this->L_mat_descr_ = 0;
   this->L_mat_info_ = 0;
-
+*/
 }
 
 template <typename ValueType>
 void GPUAcceleratorMatrixCSR<ValueType>::UAnalyseClear(void) {
 
   hipsparseStatus_t stat_t;
-
+/*
   if (this->U_mat_info_ != 0) {
     stat_t = cusparseDestroySolveAnalysisInfo(this->U_mat_info_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__); 
@@ -2230,14 +2241,14 @@ void GPUAcceleratorMatrixCSR<ValueType>::UAnalyseClear(void) {
 
   this->U_mat_descr_ = 0;
   this->U_mat_info_ = 0;
-
+*/
 }
 
 template <>
 bool GPUAcceleratorMatrixCSR<double>::LSolve(const BaseVector<double> &in, BaseVector<double> *out) const {
 
   if (this->get_nnz() > 0) {
-
+/*
     assert(this->L_mat_descr_ != 0);
     assert(this->U_mat_descr_ != 0);
     assert(this->L_mat_info_  != 0);
@@ -2270,6 +2281,7 @@ bool GPUAcceleratorMatrixCSR<double>::LSolve(const BaseVector<double> &in, BaseV
                                   cast_in->vec_,
                                   cast_out->vec_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
+    */
 
   }
 
@@ -2281,7 +2293,7 @@ template <>
 bool GPUAcceleratorMatrixCSR<float>::LSolve(const BaseVector<float> &in, BaseVector<float> *out) const {
 
   if (this->get_nnz() > 0) {
-
+/*
     assert(this->L_mat_descr_ != 0);
     assert(this->U_mat_descr_ != 0);
     assert(this->L_mat_info_  != 0);
@@ -2314,7 +2326,7 @@ bool GPUAcceleratorMatrixCSR<float>::LSolve(const BaseVector<float> &in, BaseVec
                                   cast_in->vec_,
                                   cast_out->vec_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
-
+*/
   }
 
   return true;
@@ -2325,7 +2337,7 @@ template <>
 bool GPUAcceleratorMatrixCSR<double>::USolve(const BaseVector<double> &in, BaseVector<double> *out) const {
 
   if (this->get_nnz() > 0) {
-
+/*
     assert(this->L_mat_descr_ != 0);
     assert(this->U_mat_descr_ != 0);
     assert(this->L_mat_info_  != 0);
@@ -2358,7 +2370,7 @@ bool GPUAcceleratorMatrixCSR<double>::USolve(const BaseVector<double> &in, BaseV
                                   cast_in->vec_,
                                   cast_out->vec_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
-
+*/
   }
 
   return true;
@@ -2369,7 +2381,7 @@ template <>
 bool GPUAcceleratorMatrixCSR<float>::USolve(const BaseVector<float> &in, BaseVector<float> *out) const {
 
   if (this->get_nnz() > 0) {
-
+/*
     assert(this->L_mat_descr_ != 0);
     assert(this->U_mat_descr_ != 0);
     assert(this->L_mat_info_  != 0);
@@ -2402,7 +2414,7 @@ bool GPUAcceleratorMatrixCSR<float>::USolve(const BaseVector<float> &in, BaseVec
                                   cast_in->vec_,
                                   cast_out->vec_);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
-
+*/
   }
 
   return true;
@@ -3318,7 +3330,7 @@ bool GPUAcceleratorMatrixCSR<ValueType>::MatrixAdd(const BaseMatrix<ValueType> &
       stat_t = hipsparseSetPointerMode(CUSPARSE_HANDLE(this->local_backend_.GPU_cusparse_handle),
                                       HIPSPARSE_POINTER_MODE_HOST);
       CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
-
+      /*
       stat_t = cusparseXcsrgeamNnz(CUSPARSE_HANDLE(this->local_backend_.GPU_cusparse_handle),
                                    m, n,
                                    this->mat_descr_, this->get_nnz(),
@@ -3331,7 +3343,7 @@ bool GPUAcceleratorMatrixCSR<ValueType>::MatrixAdd(const BaseMatrix<ValueType> &
 
       allocate_gpu(nnzC, &csrColC);
       allocate_gpu(nnzC, &csrValC);
-
+      
       stat_t = __cusparseXcsrgeam__(CUSPARSE_HANDLE(this->local_backend_.GPU_cusparse_handle),
                                     m, n,
                                     // A
@@ -3350,7 +3362,7 @@ bool GPUAcceleratorMatrixCSR<ValueType>::MatrixAdd(const BaseMatrix<ValueType> &
                                     csrRowPtrC, csrColC);
 
       CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
-
+      */
       stat_t = hipsparseDestroyMatDescr(desc_mat_C);
       CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
 
@@ -3645,7 +3657,7 @@ bool GPUAcceleratorMatrixCSR<ValueType>::ExtractRowVector(const int idx, BaseVec
 
 }
 
-
+// Srinivas K
 template class GPUAcceleratorMatrixCSR<double>;
 template class GPUAcceleratorMatrixCSR<float>;
 

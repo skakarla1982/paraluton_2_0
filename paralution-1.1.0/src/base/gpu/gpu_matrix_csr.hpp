@@ -40,7 +40,8 @@
 #include "../matrix_formats.hpp"
 
 #include <hip/hip_runtime.h>
-#include <hipsparse.h>
+//#include <hipsparse.h>
+#include "hipsparse.h"
 
 namespace paralution {
 
@@ -171,8 +172,8 @@ private:
   friend class AcceleratorVector<ValueType>;
   friend class GPUAcceleratorVector<ValueType>;
 
-  cusparseSolveAnalysisInfo_t L_mat_info_;
-  cusparseSolveAnalysisInfo_t U_mat_info_;
+  //cusparseSolveAnalysisInfo_t L_mat_info_; // Srinivas K
+  //cusparseSolveAnalysisInfo_t U_mat_info_;
   hipsparseMatDescr_t L_mat_descr_;
   hipsparseMatDescr_t U_mat_descr_;
   hipsparseMatDescr_t mat_descr_;
