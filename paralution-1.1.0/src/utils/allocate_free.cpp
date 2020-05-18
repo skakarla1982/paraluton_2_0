@@ -45,7 +45,7 @@ namespace paralution {
 
 // Check -- if there is no CUDA support 
 // pinned memory is disabled
-#ifndef SUPPORT_CUDA
+#ifndef SUPPORT_HIP
 #undef PARALUTION_CUDA_PINNED_MEMORY
 #endif
 

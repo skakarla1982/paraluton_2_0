@@ -1263,16 +1263,15 @@ void GPUAcceleratorMatrixCSR<double>::ApplyAdd(const BaseVector<double> &in, con
 
 }
 // Srinivas K
-/*
+
 template <>
 bool GPUAcceleratorMatrixCSR<float>::ILU0Factorize(void) {
   
   if (this->get_nnz() > 0) {
 
     hipsparseStatus_t stat_t;
-    
+    /*
     cusparseSolveAnalysisInfo_t infoA = 0;
-
     stat_t = cusparseCreateSolveAnalysisInfo(&infoA);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
 
@@ -1294,7 +1293,7 @@ bool GPUAcceleratorMatrixCSR<float>::ILU0Factorize(void) {
 
     stat_t = cusparseDestroySolveAnalysisInfo(infoA);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
-
+*/
   }
  
   return true;
@@ -1308,7 +1307,7 @@ bool GPUAcceleratorMatrixCSR<double>::ILU0Factorize(void) {
 
     hipsparseStatus_t stat_t;
     // Srinivas K
-    
+/*    
     cusparseSolveAnalysisInfo_t infoA = 0;
 
     stat_t = cusparseCreateSolveAnalysisInfo(&infoA);
@@ -1332,7 +1331,7 @@ bool GPUAcceleratorMatrixCSR<double>::ILU0Factorize(void) {
 
     stat_t = cusparseDestroySolveAnalysisInfo(infoA);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__); 
-
+*/
   }
 
   return true;
@@ -1345,8 +1344,9 @@ bool GPUAcceleratorMatrixCSR<float>::ICFactorize(BaseVector<float> *inv_diag) {
   if (this->get_nnz() > 0) {
 
     hipsparseStatus_t stat_t;
-    
-    
+   
+    //Srinivas K 
+    /*
     cusparseSolveAnalysisInfo_t infoA = 0;
 
     stat_t = cusparseCreateSolveAnalysisInfo(&infoA);
@@ -1376,7 +1376,7 @@ bool GPUAcceleratorMatrixCSR<float>::ICFactorize(BaseVector<float> *inv_diag) {
                              this->mat_.val, this->mat_.row_offset, this->mat_.col,
                              infoA);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
- 
+ */
   }
 
   return true;
@@ -1390,7 +1390,7 @@ bool GPUAcceleratorMatrixCSR<double>::ICFactorize(BaseVector<double> *inv_diag) 
 
     hipsparseStatus_t stat_t;
     // Srinivas K
-    
+  /*  
     cusparseSolveAnalysisInfo_t infoA = 0;
 
     stat_t = cusparseCreateSolveAnalysisInfo(&infoA);
@@ -1420,16 +1420,13 @@ bool GPUAcceleratorMatrixCSR<double>::ICFactorize(BaseVector<double> *inv_diag) 
                              this->mat_.val, this->mat_.row_offset, this->mat_.col,
                              infoA);
     CHECK_CUSPARSE_ERROR(stat_t, __FILE__, __LINE__);
-
+*/
   }
 
   return true;
 
 }
 
-*/
-
-// Srinivas K
 
 template <>
 void GPUAcceleratorMatrixCSR<double>::LUAnalyse(void) {
